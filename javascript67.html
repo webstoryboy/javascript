@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>for문</h2>
+<p class="line">for문은 특정 구문을 여러번 반복하고 싶을 때 사용하는 반복문입니다.</p>
+
+<h3>for문</h3>
+<p class="blue">
+for(초기값; 조건식; 증감값){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//반복 코드 <br>
+}
+</p>
+<br>
+<p class="blue">
+for(var i=0; i&lt;100; i++){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//반복 코드 <br>
+}<br>
+초기값 설정 : var i=0 초기 시작 값을 0으로 설정하고, 초기값은 오직 한 번만 실행되면 이후로는 실행되지 않습니다.<br>
+조건식 설정 : i&lt;100 조건에 맞으면 실행됩니다.<br>
+증감 설정 : 조건에 맞으면 1씩 증가됩니다. 
+</p>
+
+<h5>Sample : for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;for문&lt;/title&gt;
+    &lt;script&gt;
+        //0~100까지 출력
+        for (var i=0; i&lt;=100; i++){
+            document.write("숫자"+i,"&lt;br&gt;");
+        }
+        
+        //1~100까지 출력
+        for (var i=1; i&lt;=100; i++){
+            document.write("숫자"+i,"&lt;br&gt;");
+        }
+        
+        //1~100중에서 짝수만 출력
+        for (var i=0; i&lt;=100; i+=2){
+            document.write("숫자"+i,"&lt;br&gt;");
+        }
+        
+        //1~100중에서 홀수만 출력
+        for (var i=1; i&lt;=100; i+=2){
+            document.write("숫자"+i,"&lt;br&gt;");
+        }
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
+
+<h5>Sample : for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			/* document.write("result =");
+	        for (var i = 1; i &lt;= 10; i++) {
+	            document.write("*");
+	        } */
+	        
+	        var result = "";
+	        for (var i = 1; i &lt;= 10; i++) {
+	            result += "*";
+	        }
+	        document.write("result = " + result);
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
+
+
+<h5>Sample : for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			for(var i=1; i&lt;100; i++){
+				if(i%5==0 && i%7!=0){	//5의 배수이고 7의 배수가 아닌경우
+					document.write("&lt;span style='color:blue;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+				}else if(i%7==0 && i%5!=0) {	//7의 배수이고 5의 배수가 아닌 경우
+					document.write("&lt;span style='color:red;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+				}else if(i%7==0 && i%5==0){		//7의 배수이고 5의 배수인 경우
+					document.write("&lt;span style='color:black;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+				}
+			}	        
+		&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>
+
+<h5>Sample : for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+        	var arr4 = new Array(100,200,300,400,500,600,700,800,900); 
+        	var sum = 0;
+				
+			for(var i=0; i&lt;arr4.length; i++) {
+				sum = sum + arr4[i];
+			}	
+				
+        	document.write(sum);    
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;      
+</code></pre>
+
+
+</body>
+</html>

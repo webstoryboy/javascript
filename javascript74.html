@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>객체</h2>
+<p class="line">객체는 데이터와 연산 작업을 담고 있는 기본적인 기능입니다.</p>
+
+<h3>객체</h3>
+<p>객체(object)란 여러분이 현실 세계에서 인지하는 물체에 대한 모델을 만들기 위해 변수와 함수를 그룹화한 것을 말합니다.</p>
+
+
+
+<h5>Sample : 객체를 생성하는 방법</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;객체를 생성하는 방법&lt;/title&gt;
+    &lt;script&gt;
+        //객체를 생성한 후 속성(변수)과 메서드(함수)를 추가하는 방법
+        //축약형 표기법
+        var hotel = {};
+        
+        hotel.name = "Park";
+        hotel.rooos = 40;
+        hotel.booked = 25;
+        hotel.check = function(){
+            return this.rooms - this.booked;
+        }
+        
+        
+        //객체 생성자 표기법
+        var hotel2 = new Object{};
+        
+        hotel2.name = "Park";
+        hotel2.rooos = 40;
+        hotel2.booked = 25;
+        hotel2.check = function(){
+            return this.rooms - this.booked;
+        }
+        
+        //속성과 메서드를 사전에 정의하여 객체 생성하기
+        //축약형 표기법
+        var hotel3 = {
+            name: "web",
+            rooms: 40,
+            booked: 25,
+            check: function(){
+                return this.rooms - this.booked;
+            }
+            
+        }
+        
+        //객체 생성자 표기법
+        //함수를 이용하면 여러개의 객체를 생성할 수 있습니다. 이때는 객체의
+        //이름 대신 this 키워드를 사용합니다.
+        
+        function Hotel(name, rooms, booked){
+            this.name = name;
+            this.rooms = rooms;
+            this.booked = booked;
+            this.check = function(){
+                return this.rooms - this.booked;
+            }
+        }
+        var quayHotel = new Hotel('quay',40,25);
+        var parkHotel = new Hotel('park',40,25);
+
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+
+<h5>Sample : 데이터 저장</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;데이터 저장하기&lt;/title&gt;
+    &lt;script&gt;
+    //변수 : 하나의 데이터를 저장하는 저장소
+    var hotel = "Park";
+    document.write(hotel,"&lt;br&gt;");
+    
+    //배열 : 여러개의 데이터를 저장하는 저장소
+    var hotel1 = ["web","S","Y","Nan"];
+    document.write(hotel1[0],"&lt;br&gt;");
+    
+    //객체 : 속성과 메서드를 저장하는 저장소
+    var hotel2 = {
+        name: "java",
+        rooom: 40
+    };
+    document.write(hotel2.name,"&lt;br&gt;");
+        
+    //여러개의 객체 : 여러개의 객채를 저장하는 저장소
+    function Hotel6(name, rooms){
+        this.name = name;
+        this.rooms = rooms;
+    }
+    var hou1 = new Hotel6('Css',40);
+    var hou2 = new Hotel6('Cass',120);
+    
+    document.write(hou1.name,"&lt;br&gt;");
+    document.write(hou2.name,"&lt;br&gt;");
+    document.write(hou1.rooms,"&lt;br&gt;");
+    document.write(hou2.rooms,"&lt;br&gt;");
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</body>
+</html>

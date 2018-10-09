@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>switch문</h2>
+<p class="line">해당 조건에 맞는 값을 case로 구분해서 수행하는 제어문입니다.</p>
+
+<h3>switch문</h3>
+<p class="blue">
+switch (조건을 체크할 변수) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;csae 값1 :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값1을 가지면 실행<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;csae 값2 :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값2을 가지면 실행<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;csae 값3 :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값3을 가지면 실행<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;default :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//해당되는 값을 가지고 있지 않을 경우 실행<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+}
+</p>
+
+<h5>Sample : switch문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var color = prompt("빨강, 파랑, 노랑, 검정, 흰색 중 가장 느낌이 오는 색을 적어주세요^^.", "");	
+			switch (color){
+				case "빨강" :
+					document.write("당신은 빨강처럼 열정적인 사람입니다.");
+					break;				
+				case "파랑" :
+					document.write("당신은 파랑처럼 열정적인 사람입니다.");
+					break;					
+				case "노랑" :
+					document.write("당신은 노랑처럼 열정적인 사람입니다.");
+					break;				
+				case "검정" :
+					document.write("당신은 검정처럼 열정적인 사람입니다.");
+					break;
+				case "흰색" :
+					document.write("당신은 흰색처럼 열정적인 사람입니다.");
+					break;
+				default :
+					document.write("당신은 색을 볼 줄 모르는군요~ 실망입니다.");
+					break;
+			}
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<h5>Sample : switch문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var site = prompt("네이버, 다음, 구글, 네이트 중 자주가는 사이트는?","");
+			var url;
+			
+			switch(site){
+				case "네이버":url="www.naver.com";
+				break;
+				
+				case "다음":url="www.daum.net";
+				break;
+				
+				case "구글":url="www.google.co.kr";
+				break;
+				
+				case "네이트":url="www.nate.com";
+				break;
+				
+				default : document.write("그런 사이트는 없습니다.");
+				break;
+			}
+			if(url) location.href="http://"+url;
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;  
+</code></pre>
+
+
+</body>
+</html>

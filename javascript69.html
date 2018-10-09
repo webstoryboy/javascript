@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>break문</h2>
+<p class="line">break문과 continue문은 반복문을 제어하는 명령어입니다.</p>
+
+<h3>break문</h3>
+<p>break문 : 코드 실행문을 빠져나갈 때 사용하며, 일반적으로 반복문을 종료할 때 사용합니다.</p>
+
+
+<h5>break문과 continue문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var count = 0;	
+			while(true){
+				count++;	
+				
+				if(count == 3){	/
+					continue;
+				}
+				document.write("" + count + "번째 실행");
+				document.write("&lt;br /&gt;");
+				
+				if(count > 9){	
+					break;
+				}
+			}
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+
+
+
+</body>
+</html>

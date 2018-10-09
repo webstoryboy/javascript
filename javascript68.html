@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>다중 for문</h2>
+<p class="line">for문 안에 for문이 있는 형태입니다.</p>
+
+<h3>다중 for문</h3>
+<p class="blue">
+for(var i=0; i&lt;100; i++){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(var j=0; j&lt;100; j++){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//반복코드<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}
+</p>
+
+
+<h5>Sample : 다중 for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			for(var i=0; i&lt;8; i++){
+				for(var j=0; j&lt;9; j++){
+					var num1 = i + 2;
+					var num2 = j + 1;
+					var gugu_num = num1 * num2;
+					document.write( num1 + " X " + num2 + " = " + gugu_num);
+					document.write("&lt;br /&gt;");
+				}
+			}
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<h5>Sample : 다중 for문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			for (var i = 0; i &lt; 10; i++) {
+				for (var j = 0; j &lt; i + 1; j++) {
+					document.write("*");
+				}
+				document.write("&lt;br /&gt;");
+			}   
+		&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<h5>Sample : 다중 for문 : 테이블 만들기</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			
+			var num=1;
+			var t="&lt;table border='1'&gt;"; //테이블 시작 태그
+			
+			for(var i=1; i&lt;=10; i++){
+				t+="&lt;tr&gt;";	//행 시작
+				
+				for(var k=1; k&lt;=10; k++){
+					t+="&lt;td&gt;"+num+"&lt;/td&gt;";
+					num++;
+				}
+				t+="&lt;/tr&gt;";
+			}
+			
+			t+="&lt;/table&gt;"; 
+			document.write(t);
+
+		&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+<h5>Sample : 다중 for문 : 피라미드 만들기</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			
+			var out = "";
+	        
+			for (var i = 0; i&lt;15; i++){
+				for(var j = 15; j&gt;i; j--){
+					out += " ";
+				}
+				for(var k = 0; k &lt; 2 * i -1; k++){
+					out += "*";
+				}
+				out += "\n";
+			}
+			
+			document.write(out);
+
+		&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+
+
+
+</body>
+</html>

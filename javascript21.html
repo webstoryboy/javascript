@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<h2>배열</h2>
+<p class="line">배열은 여러개의 데이터를 순차적으로 저장하는 저장소입니다.</p>
+
+<h3>배열</h3>
+<p>배열을 선언하는 방법과 선언과 동시에 초기화하는 방법, 배열의 크기구하는 방법등을 알아보겠습니다.</p>
+
+<h4>문법</h4>
+<p class="blue">
+var 변수명 = [값1, 값2, 값3......]
+</p>
+
+<h5>Sample : 변수의 검사</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;배열&lt;/title&gt;
+    &lt;script&gt;
+        //변수 x=100, y=200 출력해주세요!
+        var x = 100;
+        var y = 200;
+        document.write(x);
+        document.write("&lt;br&gt;");
+        document.write(y);
+        document.write("&lt;br&gt;&lt;br&gt;");
+        
+        //배열 선언
+        var arr1 = new Array();
+        arr1[0] = 100;
+        arr1[1] = 200;
+        
+        document.write(arr1[0]);
+        document.write("&lt;br&gt;");
+        document.write(arr1[1]);
+        document.write("&lt;br&gt;&lt;br&gt;");
+        
+        //배열 선언과 동시에 초기화하기
+        var arr2 = new Array(100,200,300);
+        
+        document.write(arr2[0],"&lt;br&gt;");
+        document.write(arr2[1],"&lt;br&gt;");
+        document.write(arr2[2],"&lt;br&gt;&lt;br&gt;");
+        
+        //배열의 크기 구하기
+        var arr3 = new Array(100,200,300,400,500);
+        
+        document.write(arr3.length);
+        
+        //for문을 이용한 배열의 합 구하기
+        var arr4 = new Array(100,200,300,400,500,600,700,800,900,1000)
+        var sum = 0;
+        
+        //arr4[0] = 100
+        //arr4[i] = 200
+        //arr4[i] = 300
+        //arr4[i] = 400
+        //arr4[i] = 500
+        //arr4[i] = 600
+        //arr4[i] = 700
+        //arr4[i] = 800
+        //arr4[i] = 900
+        //arr4[i] = 1000
+        
+        // 0 = 0 + 100;
+        // 100 = 100 + 200;
+        // 300 = 300 + 300;
+        // 600 = 600 + 400;
+        // 1000 = 1000 + 500;
+        // 1500 = 1500 + 600;
+        // 2100 = 2100 + 700;
+        // 2800 = 2800 + 800;
+        // 3600 = 3600 + 900;
+        // 4500 = 4500 + 1000;
+        // 5500
+        
+        //i=0;  0&lt;10; 1;
+        //i=1;  1&lt;10; 2;
+        //i=2;  2&lt;10; 3;
+        //i=3;  3&lt;10; 4;
+        //i=4;  4&lt;10; 5;
+        //i=5;  5&lt;10; 6;
+        //i=6;  6&lt;10; 7;
+        //i=7;  7&lt;10; 8;
+        //i=8;  8&lt;10; 9;
+        //i=9;  9&lt;10; 10;
+        
+        for(var i=0; i&lt;arr4.length; i++){
+            sum = sum + arr4[i];
+        }
+        document.write("&lt;br&gt;");
+        document.write(sum);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+
+</body>
+</html>

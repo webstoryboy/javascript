@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>window 객체</h2>
+<p class="line">window 객체는 DOM 구조의 최상위 객체입니다.</p>
+
+<h3>window 객체</h3>
+
+
+<h5>window 객체 속성</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>open()</td>
+                <td>새로운 윈도우 창을 생성합니다.</td>
+            </tr>
+            <tr>
+                <td>closed</td>
+                <td>브라우저 창이 열려 있는지 닫혀 있는지에 대한 정보의 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>defaultStatus</td>
+                <td>브라우저 상태 표시줄 글자의 기본 값을 표현합니다.</td>
+            </tr>
+            <tr>
+                <td>document</td>
+                <td>하위 document 객체</td>
+            </tr>
+            <tr>
+                <td>frames</td>
+                <td>브라우저에서 사용된 모든 프레임을 배열 형태로 제공합니다.</td>
+            </tr>
+            <tr>
+                <td>history</td>
+                <td>하위 history 객체</td>
+            </tr>
+            <tr>
+                <td>innerHeight></td>
+                <td>브라우저의 콘텐츠 영역의 높이</td>
+            </tr>
+            <tr>
+                <td>innerWidth</td>
+                <td>브라우저의 콘텐츠 영역의 너비</td>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>브라우저에 사용된 프레임의 개수</td>
+            </tr>
+            <tr>
+                <td>location</td>
+                <td>하위 location 객체</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>브라우저 전체의 표시 이름</td>
+            </tr>
+            <tr>
+                <td>navigator</td>
+                <td>하위 navigator 객체</td>
+            </tr>
+            <tr>
+                <td>opener</td>
+                <td>열려 있는 창에 대한 레퍼런스</td>
+            </tr>
+            <tr>
+                <td>outerHeight</td>
+                <td>툴바/스크롤바를 포함한 바깥 영역의 높이</td>
+            </tr>
+            <tr>
+                <td>outerWidth</td>
+                <td>툴바/스크롤바를 포함한 바깥 영역의 너비</td>
+            </tr>
+            <tr>
+                <td>pageXOffset</td>
+                <td>브라우저의 문서 위치(스크롤된 위치)의 x좌표</td>
+            </tr>
+            <tr>
+                <td>pageYOffset</td>
+                <td>브라우저의 문서 위치(스크롤된 위치)의 y좌표</td>
+            </tr>
+            <tr>
+                <td>parent</td>
+                <td>현재 창의 부모창</td>
+            </tr>
+            <tr>
+                <td>screen</td>
+                <td>하위 screen 객체</td>
+            </tr>
+            <tr>
+                <td>screenLeft</td>
+                <td>브라우저 화면에서의 x좌표</td>
+            </tr>
+            <tr>
+                <td>screenTop</td>
+                <td>브라우저 화면에서의 y좌표</td>
+            </tr>
+            <tr>
+                <td>screenX</td>
+                <td>브라우저 화면에서의 x좌표</td>
+            </tr>
+            <tr>
+                <td>screenY</td>
+                <td>브라우저 화면에서의 y좌표</td>
+            </tr>
+            <tr>
+                <td>self</td>
+                <td>현재 사용 중인 창</td>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td>브라우저의 상태 표시줄의 글자</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>제일 위에 표시된 브라우저 창</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h5>window 객체 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>alert()</td>
+                <td>경고창을 뛰웁니다.</td>
+            </tr>
+            <tr>
+                <td>blur()</td>
+                <td>현재 윈도우의 포커스를 없애줍니다.</td>
+            </tr>
+            <tr>
+                <td>close()</td>
+                <td>현재 윈도우를 닫습니다.</td>
+            </tr>
+            <tr>
+                <td>stop()</td>
+                <td>창이 로그되는 것을 멈춥니다.</td>
+            </tr>
+            <tr>
+                <td>confirm()</td>
+                <td>ok, cancel 형태의 다이얼로그를 뛰어줍니다.</td>
+            </tr>
+            <tr>
+                <td>createPopup()</td>
+                <td>팝업 창을 만듭니다.</td>
+            </tr>
+            <tr>
+                <td>focus()</td>
+                <td>현재 윈도우로 포커스를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>moveBy()</td>
+                <td>윈도우 창의 위치를 상대적으로 이동합니다.</td>
+            </tr>
+            <tr>
+                <td>moveTo()</td>
+                <td>윈도우 창의 위치를 이동시킬 때 사용합니다.</td>
+            </tr>
+            <tr>
+                <td>open(URL, name, features, replace)</td>
+                <td>새창을 열어줍니다.</td>
+            </tr>
+            <tr>
+                <td>print()</td>
+                <td>현재 창의 콘텐츠 부분을 프린트합니다.</td>
+            </tr>
+            <tr>
+                <td>prompt()</td>
+                <td>사용자 입력이 가능한 입력창을 띄어줍니다.</td>
+            </tr>
+            <tr>
+                <td>resizeBy()</td>
+                <td>윈도우 창의 크기를 상대적으로 변경할 때 지정합니다.</td>
+            </tr>
+            <tr>
+                <td>resizeTo()</td>
+                <td>윈도우 창의 크기를 변경할 때 사용합니다.</td>
+            </tr>
+            <tr>
+                <td>scrollBy()</td>
+                <td>윈도우 스크롤의 위치를 상대적으로 이동합니다.</td>
+            </tr>
+            <tr>
+                <td>scrollTo()</td>
+                <td>윈도우 스크롤의 위치를 절대적으로 이동합니다.</td>
+            </tr>
+            <tr>
+                <td>setInterval()</td>
+                <td>일정 시간마다 함수를 반복해서 실행합니다.</td>
+            </tr>
+            <tr>
+                <td>setTimeout()</td>
+                <td>일정 시간 후 함수를 한 번만 실행합니다.</td>
+            </tr>
+            <tr>
+                <td>clearInterval()</td>
+                <td>일정 시간마다 함수를 반복하는 것을 중지합니다.</td>
+            </tr>
+            <tr>
+                <td>clearTimeout()</td>
+                <td>일정 시간 후 함수를 한 번 실행하는 것을 중지합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

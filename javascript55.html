@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>비교 연산자</h2>
+<p class="line">두개의 값을 비교하여 결과를 참 또는 거짓으로 나타냅니다.</p>
+
+<h3>비교 연산자</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width: 20%">
+            <col style="width: 20%">
+            <col style="width: 60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>연산자</th>
+                <th>예시</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>==</td>
+                <td>x == y</td>
+                <td>좌변과 우변이 값이 같을 경우 true</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>x === y</td>
+                <td>좌변과 우변이 값이 같거나 데이터형도 같을 경우 true</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>x != y</td>
+                <td>좌변과 우변의 값이 같지 않을 경우 true</td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>x !== y</td>
+                <td>좌변과 우변의 값이 같지 않을 경우, 또는 데이터형이 다른 경우 true</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>x &gt; y</td>
+                <td>좌변이 우변보다 클 경우 ture</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>x &lt; y</td>
+                <td>좌변이 우변보다 작을 경우 true</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>x &gt;= y</td>
+                <td>좌변이 우변보다 크거나 같을 경우 ture</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>x &lt;= y</td>
+                <td>좌변이 우변보다 작거나 같을 경우 true</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h5>Sample : 비교 연산자</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var x = 10;
+			var y = 20;
+			
+			document.write(x == y);
+			document.write("&lt;br/&gt;");
+			document.write(x != y);
+			document.write("&lt;br/&gt;");
+			document.write(x > y);
+			document.write("&lt;br/&gt;");
+			document.write(x &lt; y);
+			document.write("&lt;br/&gt;");
+			document.write(x &gt;= y);
+			document.write("&lt;br/&gt;");
+			document.write(x &lt;= y);
+			document.write("&lt;br/&gt;");
+			
+			document.write(x &gt; y) &lt; (200 % 3 + 50);
+			
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
+
+
+</body>
+</html>

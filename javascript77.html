@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>날짜 객체</h2>
+<p class="line">날짜 객체(Data Object)는 날짜와 관련된 객체입니다. </p>
+
+<h3>날짜 객체 생성</h3>
+<p class="blue">
+    var 참조 변수 = new Data();
+</p>
+
+<h5>날짜 함수</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>함수</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Date.now</td>
+                <td>현재 날짜 및 시간의 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>Date.parse</td>
+                <td>날자를 포함한 문자열 구문을 분석하여 해당 날짜 사이의 시간을 밀리세컨드로 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>Date.UTC</td>
+                <td>UTC(지역표준시) 또는 GMT(그리니치 표준시)의 날짜 사이의 시간을 밀리세컨트로 리턴합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h5>날짜 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>getDate()</td>
+                <td>로컬 시간을 사용하여 일(월 기준) 값을 리텁합니다.</td>
+            </tr>
+            <tr>
+                <td>getDay()</td>
+                <td>로컬 시간을 사용하여 일(주 기준)값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getFullYear()</td>
+                <td>로컬 시간을 사용하여 연도 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getHours()></td>
+                <td>로컬 시간을 사용하여 시간 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getMilliseconds()</td>
+                <td>로컬 시간을 사용하여 밀리세컨드 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getMinutes()</td>
+                <td>로컬 시간을 사용하여 분 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getMonth()</td>
+                <td>로컬 시간을 사용하여 월 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getSeconds()</td>
+                <td>로컬 시간을 사용하여 초 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getTime()</td>
+                <td>1970년 1월 1일 자정 이후로 밀리세컨드 단위로 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getTimezoneOffset()</td>
+                <td>호스트 컴퓨터와 UTC(지역 표준시) 사이의 시간차를 분으로 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCDate()</td>
+                <td>UTC를 사용하여 일(월 기준)값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCDay()</td>
+                <td>UTC를 사용하여 일(일 기준)값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCFullYear()</td>
+                <td>UTC를 사용하여 연도 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCHours()</td>
+                <td>UTC를 사용하여 시간 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCMilliseconds()</td>
+                <td>UTC를 사용하여 밀리세컨드 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCMinutes()</td>
+                <td>UTC를 사용하여 분 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCMonth()</td>
+                <td>UTC를 사용하여 월 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getUTCSeconds()</td>
+                <td>UTC를 사용하여 초 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getVarData()</td>
+                <td>Data 객체의 VT_DATE 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>getYear()></td>
+                <td>연도 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>hasOwnProperty()</td>
+                <td>객체에 지정된 이름을 가진 속성이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>isPrototypeOf()</td>
+                <td>다른 객체의 prototype 체인이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>propertyIsEnumerable()</td>
+                <td>지정된 속성이 객체의 일부인지와 열거할 수 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>setData()</td>
+                <td>로컬 시간을 사용하여 숫자로 된 날짜(월 기준)을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setFullYear()</td>
+                <td>로컬 시간을 사용하여 연도 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setHours()</td>
+                <td>로컬 시간을 사용하여 시간 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setMilliseconds()</td>
+                <td>로컬 시간을 사용하여 밀리세컨드 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setMinutes()</td>
+                <td>로컬 시간을 사용하여 분 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setMonth()></td>
+                <td>로컬 시간을 사용하여 월 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setSeconds()</td>
+                <td>로컬 시간을 사용하여 초 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setTime()</td>
+                <td>Date 객체의 날짜와 시간 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCDate()</td>
+                <td>UTC를 사용하여 숫자로 된 날짜(월 기준)을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCFullYear()</td>
+                <td>UTC를 사용하여 연도 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCHours()</td>
+                <td>UTC를 사용하여 시간 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCMilliseconds()</td>
+                <td>UTC를 사용하여 밀리세컨드 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCMinutes()</td>
+                <td>UTC를 사용하여 분 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCMonth()</td>
+                <td>UTC를 사용하여 월 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setUTCSeconds()</td>
+                <td>UTC를 사용하여 초 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>setYear()</td>
+                <td>로컬 시간을 사용하여 연도 값을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>toDateString()</td>
+                <td>날짜를 문자열 값으로 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>toGMTString()</td>
+                <td>GMT를 사용하여 문자열로 변환된 날짜를 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>toISOString()</td>
+                <td>날짜를 ISO 형식의 문자열 값으로 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>toJSON()</td>
+                <td>JSON serialization 이전에 객체 형식의 날짜를 변환하는데 사용합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

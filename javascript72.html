@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>함수의 사용형태</h2>
+<p class="line">함수는 사용 형태에 따라 익명 함수, 선언적 함수, 매개변수가 있는 함수, 리턴값이 있는 함수로 구분됩니다.</p>
+
+
+<h3>함수의 사용형태</h3>
+<p>함수는 사용 형태에 따라 익명 함수, 선언적 함수, 매개변수가 있는 함수, 리턴값이 있는 함수로 구분됩니다.</p>
+
+<h4>선언적 함수</h4>
+<p class="blue">
+function 함수이름(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; //실행 코드<br>
+}<br>
+함수이름();  //함수 호출
+</p>
+
+<h5>Sample : 선언적 함수</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			function func1(){	//function1 생성 
+				document.write("function1이 실행되었습니다.");
+				document.write("&lt;br /&gt;");
+			}
+			func1();	
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;   
+</code></pre>
+
+<h4>익명 함수</h4>
+<p class="blue">
+var 변수이름 = function(){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행 코드<br>
+}<br>
+변수이름();	//함수 호출
+</p>
+
+<h5>Sample : 익명 함수</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;			
+			var func2 = function(){
+			document.write("2.함수가 실행되었습니다.");
+		 	document.write("&lt;br&gt;");
+		}
+		func2();
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;   
+</code></pre>
+
+
+<h4>매개변수가 있는 함수</h4>
+<p class="blue">
+function 함수이름(매개변수1, 매개변수2,.....){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+}<br>
+함수이름(매개변수1, 매개변수2,.....); //실행함수
+</p>
+
+<h5>Sample : 매개변수가 있는 함수</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;			
+			function func3(name){
+			document.write(name);
+			document.write("<br>");
+		}
+		func3("3.함수가 실행되었습니다.");
+			
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;   
+</code></pre>
+
+
+<h4>리턴값이 있는 함수</h4>
+<p class="blue">
+function 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+&nbsp;&nbsp;&nbsp;&nbsp; return 리턴값;<br>
+}
+</p>
+
+<h5>Sample : 리턴값이 있는 함수</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			function func4(){
+			var str = "4.함수가 실행되었습니다.";
+			return str;
+		}
+		var value = func4();
+		document.write(value);
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>
+
+
+
+</body>
+</html>

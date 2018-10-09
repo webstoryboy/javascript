@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>조건부 연산자</h2>
+<p class="line">조건부 연산자는 조건을 처리하는 다른 형태의 제어문입니다.</p>
+
+<h3>조건부 연산자(삼항 연산자)</h3>
+<p class="blue">
+(조건) ? (참일 때 실행할 코드) : (거짓일 때 실행할 코드);
+</p>
+
+<h5>Sample : switch문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+        	// if ~ else
+        	var value = window.prompt("숫자를 입력해주세요.");
+			value = parseInt(value);
+
+			if (value % 2 == 0){
+				alert("짝수입니다.");
+			} else {
+				alert("홀수입니다.");
+			};
+			
+			//조건 연산자
+			var value = window.prompt("숫자를 입력해주세요. ");
+	        value = parseInt(value);
+
+	        (value % 2 == 0) ? alert("짝수입니다.") : alert("홀수입니다.");
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;  
+</code></pre>
+
+
+</body>
+</html>

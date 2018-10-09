@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>정규 표현 객체</h2>
+<p class="line">정규 표현 객체(RegExp)는 입력 요소에 테이터를 규칙에 맞게 작성했는지 판단해서 알려주는 객체입니다. </p>
+
+<h3>수학 객체</h3>
+<p class="blue">
+    var 참조 변수 = new RegExp(패턴, 검색옵션)
+</p>
+
+<h5>정구 표현 검색 옵션</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>*</td>
+                <td>0회 이상 일치하는 문자를 검사할 때 사용합니다.</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>1회 이상 일치하는 문자를 검사할 때 사용합니다.</td>
+            </tr>
+            <tr>
+                <td>i</td>
+                <td>찾는 문자가 영문일 경우 대문자, 소문자를 구분하지 않습니다.</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>0회 또는 1회, 규칙에 맞는 문자가 있는지 검사합니다.</td>
+            </tr>
+            <tr>
+                <td>g</td>
+                <td>옵션에 g가 없으면 데이터의 왼쪽부터 규칙에 일치하는 문자 한 개만 찾지만, g를 넣으면 규칙에 맞는 모든 문자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>m</td>
+                <td>데이터의 행이 바뀌어도 규칙에 맞는 문자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>문자열 끝부분에 규칙에 맞는 문자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>문자열 앞에서부터 규칙에 일치하는 문제를 찾습니다. 또는 부정을 나타냅니다.</td>
+            </tr>
+            <tr>
+                <td>\d</td>
+                <td>숫자 하나를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>\D</td>
+                <td>숫자가 아닌 문자 하나를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>\s</td>
+                <td>공백 문자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>\w</td>
+                <td>알파벳, 숫자, 밑줄(_) 기호를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>\W</td>
+                <td>알파벳, 숫자, 밑줄(_) 기호를 제회한 문자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>[0-9][A-Z][a-z]</td>
+                <td>숫자, 대문자 영문, 소문자 영문을 찾습니다.</td>
+            </tr>
+            <tr>
+                <td>a|b</td>
+                <td>a 또는 b이닞 검사할 때 사용합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h5>정규 표현 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>test()</td>
+                <td>지정된 규칙에 맞는 단어가 있으면 true를 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>exec()</td>
+                <td>지정된 규칙에 맞는 단어가 있으면 해당 단어를 반환합니다.</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

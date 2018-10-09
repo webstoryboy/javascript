@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>while문</h2>
+<p class="line">반복되는 부분을 실행할 때 사용하는 제어문입니다.</p>
+
+<h3>while문</h3>
+<p class="blue">
+var 변수 = 초기값<br>
+while (조건식){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;증감식;<br>
+}
+</p>
+
+<h5>Sample : while문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var count = 0;	
+			while(true){
+				count++;	
+				document.write("" + count + "번째 실행");
+				document.write("&lt;br /&gt;");
+				
+				if(count > 9){	// 조건
+					break;
+				}
+			}
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;   
+</code></pre>
+
+<h5>Sample : while문</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+			var i = 100;
+			while(i&gt;0){	
+				
+				if(i%2==0){
+					document.write("&lt;span style='color:blue;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+				}else{
+					document.write("&lt;span style='color:red;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+				}
+				
+				i--;
+			}	        
+		&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+	...
+    &lt;/body&gt;
+&lt;/html&gt;  
+</code></pre>
+
+
+
+</body>
+</html>

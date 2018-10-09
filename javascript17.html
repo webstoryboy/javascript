@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>자바스크립트 기초</h2>
+<p class="line">자바스크립트를 다루기 위해서는 기초적인 특징과 문법이 있습니다. 가장 기본이기 때문에 이 부분을 숙지 후 스크립트를 작성하는 것이 좋습니다.</p>
+
+<h3>자바스크립트 주석</h3>    
+<p>자바스크립트 주석은 일반적으로 특정 코드에 대한 설명을 입력하거나 특정한 부분의 코드가 실행되지 않도록 사용합니다. 주석 표시는 프로그램에 영향을 미치지 않습니다.</p>
+<p class="blue">
+/* ... */ : 여러 줄에 주석을 적용하는 경우<br>
+// : 한 줄에 주석을 적용하는 경우
+</p>
+  
+<h3 class="pt50">키워드와 식별자</h3>  
+<p>자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수 없는 단어들이 있습니다.</p> 
+<p class="blue">
+키워드(예약어) : 자바스크립트에서 정해진 단어<br>
+식별자 : 사용자가 임의로 사용하는 단어<br>
+</p>
+
+<h4>식별자를 만드는 규칙</h4>
+<ul>
+    <li>숫자로 시작하면 안됨(첫 글자)</li>
+    <li>공백을 주면 안됨</li>
+    <li>특수기호를 사용할 수 없음</li>
+    <li>키워드를 사용 할 수 없음</li>
+</ul>
+
+<h4>단어를 조합할 때 규칙</h4>
+<ul>
+    <li>언더스코어 노테이션 : text_top과 같이 중간에 '_'를 사용합니다.</li>
+    <li>카멜 노테이션 : textTop과 같이 두번째 단어의 첫 글자를 대문자로 사용합니다.</li>
+    <li>파스칼 노테이션 : TextTop과 같이 모든 단어의 첫 문장을 대문자로 사용합니다.</li>
+</ul>
+
+<h3 class="pt50">자바스크립트 사용방법</h3> 
+<p>자바스크립트의 사용하는 방법은 외부파일, 스크립트 태그, 태그에 직접 기수랗는 방법이 있습니다.</p>
+<h4>외부 파일로 로드하는 방법</h4>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript" src="javascript.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    ....
+    &lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>			
+						
+
+<h4>script태그 사이에 기술하는 방법</h4>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+        	document.write("hello, Webstoryboy")
+        &lt;/script&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    ....
+    &lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>
+
+<h4>태그에 직접 기술하는 방법</h4>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+    	&lt;meta charset="utf-8"&gt;
+        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+		&lt;input type="button" onclick="alert('hello webstoryboy')" value="Hello webstoryboy" /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>	
+
+
+
+    
+</body>
+</html>
