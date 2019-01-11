@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>지역변수/전역변수</title>
+    <script type="text/javascript">
+        var x = 100;        //변수(전역) x에 100을 저장
+        var y = 200;        //변수(전역) y에 200을 저장
+        
+        function area(){
+            var x = 300;        //변수(지역) x에 300을 저장      
+            var z = 500;        //변수(지역) z에 500을 저장
+            y = 600;            //변수(전역) y에 값을 200에서 600으로 변경
+            
+            document.write("area 함수 안");
+            document.write("<br>");
+            document.write("x의 값 : " + x);
+            document.write("<br>");
+            document.write("y의 값 : " + y);
+            document.write("<br>");
+            document.write("z의 값 : " + z);
+            document.write("<br><br>");
+        }
+        
+        area();
+        document.write("area 함수 밖");
+        document.write("<br>");
+        document.write("x의 값 : " + x);
+        document.write("<br>");
+        document.write("y의 값 : " + y);
+        document.write("<br>");
+        document.write("z의 값 : " + z);
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 
