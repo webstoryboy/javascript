@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열</title>
+    <script>
+        //변수 x=100, y=200 출력해주세요!
+        var x = 100;
+        var y = 200;
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br><br>");
+        
+        //배열 선언
+        var arr1 = new Array();
+        arr1[0] = 100;
+        arr1[1] = 200;
+        
+        document.write(arr1[0]);
+        document.write("<br>");
+        document.write(arr1[1]);
+        document.write("<br><br>");
+        
+        //배열 선언과 동시에 초기화하기
+        var arr2 = new Array(100,200,300);
+        
+        document.write(arr2[0],"<br>");
+        document.write(arr2[1],"<br>");
+        document.write(arr2[2],"<br><br>");
+        
+        //배열의 크기 구하기
+        var arr3 = new Array(100,200,300,400,500);
+        
+        document.write(arr3.length);
+        
+        //for문을 이용한 배열의 합 구하기
+        var arr4 = new Array(100,200,300,400,500,600,700,800,900,1000)
+        var sum = 0;
+        
+        //arr4[0] = 100
+        //arr4[i] = 200
+        //arr4[i] = 300
+        //arr4[i] = 400
+        //arr4[i] = 500
+        //arr4[i] = 600
+        //arr4[i] = 700
+        //arr4[i] = 800
+        //arr4[i] = 900
+        //arr4[i] = 1000
+        
+        // 0 = 0 + 100;
+        // 100 = 100 + 200;
+        // 300 = 300 + 300;
+        // 600 = 600 + 400;
+        // 1000 = 1000 + 500;
+        // 1500 = 1500 + 600;
+        // 2100 = 2100 + 700;
+        // 2800 = 2800 + 800;
+        // 3600 = 3600 + 900;
+        // 4500 = 4500 + 1000;
+        // 5500
+        
+        //i=0;  0<10; 1;
+        //i=1;  1<10; 2;
+        //i=2;  2<10; 3;
+        //i=3;  3<10; 4;
+        //i=4;  4<10; 5;
+        //i=5;  5<10; 6;
+        //i=6;  6<10; 7;
+        //i=7;  7<10; 8;
+        //i=8;  8<10; 9;
+        //i=9;  9<10; 10;
+        
+        for(var i=0; i<arr4.length; i++){
+            sum = sum + arr4[i];
+        }
+        document.write("<br>");
+        document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
