@@ -20,32 +20,47 @@ for(var i=0; i&lt;100; i++){<br>
 </p>
 
 
-<h5>Sample : 다중 for문</h5>
+<h5>Sample : 다중 for문 : 구구단 출력하기<a href="https://webstoryboy.github.io/javascript/sample06_5.html" class="view" target="_blank">View</a></h5>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			for(var i=0; i&lt;8; i++){
-				for(var j=0; j&lt;9; j++){
-					var num1 = i + 2;
-					var num2 = j + 1;
-					var gugu_num = num1 * num2;
-					document.write( num1 + " X " + num2 + " = " + gugu_num);
-					document.write("&lt;br /&gt;");
-				}
-			}
-        &lt;/script&gt;
-    &lt;/head&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;다중 for문&lt;/title&gt;
+    &lt;script&gt;
+        //구구단을 출력하세요
+        //var i = 2 ~ 9
+        //var j = 1 ~ 9
+        
+        //num1 * num2 = sum
+        //2 * 1 = 2
+        //2 * 2 = 4
+        //2 * 3 = 6
+        //2 * 4 = 8
+        //2 * 5 = 10
+        //2 * 6 = 12
+        //2 * 7 = 14
+        //2 * 8 = 16
+        //2 * 9 = 18
+        
+        for(var i = 2; i &lt;= 9; i++){
+            for(var j = 1; j &lt;= 9; j++){
+                //console.log(i);
+                //console.log(j);
+                var sum = i * j;
+                
+                document.write( i + "X" + j + "=" + sum );
+                document.write("&lt;br&gt;");
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<h5>Sample : 다중 for문</h5>
+<h5>Sample : 다중 for문 : * 출력하기<a href="https://webstoryboy.github.io/javascript/sample06_6.html" class="view" target="_blank">View</a></h5>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
@@ -67,7 +82,7 @@ for(var i=0; i&lt;100; i++){<br>
 &lt;/html&gt; 
 </code></pre>
 
-<h5>Sample : 다중 for문 : 테이블 만들기</h5>
+<h5>Sample : 다중 for문 : 테이블 만들기<a href="https://webstoryboy.github.io/javascript/sample06_7.html" class="view" target="_blank">View</a></h5>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
@@ -100,7 +115,8 @@ for(var i=0; i&lt;100; i++){<br>
 &lt;/html&gt; 
 </code></pre>
 
-<h5>Sample : 다중 for문 : 피라미드 만들기</h5>
+
+<h5>Sample : 다중 for문 : 피라미드 만들기<a href="https://webstoryboy.github.io/javascript/sample06_8.html" class="view" target="_blank">View</a></h5>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;

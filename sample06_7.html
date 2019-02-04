@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    	<meta charset="utf-8">
+        <title>자바스크립트(JavaScript)</title>
+        <script type="text/javascript">
+			
+			var num=1;
+			var t="<table border='1'>"; //테이블 시작 태그
+			
+			for(var i=1; i<=10; i++){
+				t+="<tr>";	//행 시작
+				
+				for(var k=1; k<=10; k++){
+					t+="<td>"+num+"</td>";
+					num++;
+				}
+				t+="</tr>";
+			}
+			
+			t+="</table>"; 
+			document.write(t);
+		</script>
+    </head>
+    
+    <body>
+	...
+    </body>
+</html> 

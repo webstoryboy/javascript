@@ -26,115 +26,82 @@ for(var i=0; i&lt;100; i++){ <br>
 증감 설정 : 조건에 맞으면 1씩 증가됩니다. 
 </p>
 
-<h5>Sample : for문</h5>
+
+<h5>Sample : for문 <a href="https://webstoryboy.github.io/javascript/sample06_4.html" class="view" target="_blank">View</a></h5>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;for문&lt;/title&gt;
     &lt;script&gt;
+        //화면에 1~10까지 출력해주세요!
+        document.write(1,"&lt;br&gt;");
+        document.write(2,"&lt;br&gt;");
+        document.write(3,"&lt;br&gt;");
+        document.write(4,"&lt;br&gt;");
+        document.write(5,"&lt;br&gt;");
+        document.write(6,"&lt;br&gt;");
+        document.write(7,"&lt;br&gt;");
+        document.write(8,"&lt;br&gt;");
+        document.write(9,"&lt;br&gt;");
+        document.write(10,"&lt;br&gt;&lt;br&gt;");
+        
         //0~100까지 출력
-        for (var i=0; i&lt;=100; i++){
+        for(var i=0; i&lt;=100; i++){
             document.write("숫자"+i,"&lt;br&gt;");
         }
         
         //1~100까지 출력
-        for (var i=1; i&lt;=100; i++){
+        for(var i=1; i&lt;=100; i++){
             document.write("숫자"+i,"&lt;br&gt;");
         }
         
         //1~100중에서 짝수만 출력
-        for (var i=0; i&lt;=100; i+=2){
+        for(var i=0; i&lt;=100; i+=2){
             document.write("숫자"+i,"&lt;br&gt;");
         }
         
         //1~100중에서 홀수만 출력
-        for (var i=1; i&lt;=100; i+=2){
+        for(var i=1; i&lt;=100; i+=2){
             document.write("숫자"+i,"&lt;br&gt;");
         }
+        
+        //1~100 에서 5의 배수를 파란색으로 7의 배수는 빨간색으로 출력
+        for(var i = 1; i &lt;= 100; i++){
+            if( i % 5 == 0 ){
+                document.write("&lt;span style='color:blue'&gt;"+i+"&lt;/span&gt;");
+            }
+            if( i % 7 == 0 ){
+                document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;");
+            }
+        }
+        
+        //1~100 중에서 5의 배수는 파란색 7의 배수는 빨간색 출력 7의 배수와 5의 공통배수는 검은색으로 출력
+        for(var i=1; i&lt;100; i++){
+            if(i%5==0 && i%7!=0){	            //5의 배수이고 7의 배수가 아닌경우
+                document.write("&lt;span style='color:blue;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            }else if (i%7==0 && i%5!=0) {	    //7의 배수이고 5의 배수가 아닌 경우
+                document.write("&lt;span style='color:red;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            }else if (i%7==0 && i%5==0){		//7의 배수이고 5의 배수인 경우
+                document.write("&lt;span style='color:black;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
+            }
+        }	   
+        
+        //100+200+300+400+500의 합을 구하시오.
+        var arr4 = new Array(100,200,300,400,500); 
+        var sum = 0;
+
+        for(var i=0; i&lt;arr4.length; i++) {
+            sum = sum + arr4[i];
+        }	
+        document.write(sum);    
         
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     
 &lt;/body&gt;
-&lt;/html&gt;    
-</code></pre>
-
-<h5>Sample : for문</h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			/* document.write("result =");
-	        for (var i = 1; i &lt;= 10; i++) {
-	            document.write("*");
-	        } */
-	        
-	        var result = "";
-	        for (var i = 1; i &lt;= 10; i++) {
-	            result += "*";
-	        }
-	        document.write("result = " + result);
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;    
-</code></pre>
-
-
-<h5>Sample : for문</h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			for(var i=1; i&lt;100; i++){
-				if(i%5==0 && i%7!=0){	//5의 배수이고 7의 배수가 아닌경우
-					document.write("&lt;span style='color:blue;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
-				}else if(i%7==0 && i%5!=0) {	//7의 배수이고 5의 배수가 아닌 경우
-					document.write("&lt;span style='color:red;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
-				}else if(i%7==0 && i%5==0){		//7의 배수이고 5의 배수인 경우
-					document.write("&lt;span style='color:black;'&gt;"+i+"&lt;/span&gt;","&lt;br&gt;");
-				}
-			}	        
-		&lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;     
-</code></pre>
-
-<h5>Sample : for문</h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-        	var arr4 = new Array(100,200,300,400,500,600,700,800,900); 
-        	var sum = 0;
-				
-			for(var i=0; i&lt;arr4.length; i++) {
-				sum = sum + arr4[i];
-			}	
-				
-        	document.write(sum);    
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;      
+&lt;/html&gt;       
 </code></pre>
 
 

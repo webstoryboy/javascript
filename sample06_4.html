@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>for문</title>
+    <script>
+        //화면에 1~10까지 출력해주세요!
+        document.write(1,"<br>");
+        document.write(2,"<br>");
+        document.write(3,"<br>");
+        document.write(4,"<br>");
+        document.write(5,"<br>");
+        document.write(6,"<br>");
+        document.write(7,"<br>");
+        document.write(8,"<br>");
+        document.write(9,"<br>");
+        document.write(10,"<br><br>");
+        
+        //0~100까지 출력
+        for(var i=0; i<=100; i++){
+            document.write("숫자"+i,"<br>");
+        }
+        
+        //1~100까지 출력
+        for(var i=1; i<=100; i++){
+            document.write("숫자"+i,"<br>");
+        }
+        
+        //1~100중에서 짝수만 출력
+        for(var i=0; i<=100; i+=2){
+            document.write("숫자"+i,"<br>");
+        }
+        
+        //1~100중에서 홀수만 출력
+        for(var i=1; i<=100; i+=2){
+            document.write("숫자"+i,"<br>");
+        }
+        
+        //1~100 에서 5의 배수를 파란색으로 7의 배수는 빨간색으로 출력
+        for(var i = 1; i <= 100; i++){
+            if( i % 5 == 0 ){
+                document.write("<span style='color:blue'>"+i+"</span>");
+            }
+            if( i % 7 == 0 ){
+                document.write("<span style='color:red'>"+i+"</span>");
+            }
+        }
+        
+        //1~100 중에서 5의 배수는 파란색 7의 배수는 빨간색 출력 7의 배수와 5의 공통배수는 검은색으로 출력
+        for(var i=1; i<100; i++){
+            if(i%5==0 && i%7!=0){	            //5의 배수이고 7의 배수가 아닌경우
+                document.write("<span style='color:blue;'>"+i+"</span>","<br>");
+            }else if (i%7==0 && i%5!=0) {	    //7의 배수이고 5의 배수가 아닌 경우
+                document.write("<span style='color:red;'>"+i+"</span>","<br>");
+            }else if (i%7==0 && i%5==0){		//7의 배수이고 5의 배수인 경우
+                document.write("<span style='color:black;'>"+i+"</span>","<br>");
+            }
+        }	   
+        
+        //100+200+300+400+500의 합을 구하시오.
+        var arr4 = new Array(100,200,300,400,500); 
+        var sum = 0;
+
+        for(var i=0; i<arr4.length; i++) {
+            sum = sum + arr4[i];
+        }	
+        document.write(sum);    
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>    
