@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>문자 객체</h2>
 <p class="line">문자객체(String Object)는 문자와 관련된 객체입니다. </p>
@@ -15,7 +8,8 @@
     var 참조 변수 = new String(문자형 데이터)
 </p>
 
-<h5>문자 객체 메서드 및 속성</h5>
+
+<h5>String 객체의 속성</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -30,58 +24,30 @@
         </thead>
         <tbody>
             <tr>
-                <td>anchor()</td>
-                <td>a 태그로 문자열을 감싸 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>big()</td>
-                <td>텍스트 양 끝에 HTML &lt;big&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>blink()</td>
-                <td>텍스트 양 끝에 HTML &lt;blink&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>bold()</td>
-                <td>텍스트 양 끝에 HTML &lt;b&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>fixed()</td>
-                <td>텍스트 양 끝에 HTML &lt;tt&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>fontcolor()</td>
-                <td>텍스트 양 끝에 HTML &lt;font&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>fontsize()</td>
-                <td>텍스트 양 끝에 HTML &lt;font&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>small()</td>
-                <td>텍스트 양 끝에 HTML &lt;small&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>strike()</td>
-                <td>텍스트 양 끝에 HTML &lt;strike&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>sub()</td>
-                <td>텍스트 양 끝에 HTML &lt;sub&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>sup()</td>
-                <td>텍스트 양 끝에 HTML &lt;sup&gt; 태그를 삽입합니다.</td>
-            </tr>
-            <tr>
-                <td>italics()</td>
-                <td>텍스트 양 끝에 HTML &lt;i&gt; 태그를 삽입합니다.</td>
+                <td>length</td>
+                <td>문자열의 길이를 가져옵니다.</td>
             </tr>
             
+            
+        </tbody>
+    </table>
+</div>
+
+
+<h5>String 객체의 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
             <tr>
-                <td>link(link)</td>
-                <td>a 태그에 href 속성을 지정해 리턴합니다.</td>
-            </tr>									
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>						
             <tr>
                 <td>charAt(index)</td>
                 <td>
@@ -164,5 +130,80 @@
 
 
 
-</body>
-</html>
+<h5>HTML 관련 String 객체 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>anchor()</td>
+                <td>a 태그로 문자열을 감싸 리턴합니다.</td>
+            </tr>
+            <tr>
+                <td>big()</td>
+                <td>텍스트 양 끝에 HTML &lt;big&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>blink()</td>
+                <td>텍스트 양 끝에 HTML &lt;blink&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>bold()</td>
+                <td>텍스트 양 끝에 HTML &lt;b&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>fixed()</td>
+                <td>텍스트 양 끝에 HTML &lt;tt&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>fontcolor()</td>
+                <td>텍스트 양 끝에 HTML &lt;font&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>fontsize()</td>
+                <td>텍스트 양 끝에 HTML &lt;font&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>italics()</td>
+                <td>텍스트 양 끝에 HTML &lt;i&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>link(href)</td>
+                <td>a 태그에 href 속성을 지정해 리턴합니다.</td>
+            </tr>   
+            <tr>
+                <td>small()</td>
+                <td>텍스트 양 끝에 HTML &lt;small&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>strike()</td>
+                <td>텍스트 양 끝에 HTML &lt;strike&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>sub()</td>
+                <td>텍스트 양 끝에 HTML &lt;sub&gt; 태그를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>sup()</td>
+                <td>텍스트 양 끝에 HTML &lt;sup&gt; 태그를 삽입합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN JavaScript <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>
+

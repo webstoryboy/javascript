@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>이벤트</h2>
 <p class="line"> 
@@ -15,7 +8,11 @@
 <h3>이벤트</h3>
 
 
-<h5>문서 객체 속성</h5>
+
+
+
+
+<h5>이벤트 속성</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -30,313 +27,439 @@
         </thead>
         <tbody>
             <tr>
-                <td>onabort</td>
-                <td>이미지 다운로드 중지할 때(브라우저 중지 버튼 클릭 시) 호출</td>
+                <td>abort</td>
+                <td>이미지 다운로드이 중단되는 경우 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onactivate</td>
+                <td>activate</td>
                 <td>객체가 활성화될 때(태그 기능이 동작할 때) 호출</td>
             </tr>
             <tr>
-                <td>onafterprint</td>
-                <td>문서를 출력한 후(또는 미리보기 후에) 호출</td>
+                <td>afterprint</td>
+                <td>웹 페이지 인쇄가 시작되거나 인쇄 대화 상자가 닫힌 경우 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onafterupdate</td>
+                <td>afterupdate</td>
                 <td>데이터 객체 내의 데이터가 업데이트 되었을 때 호출</td>
             </tr>
             <tr>
-                <td>onbeforeactivate</td>
+                <td>animationend</td>
+                <td>애니메이션이 완료되었을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>animationiteration</td>
+                <td>애니메이션이 반복될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>animationstart</td>
+                <td>애니메이션이 시작될 때 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>beforeactivate</td>
                 <td>객체가 활성화되기 직전에 호출</td>
             </tr>
             <tr>
-                <td>onbeforecopy</td>
+                <td>beforecopy</td>
                 <td>선택 영역이 클립보드로 복사되기 직전에 호출</td>
             </tr>
             <tr>
-                <td>onbeforecut</td>
+                <td>beforecut</td>
                 <td>선택 영역이 클립보드로 잘라내지기 직전에 호출</td>
             </tr>
             <tr>
-                <td>onbeforedeactivate</td>
+                <td>beforedeactivate</td>
                 <td>웹 문서상에서 현재 객체에서 다른 객체로 activeElement가 변경될 때 호출</td>
             </tr>
             <tr>
-                <td>onbeforeeditfocus</td>
+                <td>beforeeditfocus</td>
                 <td>편집 가능한 객체 내부에 포함된 객체의 편집 모드가 활성화될 때 호출</td>
             </tr>
             <tr>
-                <td>onbeforepaste</td>
+                <td>beforepaste</td>
                 <td>클립보드에서 문서로 붙여넣기를 할 때 대상 객체에서 호출</td>
             </tr>
             <tr>
-                <td>onbeforeprint</td>
+                <td>beforeprint</td>
                 <td>웹 문서가 출력되기 직전에(또는 미리보기를 실행하기 직전에) 호출</td>
             </tr>
             <tr>
-                <td>onbeforeunload</td>
-                <td>웹 문서가 업로드 되기 직전에 호출</td>
+                <td>beforeunload</td>
+                <td>웹 문서가 업로드 되기 직전에 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onbeforeupdate</td>
+                <td>beforeupdate</td>
                 <td>데이터 객체 내의 데이터가 업데이트 되기 직전에 호출</td>
             </tr>
             <tr>
-                <td>onblur</td>
-                <td>객체가 포커스를 잃었을 때 호출</td>
+                <td>blur</td>
+                <td>요소가 포커스를 잃었을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onbounce</td>
+                <td>bounce</td>
                 <td>marquee 객체의 스크롤 영역 양쪽 끝에서 바운드 될 때 호출</td>
             </tr>
             <tr>
-                <td>oncellchange</td>
+                <td>canplay</td>
+                <td>브라우저가 미디어 재생을 시작할 수 있을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>cellchange</td>
                 <td>데이터 객체에서 데이터가 변경될 때 호출</td>
             </tr>
             <tr>
-                <td>onchange</td>
-                <td>객체 또는 선택 영역의 내용이 변경될 때 호출</td>
+                <td>change</td>
+                <td>폼 요소 또는 선택 영역의 내용이 변경될 때 이벤트가 발생하   니다.</td>
             </tr>
             <tr>
-                <td>onclick</td>
-                <td>객체 위에서 마우스 왼쪽 버튼을 클릭할 때 호출</td>
+                <td>click</td>
+                <td>요소 위에 마우스를 클릭할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>oncontextmenu</td>
-                <td>클라이언트 영역에서 사용자가 마우스 오른쪽 버튼을 눌러 팝업 메뉴를 띄울 때 호출</td>
+                <td>contextmenu</td>
+                <td>마우스 오른쪽 버튼을 눌러 팝업 메뉴를 띄울 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>oncontrolselect</td>
+                <td>controlselect</td>
                 <td>사용자가 객체의 제어 영역을 선택할 때 호출</td>
             </tr>
             <tr>
-                <td>oncopy</td>
-                <td>클립보드에 선택 영역 또는 객체를 복사할 때 호출</td>
+                <td>copy</td>
+                <td>사용자가 컨텐츠의 요소를 복사할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>oncut</td>
-                <td>클립보드에 선택 영역 또는 객체를 잘라낼 때 호출</td>
+                <td>cut</td>
+                <td>사용자가 컨텐츠의 요소를 잘라내기 했을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondataavailable</td>
-                <td>비정기적으로 데이터가 전달되는 데이터 객체로부터 데이터가 전달될 때 호출</td>
+                <td>dblclick</td>
+                <td>요소를 더블클릭했을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondatasetchanged</td>
-                <td>데이터 객체의 변화 때문에 데이터가 노출되면 호출</td>
-            </tr>
-            <tr>
-                <td>ondatasetcomplete</td>
-                <td>데이터 객체의 모든 데이터가 사용 가능한 상태가 될 때 호출</td>
-            </tr>
-            <tr>
-                <td>ondblclick</td>
-                <td>객체 위에서 더블클릭할 때 호출</td>
-            </tr>
-            <tr>
-                <td>ondeactivate</td>
+                <td>deactivate</td>
                 <td>웹 문서의 현재 선택된 객체에서 다른 객체로 activeDlement가 변할 때 호출</td>
             </tr>
             <tr>
-                <td>ondrag</td>
-                <td>드래그 상태가 유지되는 동안 해당 객체로부터 호출</td>
+                <td>drag</td>
+                <td>요소를 드래그 할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondragend</td>
-                <td>드래그 상태가 종료될 때 해당 객체로부터 호출</td>
+                <td>dragend</td>
+                <td>요스를 드래그하고 끝날 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondragenter</td>
-                <td>사용자가 객체를 드래그하여 드롭 가능한 영역으로 이동시킬 때 호출</td>
+                <td>dragenter</td>
+                <td>요소를 드래그하는 동안 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondragleave</td>
-                <td>사용자가 객체를 드래그하여 드롭 가능한 영역을 벗어날 때 호출</td>
+                <td>dragleave</td>
+                <td>요소를 드래그하고 요소를 벗어났을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondragover</td>
-                <td>사용자가 드롭 가능 영역 내에서 객체를 드래그할 때 호출</td>
+                <td>dragover</td>
+                <td>드래그 가능 영역에서 드래그 할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ongragstart</td>
-                <td>선택된 객체 또는 텍스트 영역에서 사용자가 드래그를 시작할 때 호출</td>
+                <td>dsragstart</td>
+                <td>드래그 가능 영역에서 드래그를 시작할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>ondrop</td>
-                <td>사용자가 특정 객체를 드래그하다가 드롭하였을 때 호출</td>
+                <td>drop</td>
+                <td>드래그를 하다가 타겟 영역에 드롭하였을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onerror</td>
+                <td>durationchange</td>
+                <td>미디어가 변경돼었을 때 이벤트가 발생합니다.</td>
+            </tr>
+            
+            <tr>
+                <td>ended</td>
+                <td>미디어가 끝날 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>error</td>
                 <td>웹 문서 내에서 스크립트 에러가 발생할 때 호출</td>
             </tr>
             <tr>
-                <td>onerrorupdate</td>
-                <td>데이터 객체 내의 데이터가 변경되는 중에 에러가 발생할 경우 호출</td>
+                <td>focus</td>
+                <td>요소에 포커스 상태가 되었을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onfilterchange</td>
-                <td>비주얼 필터의 상태가 변경되거나 트랜지션이 완료되었을 때 호출</td>
+                <td>focusin</td>
+                <td>요소에 포커스가 되기 직전에 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onfinish</td>
-                <td>marquee 객체의 Loop가 완료되었을 때 호출</td>
+                <td>focusout</td>
+                <td>요소에 포커스가 다른 요소로 이동할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onfocus</td>
-                <td>객체가 포커스 상태가 되었을 때 호출</td>
+                <td>fullscreenchange</td>
+                <td>전체화면 모드로 표시할 수 없는 경우 이벤트가 발생합니다.</td>
+            </tr>
+
+            
+            <tr>
+                <td>hashchange</td>
+                <td>URL의 앵커가 변경되어 있을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onfocusin</td>
-                <td>객체가 포커스되기 직전에 호출</td>
+                <td>help</td>
+                <td>브라우저에서 F1 키를 눌렀을 때 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>input</td>
+                <td>사용자가 input 요소를 눌렀을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onfocusout</td>
-                <td>포커스가 다른 객체로 이동할 때 호츨</td>
+                <td>invalid</td>
+                <td>요소가 유효하지 않는 경우 이벤트가 발생합니다.</td>
+            </tr>
+           
+
+            <tr>
+                <td>keydown></td>
+                <td>사용자가 키를 눌렀을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onhelp</td>
-                <td>브라우저에서 F1 키를 눌렀을 때 호출</td>
+                <td>keypress</td>
+                <td>사용자가 기능 키를 제외한 키를 눌렀을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onkeydown></td>
-                <td>사용자가 키를 눌렀을 때 호출</td>
+                <td>keyup</td>
+                <td>사용자가 키를 눌렀다가 떼었을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onkeypress</td>
-                <td>사용자가 기능 키를 제외한 키를 눌렀을 때 호출</td>
+                <td>load</td>
+                <td>브라우저가 로딩한 다음 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onkeyup</td>
-                <td>사용자가 키를 눌렀다가 떼었을 때 호출</td>
+                <td>loadeddata</td>
+                <td>미디어 데이터가 로딩될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onload</td>
-                <td>브라우저 객체를 로딩한 다음 호출</td>
+                <td>loadedmetadata</td>
+                <td>미디어 메타 데이터가 로딩될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onlosecapture</td>
-                <td>객체가 마우스 캡쳐를 잃었을 때 호출</td>
+                <td>loadstart</td>
+                <td>브라우저가 미디어를 찾기 시작할 때 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>message</td>
+                <td>이벤트 소스를 통해서 메세지를 전송할 때 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>mousedown</td>
+                <td>요소 위에서 마우스 버튼을 클릭할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmousedown</td>
-                <td>객체 위에서 마우스 버튼을 클릭할 때 호출</td>
+                <td>mouseenter</td>
+                <td>요소 영역에 마우스 포인터가 들어올 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmouseenter</td>
-                <td>객체의 영역 안으로 마우스 포인터가 들어올 때 호출</td>
+                <td>mouseleave</td>
+                <td>요소 영역 밖으로 마우스 포인터가 이동할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmouseleave</td>
-                <td>객체의 영역 밖으로 마우스 포인터가 이동할 때 호출</td>
+                <td>mousemove</td>
+                <td>요소 영역 내에서 마우스 포인터가 움직일 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td><code>onmousemove</code></td>
-                <td>객체의 영역 내에서 마우스 포인터가 움직일 때 호출</td>
+                <td>mouseout</td>
+                <td>요소 영역 밖으로 마우스 포인터가 빠져나갈 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmouseout</td>
-                <td>객체의 영역 밖으로 마우스 포인터가 빠져나갈 때 호출</td>
+                <td>mouseover</td>
+                <td>요소 영역으로 마우스 포인터가 들어올 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmouseover</td>
-                <td>객체의 영역으로 마우스 포인처가 들어올 때 호출</td>
+                <td>mouseup</td>
+                <td>요소 위에서 마우스 버튼을 눌렀다가 떼었을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmouseup</td>
-                <td>객체 위에서 마우스 버튼을 눌렀다가 떼었을 때 호출</td>
+                <td>mousewheel</td>
+                <td>마우스 휠로 조정할 때 이벤트가 발생합니다.(없어짐)</td>
+            </tr>
+            
+            <tr>
+                <td>offline</td>
+                <td>브라우저가 오프라인 작업을 시작하면 이벤트가 발생합니다</td>
             </tr>
             <tr>
-                <td>onmousewheel</td>
-                <td>마우스 휠로 조정할 때 호출</td>
+                <td>online</td>
+                <td>브라우저가 온라인 작업을 시작하면 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmove</td>
-                <td>객체가 움직일 때 호출</td>
+                <td>open</td>
+                <td>이벤트 소스와 연결될 때 이벤트가 발생합니다.</td>
+            </tr>
+            
+
+            <tr>
+                <td>pagehide</td>
+                <td>사용자가 웹 페이지에서 떠날 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmoveend</td>
-                <td>객체의 이동이 끝날 때 호출</td>
+                <td>pageshow</td>
+                <td>사용자가 웹 페이지로 새로 이동할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onmovestart</td>
-                <td>객체의 움직이기 시작할 때 호출</td>
+                <td>paste</td>
+                <td>사용자가 요소를 붙여넣기 할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onpaste</td>
-                <td>클립보드에 복사해둔 내용을 웹 문서에 붙여넣기를 할 때 호출</td>
+                <td>pause</td>
+                <td>사용자가 미디어를 정지할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onpropertychange</td>
-                <td>객체의 속성이 변경될 때 호출</td>
+                <td>playing</td>
+                <td>사용자가 미디어를 시작할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onreadystatechange</td>
-                <td>객체의 상태가 변경될 때 호출</td>
+                <td>popstate</td>
+                <td>사용자가 윈도우 창을 변경 할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onreset</td>
-                <td>사용자가 폼을 리셋할 때 호출</td>
+                <td>progress</td>
+                <td>브라우저가 미디어 데이터를 다운로드 중 일때 이벤트가 발생합니다.</td>
+            </tr>
+
+            
+            <tr>
+                <td>ratechange</td>
+                <td>미디어의 재생 속도가 변경 될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onresize</td>
-                <td>객체의 크기가 변경될 때 호출</td>
+                <td>resize</td>
+                <td>문서의 크기가 변경될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onresizeend</td>
+                <td>reset</td>
+                <td>사용자가 폼을 리셋할 때 이벤트가 발생합니다.</td>
+            </tr>
+            
+            <tr>
+                <td>resizeend</td>
                 <td>사용자가 객체의 크기 변경을 끝낼 때 호출</td>
             </tr>
             <tr>
-                <td>onresizestart</td>
+                <td>resizestart</td>
                 <td>사용자가 객체의 크기변경을 시작할 때 호출</td>
             </tr>
             <tr>
-                <td>onrowenter</td>
+                <td>rowenter</td>
                 <td>데이터 소스 내에서 현재 열이 변경되거나 객체에 새로운 데이터가 추가될 때 호출</td>
             </tr>
             <tr>
-                <td>onrowexit</td>
+                <td>rowexit</td>
                 <td>데이터 소스 컨트롤이 객체 내의 현재 열을 변경시킬 때 호출</td>
             </tr>
             <tr>
-                <td>onrowsdelete</td>
+                <td>rowsdelete</td>
                 <td>현재 레코드셋에 열이 삭제될 때 호출</td>
             </tr>
             <tr>
-                <td>onrowsinserted</td>
+                <td>rowsinserted</td>
                 <td>현재 레코드셋에 새로운 열리 추가될 때 호출</td>
             </tr>
+            
             <tr>
-                <td>onscroll</td>
-                <td>사용자가 객체 내의 스크롤바를 이용하여 스크롤 할 때 호출</td>
+                <td>scroll</td>
+                <td>사용자가 스크롤 할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onselect</td>
-                <td>현재 선택된 영역이 변경될 때 호출</td>
+                <td>search</td>
+                <td>사용자가 검색 차에서 검색할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onselectionchange</td>
-                <td>웹 문서의 선택 영역 상태가 변경될 때 호출</td>
+                <td>seeked</td>
+                <td>미디어에서 이동 및 건너뛰기가 끝났을 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onstart</td>
-                <td>marquee 객체의 Loop가 시작될 때 마다 호출</td>
+                <td>seeking</td>
+                <td>미디어에서 이동 및 건너뛰기가 시작할 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onstop</td>
-                <td>사용자가 stop버튼을 클릭했을 때(또는 웹 문서를 떠날 때) 호출</td>
+                <td>select</td>
+                <td>선택 영역이 변경될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onsubmit</td>
-                <td>폼이 전송되기 직전에 호출</td>
+                <td>show</td>
+                <td>메뉴 요소가 표실될 때 이벤트가 발생합니다.</td>
             </tr>
             <tr>
-                <td>onunload</td>
-                <td>객체가 언로드되기 직전에 호출</td>
+                <td>stalled</td>
+                <td>미디어 데이터를 가져오려고 시도 했지만 가져올 수 없는 경우에 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>storage</td>
+                <td>웹 저장소의 영역이 업데이트 될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>submit</td>
+                <td>폼 양식이 전송되기 직전에 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>suspend</td>
+                <td>브라우저가 의도적으로 미디어 데이터를 가져오지 않을 때 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>timeupdate</td>
+                <td>재생 위치가 변경될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>toggle</td>
+                <td>&lt;details&gt; 요소를 열거나 닫을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>touchcancel</td>
+                <td>터치가 중단되면 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>touchend</td>
+                <td>손가락이 터치 스크린에서 제거 될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>touchend</td>
+                <td>손가락이 터치 스크린에서 제거 될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>touchmove</td>
+                <td>스크린에서 손가락을 드래그 하고 있을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>touchstart</td>
+                <td>스크린에서 손가락이 드래그 시작할 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td>transitionend</td>
+                <td>CSS transitio이 완료되면 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>unload</td>
+                <td>페이지가 로드되지 않으면 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>volumechange</td>
+                <td>미디어의 볼륨이 변경되었을 때 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>waiting</td>
+                <td>미디어의 버퍼링을 위해 일시 중지한 경우 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td>wheel</td>
+                <td>마우스 휠을 올릴거나 내일때 이벤트가 발생합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-
-</body>
-</html>
