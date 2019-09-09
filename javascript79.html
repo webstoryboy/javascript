@@ -2,10 +2,12 @@
     
 
 <h2>수학 객체</h2>
-<p class="line">수학 객체(Math Object)는 수학과 관련된 기능과 속성을 제공하는 객체입니다. </p>
+<p>수학 객체(Math Object)는 수학과 관련된 기능과 속성을 제공하는 객체입니다. </p>
+
+<hr>
 
 <h3>수학 객체</h3>
-
+<p>자바스크립트에서는 수학과 과련된 객체를 제공합니다. 수학 관련 객체 메서드를 이용하면 수학과 관련된 작업들을 처리 할 수 있습니다. </p>
 
 <h5>Math 객체 속성</h5>
 <div class="table-responsive">
@@ -23,35 +25,35 @@
         <tbody>
             <tr>
                 <td>Math.E</td>
-                <td>2.718281828459045</td>
-            </tr>
-            <tr>
-                <td>Math.LN10</td>
-                <td>2.302585092994046.</td>
+                <td>오일러의 상수, 2.718281828459045</td>
             </tr>
             <tr>
                 <td>Math.LN2</td>
-                <td>0.6931471805599453</td>
+                <td>2의 자연로그, 0.6931471805599453</td>
             </tr>
             <tr>
-                <td>Math.LOG10E</td>
-                <td>0.4342944819032518</td>
+                <td>Math.LN10</td>
+                <td>10의 자연로그, 2.302585092994046.</td>
             </tr>
             <tr>
                 <td>Math.LOG2E</td>
-                <td>1.4426950408889634</td>
+                <td>밑이 2인 로그 E, 1.4426950408889634</td>
+            </tr>
+            <tr>
+                <td>Math.LOG10E</td>
+                <td>밑이 10인 로그 E, 0.4342944819032518</td>
             </tr>
             <tr>
                 <td>Math.PI</td>
-                <td>3.141592653589793</td>
+                <td>원의 둘레와 지름의 비율, 3.141592653589793</td>
             </tr>
             <tr>
                 <td>Math.SQRT1_2</td>
-                <td>0.7071067811865476</td>
+                <td>2의 제곱근, 0.7071067811865476</td>
             </tr>
             <tr>
                 <td>Math.SQRT2</td>
-                <td>1.4142135623730951</td>
+                <td>2의 제곱근, 1.4142135623730951</td>
             </tr>
             
         </tbody>
@@ -76,82 +78,237 @@
         <tbody>
             <tr>
                 <td>Math.abs(x)</td>
-                <td>숫자(x)의 절대값을 리턴합니다.</td>
+                <td>숫자(x)의 절대값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.acos(x)</td>
-                <td>숫자(x)의 아크 코사인 값을 리턴합니다.</td>
+                <td>숫자(x)의 아크 코사인 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>Math.acosh(x)</td>
+                <td>숫자(x)의 쌍곡아크코사인 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.asin(x)</td>
-                <td>숫자(x)의 아크 사인 값을 리턴합니다.</td>
+                <td>숫자(x)의 아크사인 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>Math.asinh(x) </td>
+                <td>숫자(x)의 쌍곡아크사인 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.atan(x)</td>
-                <td>숫자(x)의 아크 탄젠트 값을 리턴합니다.</td>
+                <td>숫자(x)의 아크탄젠트 값을 반환합니다.</td>
             </tr>
             <tr>
-                <td>Math.atan2(x,y)</td>
-                <td>x축에 제공된 y및 x좌표로 표시된 점까지의 각도를 라디안 값으로 리턴합니다.</td>
+                <td>Math.atanh(x)</td>
+                <td>숫자(x)의 쌍곡아크탄젠트 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>Math.atan2(y, x)</td>
+                <td>인수 몫의 아크탄젠트 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>Math.cbrt(x) </td>
+                <td>숫자(x)의 세제곱근을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.ceil(x)</td>
-                <td>제공된 숫자(x) 보다 크거나 같은 가장 작은 정수를 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>Math.floor(x)</td>
-                <td>제공된 숫자(x) 보다 작거나 같은 가장 큰 정수를 리턴합니다.</td>
+                <td>숫자(x) 보다 크거나 같은 수 중에서 가장 작은 정수를 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.cos(x)</td>
-                <td>숫자(x)의 코사인 값을 리턴합니다.</td>
+                <td>숫자(x)의 코사인 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>Math.cosh(x) </td>
+                <td>숫자(x)의 쌍곡코사인 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.exp(x)</td>
                 <td>자연 로그의 x 제곱을 리턴합니다.</td>
             </tr>
-
+            <tr>
+                <td>Math.floor(x)</td>
+                <td>제공된 숫자(x) 보다 작거나 같은 가장 큰 정수를 반환합니다.</td>
+            </tr>
             <tr>
                 <td>Math.log(x)</td>
-                <td>숫자(x)의 자연로그를 리턴합니다.</td>
+                <td>숫자(x)의 자연로그를 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.max(x....)</td>
-                <td>주어진 매개변수 중 가장 큰 값을 리턴합니다.</td>
+                <td>주어진 수 중에서 가장 큰 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.min(x....)</td>
-                <td>주어진 매개변수 중 가장 작은 값을 리턴합니다.</td>
+                <td>주어진 수 중에서 가장 작은 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.pow(x,y)</td>
-                <td>x의 y제곱을 리턴합니다.</td>
+                <td>x의 y제곱을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.random()</td>
-                <td>0과 1사이의 의사 난수값을 리턴합니다.</td>
+                <td>0과 1사이의 의사 난수 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.round(x)</td>
-                <td>(x)을 반올림하여 가장 가까운 정수를 리턴합니다.</td>
+                <td>(x)을 반올림하여 가장 가까운 정수를 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.sin(x)</td>
-                <td>숫자(x)의 사인 값을 리턴합니다.</td>
+                <td>숫자(x)의 사인 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.sqrt(x)</td>
-                <td>숫자(x)의 제곱근을 리턴합니다.</td>
+                <td>숫자(x)의 제곱근을 반환합니다.</td>
             </tr>
             <tr>
                 <td>Math.tan(x)</td>
-                <td>숫자(x)의 탄젠트 값을 리턴합니다.</td>
+                <td>숫자(x)의 탄젠트 값을 반환합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>Math와 관련된 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            최대값[Math.max()] : 100<br>
+            최소값[Math.min()] : -100<br>
+            반올림[Math.round()] : 1<br>
+            소수점 삭제[Math.floor()] : 1<br>
+            소수점 올림[Math.ceil()] : 2<br>
+            랜덤 숫자[Math.random()] : 0.19023694069547892<br>
+            원주율[Math.PI()] : 3.141592653589793
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Math&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        var numMax = Math.max(100,-100);
+        var numMin = Math.min(100,-100);
+        var numRound = Math.round(1.23456);
+        var numFloor = Math.floor(1.23456);
+        var numCeil = Math.ceil(1.23456);
+        var numRandom = Math.random(10);
+        var numPI = Math.PI;
+        
+        document.write("최대값[Math.max()] : " + numMax,"&lt;br&gt;");
+        document.write("최소값[Math.min()] : " + numMin,"&lt;br&gt;");
+        document.write("반올림[Math.round()] : " + numRound,"&lt;br&gt;");
+        document.write("소수점 삭제[Math.floor()] : " + numFloor,"&lt;br&gt;");
+        document.write("소수점 올림[Math.ceil()] : " + numCeil,"&lt;br&gt;");
+        document.write("랜덤 숫자[Math.random()] : " + numRandom,"&lt;br&gt;");
+        document.write("원주율[Math.PI()] : " + numPI,"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>숫자의 차이값을 예제입니다.</p>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;차이값&lt;/title&gt;
+    &lt;script&gt;
+        var num1 = parseInt(prompt("첫번째 숫자를 입력하세요",0));   
+        var num2 = parseInt(prompt("두번째 숫자를 입력하세요",0));     
+
+        document.write("두 숫자의 차이는 : " + Math.abs(num1-num2)+ "입니다.");    
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3</h4>
+<p>1초에 한번씩 랜덤 숫자 구하기</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <div id="random"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;1초에 한번씩 랜덤 숫자 구하기&lt;/title&gt;
+    &lt;script&gt;
+        setInterval(function(){
+            var num = Math.floor(Math.random()*101);
+            document.write(num,"&lt;br&gt;");
+        },1000);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+
 <h4 class="pt40">참고(Reference)</h4>
 <ul>
     <li>MDN JavaScript <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
 </ul>
+
+
+
+<script>
+    setInterval(function(){
+        var num = Math.floor(Math.random()*101);
+        document.getElementById('random').innerHTML = num;
+    },1000);
+</script>
+
+
+

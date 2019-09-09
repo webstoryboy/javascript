@@ -1,51 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>문자열 결합 연산자</h2>
-<p class="line">문자열과 연산자를 결합해서 사용할 수 있습니다.</p>
+<p>문자열과 연산자를 결합해서 사용할 수 있습니다.</p>
+
+<hr>
 
 <h3>문자열 결합 연산자</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>x 변수</th>
+                <th>y 변수</th>
+                <th>x + y</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>숫자</td>
+                <td>숫자</td>
+                <td>숫자</td>
+            </tr>
+            <tr>
+                <td>문자열</td>
+                <td>문자열</td>
+                <td>문자열</td>
+            </tr>
+            <tr>
+                <td>숫자</td>
+                <td>문자열</td>
+                <td>문자열</td>
+            </tr>
+            <tr>
+                <td>문자열</td>
+                <td>숫자</td>
+                <td>문자열</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-<h5>Sample : 문자열 결합 연산자</h5>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>논리 연산자를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            number<br>
+            200<br>
+            100javascript<br>
+            100200<br>
+            101<br>
+            100<br>
+            2<br>
+            1<br>
+            1<br>
+            100<br>
+            string
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = "java";
-        	var y = 30;
-        	
-        	document.write(x + 100);  // 숫자와 연산
-        	document.write("&lt;br/&gt;");
-        	document.write(x + true); // boolean 타입과 연산  
-        	document.write("&lt;br/&gt;");
-        	document.write(x + null); // null과 연산 
-        	document.write("&lt;br/&gt;");
-        	document.write(x + "script"); // 문자열과 연산 
-        	document.write("&lt;br/&gt;");
-        	document.write(true + true); // boolean타입 연산(true는 1, false는 0으로 인식) 
-			document.write("&lt;br/&gt;");
-			document.write(true + null); // boolean타입과 null (null은 0으로 인식)
-			document.write("&lt;br/&gt;");
-			
-			y = "" + y; // y를 문자열로 변환
-			document.write(y + 30);
-			
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;       
-</code></pre>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;문자 결합 연산자&lt;/title&gt;
+    &lt;script&gt;
+        var x1 = 100;           //숫자(number)
+        var x2 = "javascript";  //문자(string)
+        var x3 = "100";         //문자(string)
+        var x4 = "200";         //문자(string)
 
-</body>
-</html>
+        document.write(typeof(x1));
+        document.write("&lt;br&gt;");
+        document.write(x1 + 100);       //숫자 + 숫자
+        document.write("&lt;br&gt;");
+        document.write(x1 + x2);        //숫자 + 문자
+        document.write("&lt;br&gt;");
+        document.write(x3 + x4);        //문자 + 문자
+        document.write("&lt;br&gt;");
+        document.write(x1 + true);      //숫자 + 불린
+        document.write("&lt;br&gt;");
+        document.write(x1 + null);      //숫자 + 특수값
+        document.write("&lt;br&gt;");
+        document.write(true + true);    //불린 + 불린
+        document.write("&lt;br&gt;");
+        document.write(true + false);   //불린 + 불린
+        document.write("&lt;br&gt;");
+        document.write(true + null);    //불린 + 특수값
+        document.write("&lt;br&gt;");
+
+        x1 = "" + x1;   //숫자를 문자열로 형 변환
+        document.write(x1);
+        document.write("&lt;br&gt;");
+        document.write(typeof(x1));
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->

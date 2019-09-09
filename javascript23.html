@@ -1,15 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+
     
 
-<h2>조건문</h2>
-<p>연산자는 산술 연산, 논리 연산, 증감 연산, 비교 연산 등을 수행하도록 도와주며, 이를 통해 자료를 가공해서 결과를 만들 수 있습니다.</p>
+<h2>중첩 if문</h2>
+<p>중첩 if문은 조건문 안에 조건문이 오는 것을 말합니다.</p>
+
+<hr>
+
+<h3>중첩 if문</h3>
+<p>중첩 if문은 if문 안에 if문이 오는 구조입니다.</p>
+<p class="blue">
+if (조건식1) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; if (조건식2) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //실행문<br>
+&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+}
+</p>
 
 
-</body>
-</html>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>중첩 if문을 이용한 아이디어/비밀번호 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;중첩 if문&lt;/title&gt;
+    &lt;script&gt;
+        var useID = "webstoryboy";
+        var usePW = "1234";
+        
+        var id = prompt("아이디가 무엇입니까?","");
+        var pw = prompt("비밀번호가 무엇입니까?","");
+        
+        if( useID == id){
+            if( usePW == pw){
+                document.write( id + "님 반갑습니다.");
+            } else {
+                document.write("비밀번호가 틀립니다.");
+            }
+        } else {
+            document.write("아이디가 일치하지 않습니다.");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+

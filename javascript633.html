@@ -1,0 +1,408 @@
+
+
+<h2>함수의 사용형태</h2>
+<p>함수는 사용 형태에 따라 익명 함수, 선언적 함수, 매개변수가 있는 함수, 리턴값이 있는 함수로 구분됩니다.</p>
+
+<hr>
+
+<h3>함수의 사용형태</h3>
+<p>함수는 사용 형태에 따라 익명 함수, 선언적 함수, 매개변수가 있는 함수, 리턴값이 있는 함수로 구분됩니다.</p>
+
+<h4>기본적인 함수</h4>
+<p class="blue">
+function 함수이름(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; //실행 코드<br>
+}<br>
+함수이름();  //함수 호출
+</p>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript50.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func1(){
+            document.write("function가 실행되었습니다.");
+            document.write("&lt;br /&gt;");
+        }
+        func1();    
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<h4 class="pt50">익명 함수</h4>
+<p>익명 함수는 변수에 함수를 설정하는 방법입니다.</p>
+<p class="blue">
+var 변수이름 = function(){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행 코드<br>
+}<br>
+변수이름();	//함수 호출
+</p>
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript50.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        var func2 = function(){
+            document.write("function가 실행되었습니다.");
+        }
+        func2();   
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+
+
+<h4 class="pt50">매개변수가 있는 함수</h4>
+<p class="blue">
+function 함수이름(매개변수1, 매개변수2,.....){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+}<br>
+함수이름(매개변수1, 매개변수2,.....); //실행함수
+</p>
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript50.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function이 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func3(name){
+            document.write(name);
+        }
+        func3("function가 실행되었습니다.");  
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+<h4 class="pt50">리턴값이 있는 함수</h4>
+<p class="blue">
+function 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+&nbsp;&nbsp;&nbsp;&nbsp; return 리턴값;<br>
+}<br>
+var 변수 = 함수명(); //함수호출
+</p>
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript53.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. 함수가 실행되었습니다.<br>
+            2. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //리턴문
+        function func4(){
+            var str = "1. 함수가 실행되었습니다.<br>";
+            return str;
+        }
+        var value = func4();
+        document.write(value);
+        
+        //종료 역할하는 리턴문
+        function func41(){
+            document.write("2. 함수가 실행되었습니다.");
+            return;
+            
+            document.write("3. 함수가 실행되었습니다.");
+        }
+        func41();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
+
+
+<h4 class="pt50">재귀 함수</h4>
+<p>재귀함수는 함수 정의문 내에 함수를 다시 호출하여 실행하는 함수입니다. 함수를 반복문처럼 사용할 때 사용합니다.</p>
+<p class="blue">
+function 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 함수이름();<br>
+}<br>
+함수이름(); //함수호출
+</p>
+
+<!-- Sample5 -->
+<h4 class="pt50">Sample5 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function이 실행되었습니다.function이 실행되었습니다.function이 실행되었습니다.function이 실행되었습니다.....
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func5(){
+            document.write("함수가 실행되었습니다.");
+            func5();
+        }
+        func5();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample5 -->
+
+
+
+<h4 class="pt50">템플릿 리터럴(Template Literal)</h4>
+<p>템플릿 리터럴은 백틱(backtick) 문자 `를 사용하여 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다.</p>
+<p class="blue">
+`${ … }` 
+</p>
+
+
+<!-- Sample6 -->
+<h4 class="pt50">Sample6 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>템플릿 리터럴을 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. 함수가 실행되었습니다.<br>
+            2. 함수가 실행되었습니다.<br>
+            3. 함수가 실행되었습니다.<br>
+            4. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;템플릿 리터럴(Template Literal)&lt;/title&gt;
+    &lt;script&gt;
+        function func6(name){
+            document.write('1. '+ name +'가 실행되었습니다.&lt;br&gt;');
+            document.write(`2. ${name}가 실행되었습니다.&lt;br&gt;`);
+        }
+        func6("함수");
+        
+        function func61(text1, text2){
+            document.write('3. '+ text1 + '가 ' + text2 + '되었습니다.&lt;br&gt;');
+            document.write(`4. ${text1}가 ${text2}되었습니다.&lt;br&gt;`);
+        }
+        func61("함수", "실행");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample6 -->
+
+
+
+
+<h4 class="pt50">화살표 함수 </h4>
+<p>화살표 함수(Arrow function)는 function 키워드 대신 화살표(=>)를 사용하여 좀 더 간단하게 함수를 사용할 수 있는 방법입니다. </p>
+<p class="blue">
+(매개변수) => {<br>           
+&nbsp;&nbsp;&nbsp;&nbsp;//실행문<br>
+};
+</p>
+
+
+<!-- Sample7 -->
+<h4 class="pt50">Sample7 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. function가 실행되었습니다.<br>
+            2. function가 실행되었습니다.<br>
+            3. function가 실행되었습니다.<br>
+            4. function가 실행되었습니다.<br>
+            5. function가 실행되었습니다.<br>
+            6. function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;템플릿 리터럴(Template Literal)&lt;/title&gt;
+    &lt;script&gt;
+        //기본함수
+        function func7(){
+            document.write("1. function가 실행되었습니다.<br>");
+        }
+        func7();
+        
+        //익명 함수
+        const func71 = function(){
+            document.write("2. function가 실행되었습니다.<br>");
+        }
+        func71(); 
+                
+        //리턴문 함수
+        const func72 = function(){
+            var str = "3. function가 실행되었습니다.<br>";
+            return str;
+        }
+        var value = func72();
+        document.write(value); 
+        
+        //화살표 함수
+        const func73 = (str) => {
+            return str;
+        }
+        const value1 = func73("4. function가 실행되었습니다.<br>");
+        document.write(value1); 
+        
+        //화살표 함수 간략화
+        const func74 = (str) => str;
+        
+        const value2 = func74("5. function가 실행되었습니다.<br>");
+        document.write(value2); 
+        
+        //템플릿 리터럴와 화살표 함수
+        const func75 = (str2) => {
+            document.write(`${str2}`);
+        }
+        func75("6. function가 실행되었습니다.");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample7 -->
+
+

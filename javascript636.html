@@ -1,0 +1,108 @@
+
+
+<h2>매개변수가 있는 함수</h2>
+<p>변수를 통해 함수의 값을 전달하는 함수입니다.</p>
+
+<hr>
+
+<h3>매개변수가 있는 함수</h3>
+<p>변수를 통해 함수의 값을 전달하는 함수입니다.</p>
+<p class="blue">
+function 함수이름(매개변수1, 매개변수2,.....){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+}<br>
+함수이름(매개변수1, 매개변수2,.....); //실행함수
+</p>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript52.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>매개변수가 있는 함수 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function이 실행되었습니다.<br>
+            30
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+         function func3(name){
+            document.write(name);
+        }
+        func3("function가 실행되었습니다.&lt;br&gt;");
+        
+        function func31(num1, num2){
+            document.write(num1 + num2);
+        }
+        func31(10,20);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript62.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>리턴문을 이용한 매개변수가 있는 함수 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100<br>
+            20
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func31(num){
+            return num * num;
+        }
+        document.write(func31(10),"&lt;br&gt;"); 
+        
+        function func32(num1, num2){
+            return num1 + num2;
+        }
+        document.write(func32(10, 10)); 
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+

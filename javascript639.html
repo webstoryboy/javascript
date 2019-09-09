@@ -1,0 +1,64 @@
+
+
+<h2>템플릿 리터럴</h2>
+<p>템플릿 리터럴은 백틱(backtick) 문자 `를 사용하여 새로운 문자열을 삽입할 수 있는 기능을 제공합니다.</p>
+
+<hr>
+
+<h3>템플릿 리터럴</h3>
+<p>템플릿 리터럴은 백틱(backtick) 문자 `를 사용하여 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다.</p>
+<p class="blue">
+`${ … }` 
+</p>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>템플릿 리터럴을 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. 함수가 실행되었습니다.<br>
+            2. 함수가 실행되었습니다.<br>
+            3. 함수가 실행되었습니다.<br>
+            4. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;템플릿 리터럴(Template Literal)&lt;/title&gt;
+    &lt;script&gt;
+        function func6(name){
+            document.write('1. '+ name +'가 실행되었습니다.&lt;br&gt;');
+            document.write(`2. ${name}가 실행되었습니다.&lt;br&gt;`);
+        }
+        func6("함수");
+        
+        function func61(text1, text2){
+            document.write('3. '+ text1 + '가 ' + text2 + '되었습니다.&lt;br&gt;');
+            document.write(`4. ${text1}가 ${text2}되었습니다.&lt;br&gt;`);
+        }
+        func61("함수", "실행");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+

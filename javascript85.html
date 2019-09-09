@@ -1,12 +1,15 @@
 
 
 <h2>location 객체</h2>
-<p class="line">location 객체는 현재 사용 중인 URL에 대한 정보를 제공하는 객체입니다.</p>
+<p>location 객체는 현재 사용 중인 URL에 대한 정보를 제공하는 객체입니다.</p>
+
+<hr>
 
 <h3>location 객체</h3>
+<p>location 객체는 브라우저 주소 창에 대한 속성과 메서드를 제공하는 객체입니다.</p>
 <p class="blue">location.속성</p>
 
-<h5>location 객체 메서드</h5>
+<h5 class="pt50">location 객체 메서드</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -67,21 +70,432 @@
                 <td>주소를 설정하거나 URL을 반환합니다.</td>
             </tr>
             <tr>
-                <td>location.port()</td>
-                <td>URL에 포트 번호를 반환합니다.</td>
+                <td>location.password()</td>
+                <td>URL의 해시값(#값)을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>location.pathname()</td>
+                <td>URL에 '/'이후에 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>location.protocol()</td>
                 <td>URL에 프로토콜을 반환합니다.</td>
             </tr>
+             <tr>
+                <td>location.port()</td>
+                <td>URL에 포트 번호를 반환합니다.</td>
+            </tr>
             <tr>
                 <td>location.search()</td>
-                <td>URL의 퀴리 값을 반환합니다.</td>
+                <td>URL의 서치의 파라미터 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>location.username()</td>
+                <td>URL의 도메인 이름을 반환합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript41.html#1" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>브라우저 주소와 관련된 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            해시값(#값)[location.hash] : #1<br>
+            브라우저 주소[location.href] : http://webstoryboy.dothome.co.kr/Wscript/javascript41.html#1<br>
+            호스트 이름과 포트 번호[location.hostname] : webstoryboy.dothome.co.kr<br>
+            호스트[location.host] : webstoryboy.dothome.co.kr<br>
+            프로토콜[location.protocol] : http:<br>
+            '/'이후에 값[location.pathname] : /Wscript/javascript41.html
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        location.href = "http://webstoryboy.dothome.co.kr/Wscript/javascript41.html#1"
+        var nowHash = location.hash;
+        var nowHref = location.href;
+        var nowHostname = location.hostname;
+        var nowHost = location.host;
+        var nowProtocol = location.protocol;
+        var nowPathname = location.pathname;
+        
+        document.write("해시값(#값)[location.hash] : " + nowHash, "&lt;br&gt;");
+        document.write("브라우저 주소[location.href] : " + nowHref, "&lt;br&gt;");
+        document.write("호스트 이름과 포트 번호[location.hostname] : " + nowHostname, "&lt;br&gt;");
+        document.write("호스트[location.host] : " + nowHost, "&lt;br&gt;");
+        document.write("프로토콜[location.protocol] : " + nowProtocol, "&lt;br&gt;");
+        document.write("'/'이후에 값[location.pathname] : " + nowPathname, "&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<style>
+    .none button {border: 1px solid #ccc; border-radius: 3px; padding: 2px 10px 0px 10px;}
+</style>
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript71.html#1" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>클릭하면 사이트로 이동하는 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <button id="btn1">네이버로 이동</button>
+            <button id="btn2">다음으로 이동</button>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;클릭하면 사이트 이동하기&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id="btn1"&gt;네이버로 이동&lt;/button&gt;
+    &lt;button id="btn2"&gt;다음으로 이동&lt;/button&gt;
+    
+    &lt;script&gt;
+        document.getElementById("btn1").onclick = function() {
+            location.href = "https://www.naver.com/";
+        }
+        document.getElementById("btn2").onclick = function() {
+            location.href = "https://www.daum.net/";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript72.html#1" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>10초 후에 사이트 새로고침하기 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            10초 뒤에 사이트가 새로고침됩니다.<br>
+            10초 뒤에 사이트가 새로고침됩니다.<br>
+            10초 뒤에 사이트가 새로고침됩니다.<br>
+            10초 뒤에 사이트가 새로고침됩니다. 
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;10초 후에 사이트 새로고침하기&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function text(){
+            document.write("10초 뒤에 사이트가 새로고침됩니다.&lt;br&gt;");
+        }
+        function func1(){
+            location.reload();
+        }
+        
+        setInterval(text, 1000); 
+        setInterval(func1, 10000); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+
+
+<h4 class="pt50">호환성(Compatibility) 
+    <a href="http://webzz.tistory.com/227" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a>
+    <span class="can">caniuse.com <a href="https://caniuse.com/#search=location.href" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span>
+</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">location.assign()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.reload()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.replace()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.hash()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.host()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.hostname()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.href()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.password()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.pathname()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.protocol()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.port()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.search()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">location.username()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 사파리 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- IOS -->
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
 
 
 

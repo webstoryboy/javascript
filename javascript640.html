@@ -1,0 +1,93 @@
+
+
+<h2>화살표 함수</h2>
+<p>화살표 함수(Arrow function)는 function 키워드 대신 화살표(=>)를 사용하여 좀 더 간단하게 함수를 사용할 수 있는 함수입니다.</p>
+
+<hr>
+
+<h3>화살표 함수</h3>
+<p>화살표 함수(Arrow function)는 function 키워드 대신 화살표(=>)를 사용하여 좀 더 간단하게 함수를 사용할 수 있는 함수입니다.</p>
+<p class="blue">
+() => {<br>           
+&nbsp;&nbsp;&nbsp;&nbsp;//실행문<br>
+};
+</p>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. function가 실행되었습니다.<br>
+            2. function가 실행되었습니다.<br>
+            3. function가 실행되었습니다.<br>
+            4. function가 실행되었습니다.<br>
+            5. function가 실행되었습니다.<br>
+            6. function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;템플릿 리터럴(Template Literal)&lt;/title&gt;
+    &lt;script&gt;
+        //기본함수
+        function func7(){
+            document.write("1. function가 실행되었습니다.<br>");
+        }
+        func7();
+        
+        //익명 함수
+        const func71 = function(){
+            document.write("2. function가 실행되었습니다.<br>");
+        }
+        func71(); 
+                
+        //리턴문 함수
+        const func72 = function(){
+            var str = "3. function가 실행되었습니다.<br>";
+            return str;
+        }
+        var value = func72();
+        document.write(value); 
+        
+        //화살표 함수
+        const func73 = (str) => {
+            return str;
+        }
+        const value1 = func73("4. function가 실행되었습니다.<br>");
+        document.write(value1); 
+        
+        //화살표 함수 간략화
+        const func74 = (str) => str;
+        
+        const value2 = func74("5. function가 실행되었습니다.<br>");
+        document.write(value2); 
+        
+        //템플릿 리터럴와 화살표 함수
+        const func75 = (str2) => {
+            document.write(`${str2}`);
+        }
+        func75("6. function가 실행되었습니다.");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+

@@ -1,0 +1,110 @@
+
+    
+
+<h2>setInterval()</h2>
+<p>setInterval() 일정 시간마다 함수를 반복해서 실행합니다.</p>
+
+<hr>
+
+<h3>setInterval()</h3>
+<p>setInterval() 일정 시간마다 함수를 반복해서 실행합니다.</p>
+<p class="blue">
+setInterval(함수, 시간);
+</p>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>일정한 시간마다 함수를 반복해서 사용한다면 setInterval()을 사용합니다.</li>
+    <li>일정한 시간 후에 함수를 한 번만 사용한다면 setTimeout()을 사용합니다.</li>
+    <li>일정한 시간마다 함수를 반복해서 사용하는 것을 중지할려면 clearInterval()을 사용합니다.</li>
+    <li>일정한 시간 후에 함수를 한 번만 사용하는 것을 중지할려면 clearTimeout()을 사용합니다.</li>
+</ul>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript69.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>일정한 시간마다 함수가 실행되는 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            함수가 실행되었습니다.<br>
+            함수가 실행되었습니다.<br>
+            함수가 실행되었습니다........
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;타이머 설정&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function func1(){
+            document.write("함수가 실행되었습니다.&lt;br&gt;");
+        }
+        setInterval(func1, 5000); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">setInterval()</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

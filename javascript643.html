@@ -1,0 +1,64 @@
+
+
+<h2>클로저</h2>
+<p></p>
+
+<hr>
+
+<h3>클로저</h3>
+<p></p>
+
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript64.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. 함수가 실행되었습니다.<br>
+			2. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;클로저&lt;/title&gt;
+    &lt;script&gt;
+        function func10(){
+            var text = "1. 함수가 실행되었습니다.&lt;br&gt;";
+            return text;
+        }
+        var result = func10();
+        document.write(result);
+        
+        function func11(){
+            var title = "2. 함수가 실행되었습니다.";
+            return function(){
+                document.write(title);
+            };
+        }
+        var result2 = func11();
+        result2();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+

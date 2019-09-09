@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>증감 연산자</h2>
-<p class="line">증가 연산자는 1만큼 증가시키고, 감소 연산자는 1만큼 감소시킵니다.</p>
+<p>증가 연산자는 1만큼 증가시키고, 감소 연산자는 1만큼 감소시킵니다.</p>
+
+<hr>
 
 <h3>증감 연산자</h3>
 <div class="table-responsive">
@@ -40,32 +35,59 @@
     </table>
 </div>
 
-<h5>Sample : 증감 연산자</h5>
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>대입 연산자를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            9<br>
+            10<br>
+            20,21<br>
+            22,22
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 10;
-			
-			document.write(x++);
-			document.write("&lt;br/&gt;");
-			document.write(++x);
-			document.write("&lt;br/&gt;");
-			document.write(x--);
-			document.write("&lt;br/&gt;");
-			document.write(--x);
-			
-        &lt;/script&gt;
-    &lt;/head&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;증감 연산자&lt;/title&gt;
+    &lt;script&gt;
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--;     //9
+        document.write(num1, "&lt;br&gt;");
+
+        num1++;     //10
+        document.write(num1, "&lt;br&gt;");
+
+        result = num2++;    //20, 21
+        document.write(result, "&lt;br&gt;");
+        document.write(num2, "&lt;br&gt;");
+
+        result = ++num2;    //22, 22
+        document.write(result, "&lt;br&gt;");
+        document.write(num2, "&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;   
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

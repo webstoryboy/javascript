@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
 
 <h2>switch문</h2>
 <p class="line">해당 조건에 맞는 값을 case로 구분해서 수행하는 제어문입니다.</p>
 
 <h3>switch문</h3>
 <p class="blue">
+var 변수 = 초깃값;<br>
 switch (조건을 체크할 변수) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;csae 값1 :<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//조건을 체크할 변수가 값1을 가지면 실행<br>
@@ -29,7 +22,14 @@ switch (조건을 체크할 변수) {<br>
 </p>
 
 
-<h5>Sample : switch문 <a href="https://webstoryboy.github.io/javascript/sample05_6.html" class="view" target="_blank">View</a></h5>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>switch문을 이용한 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
@@ -65,9 +65,20 @@ switch (조건을 체크할 변수) {<br>
     &lt;/body&gt;
 &lt;/html&gt; 
 </code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
-<h5>Sample : switch문 <a href="https://webstoryboy.github.io/javascript/sample05_7.html" class="view" target="_blank">View</a></h5>
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>switch문을 이용한 사이트 이동 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
@@ -78,32 +89,37 @@ switch (조건을 체크할 변수) {<br>
 			var url;
 			
 			switch(site){
-				case "네이버":url="www.naver.com";
+				case "네이버":url="https://www.naver.com";
 				break;
 				
-				case "다음":url="www.daum.net";
+				case "다음":url="https://www.daum.net";
 				break;
 				
-				case "구글":url="www.google.co.kr";
+				case "구글":url="https://www.google.com";
 				break;
 				
-				case "네이트":url="www.nate.com";
+				case "네이트":url="https://www.nate.com";
 				break;
 				
 				default : document.write("그런 사이트는 없습니다.");
 				break;
 			}
 			
-			location.href="http://"+url;
+			location.href=url;
+			//if(url) location.href=url
         &lt;/script&gt;
     &lt;/head&gt;
     
     &lt;body&gt;
 	...
     &lt;/body&gt;
-&lt;/html&gt;  
+&lt;/html&gt;   
 </code></pre>
+    </div>
+</div>
+<!-- sample2 -->
 
 
-</body>
-</html>
+
+
+

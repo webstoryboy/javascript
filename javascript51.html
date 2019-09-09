@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>변수의 검사</h2>
-<p class="line">현재 변수에 어떠한 자료형이 저장되어 있는지 검사합니다.</p>
+<p>현재 변수에 어떠한 자료형이 저장되어 있는지 검사합니다.</p>
+
+<hr>
 
 <h3>변수의 검사</h3>
 <p>현재 변수에 어떠한 자료형이 저장되어 있는지 검사합니다.</p>
@@ -16,40 +11,64 @@
 typeof(검사할 대상)
 </p>
 
-<h5>Sample : 변수의 검사 <a href="https://webstoryboy.github.io/javascript/sampel03_4.html" class="view" target="_blank">View</a></h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-        	var var1 = 30;	// 숫자 대입
-			document.write(typeof(var1));
-			document.write("&lt;br /&gt;");
-			
-			var1 = "hello";	// 문자열 대입
-			document.write(typeof(var1));
-			document.write("&lt;br /&gt;");
-			
-			var1 = function(){};	// funtion 대입
-			document.write(typeof(var1));
-			document.write("&lt;br /&gt;");
-			
-			var1 = {};	// 객체 대입
-			document.write(typeof(var1));
-			document.write("&lt;br /&gt;");
-			
-			var var2;	// 초기화 안함
-			document.write(typeof(var2));
-			document.write("&lt;br /&gt;");
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;     
-</code></pre>
 
-</body>
-</html>
+<!-- Sample1 -->
+<h4 class="pt50">변수의 검사</h4>
+<p>현재 변수에 어떠한 자료형이 저장되어 있는지 검사하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            number<br>
+			string<br>
+			string<br>
+			undefined<br>
+			function<br>
+			object<br>
+			symbol
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Javascript&lt;/title&gt;
+	&lt;script&gt;
+		var x1 = 30;				//숫자 저장
+		var x2 = "30";				//문자열 저장
+		var x3 = "javascript";		//문자열 저장
+		var x4;						//선언
+		var x5 = function(){};		//함수 저장
+		var x6 = {};				//객체 저장
+		var x7 = Symbol();			//심볼 저장
+
+		document.write(typeof(x1));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x2));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x3));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x4));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x5));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x6));
+		document.write("&lt;br&gt;");
+		document.write(typeof(x7));
+		document.write("&lt;br&gt;");
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->

@@ -1,0 +1,73 @@
+
+
+<h2>내부 함수</h2>
+<p>내부 함수는 함수 안에 함수를 선언하는 함수를 말합니다.</p>
+
+<hr>
+
+<h3>내부 함수</h3>
+<p>내부 함수는 함수 안에 함수를 선언하는 함수를 말합니다.</p>
+<p class="blue">
+function 외부 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//실행 코드<br>
+&nbsp;&nbsp;&nbsp;&nbsp;function 내부 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//실행 코드<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;내부 함수이름();<br>
+}<br>
+외부 함수이름();
+</p>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            함수가 출력되었습니다.<br>
+            함수가 출력되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;내부 함수&lt;/title&gt;
+    &lt;script&gt;
+        function outter(){
+            function inner(){
+                var title = "함수가 출력되었습니다.&lt;br&gt;"; 
+                document.write(title);
+            }
+            inner();
+        }
+        outter();
+        
+        function outter2(){
+            var title = "함수가 출력되었습니다."; 
+            function inner2(){
+                document.write(title);
+            }
+            inner2();
+        }
+        outter2();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+

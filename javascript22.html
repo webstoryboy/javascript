@@ -1,15 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+
     
 
-<h2>연산자</h2>
-<p class="line">연산자는 산술 연산, 논리 연산, 증감 연산, 비교 연산 등을 수행하도록 도와주며, 이를 통해 자료를 가공해서 결과를 만들 수 있습니다.</p>
+<h2>정리</h2>
+<p>연산자를 통해 다음과 같은 예제를 만들 수 있습니다.</p>
 
 
-</body>
-</html>
+<hr>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>적정 체중을 알아보는 예제입니다.</p>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;적정 체중 구하기&lt;/title&gt;
+	&lt;script&gt;
+		//적정 체중 = (본인 신장 - 100) * 0.9;
+
+		// var userHegiht = 174; 	//키
+		// var userWeight = 90;	//몸무게
+		// var normal = (userHegiht - 100) * 0.9;
+
+		var name = prompt("당신의 이름은?","");
+		var height = prompt("당신의 키는?", "0");
+		var weight = prompt("당신의 몸무게는?", "0");
+
+		var normal = (height - 100) * 0.9;
+		var result = weight &gt;= normal - 5 && weight &lt;= normal + 5;
+		//console.log(result);
+		result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+		document.write(name +"님은 "+ result);
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample1</h4>
+<p>지출 내역을 알아보는 예제입니다.</p>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+	&lt;script&gt;
+		// var price1 = 3000;
+		// var price2 = 6000;
+		// var price3 = 3000;
+
+		// var total = price1 + price2 + price3;
+		// var result =  total &gt; 10000  ? "초과되었습니다." : "돈 관리 잘했어요!";
+
+		var price1 = prompt("당신의 교통비는?");
+		var price2 = prompt("당신의 식비는?");
+		var price3 = prompt("당신의 음료비?");
+
+		price1 = Number(price1);
+		price2 = Number(price2);
+		price3 = Number(price3);
+
+		var total = price1 + price2 + price3;
+		
+		console.log(total);
+		var result =  total &gt; 10000  ? total - 10000 + "초과되었습니다." : "돈 관리 잘했어요!";
+
+		document.write(result);
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->

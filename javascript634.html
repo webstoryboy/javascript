@@ -1,0 +1,101 @@
+
+
+<h2>기본적인 함수</h2>
+<p>함수의 일반적인 사용 방법입니다.</p>
+
+<hr>
+
+<h3>기본적인 함수</h3>
+<p>가장 기본적으로 사용하는 함수의 형태입니다. 기본적으로 함수는 함수 이름을 설정하고 함수 이름을 호출해야 실행이 됩니다.</p>
+<p class="blue">
+function 함수이름(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; //실행 코드<br>
+}<br>
+함수이름();  //함수 호출
+</p>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript50.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func1(){
+            document.write("function가 실행되었습니다.");
+            document.write("&lt;br /&gt;");
+        }
+        func1();    
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript61.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>두개의 동일한 함수가 있는 경우 뒤에 있는 함수가 호출됩니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            2. function가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        function func1(){
+            document.write("1. function가 실행되었습니다.&lt;br /&gt;");
+        }
+        function func1(){
+            document.write("2. function가 실행되었습니다.&lt;br /&gt;");
+        }
+        func1();  
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+

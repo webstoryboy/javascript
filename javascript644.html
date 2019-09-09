@@ -1,0 +1,74 @@
+
+
+<h2>가변인자 함수</h2>
+<p>가변인자 함수는 매개 변수의 지정없이 사용하는 함수입니다.</p>
+
+<hr>
+
+<h3>가변인자 함수</h3>
+<p>가변인자 함수는 매개 변수의 지정없이 사용하는 함수입니다. arguments는 가상 공간에 변수 값을 지정하여 배열 형태로 사용합니다.</p>
+<p class="blue">
+function 함수 이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//arguments.length <br>
+&nbsp;&nbsp;&nbsp;&nbsp;//arguments[i]<br>
+}
+</p>
+
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript65.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            15<br>
+            15
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        function func1() {
+            var num = arguments.length;
+            var sum = 0;
+            for(var i=0; i&lt;num; i++) {
+                sum = sum + arguments[i];
+            }
+            return sum;
+        }
+        document.write(func1(1,2,3,4,5),"&lt;br&gt;");
+        
+        function func2() {
+            var sum = 0;
+            for(var i in arguments) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        document.write(func2(1,2,3,4,5));
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+

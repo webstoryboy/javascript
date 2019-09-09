@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
 
-<h2>복합 연산자</h2>
-<p class="line">복합 연산자는 사칙연산을 간결하게 표현할 때 사용합니다.</p>
 
-<h3>복합 연산자</h3>
+<h2>대입 연산자</h2>
+<p class="line">대입 연산자는 사칙연산을 간결하게 표현할 때 사용합니다.</p>
+
+<h3>대입 연산자</h3>
 <div class="table-responsive">
     <table class="table table-bordered table-striped">
         <colgroup>
@@ -55,31 +48,114 @@
     </table>
 </div>
 
-<h5>Sample : 복합 연산자</h5>
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>대입 연산자를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            10
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-       	/*	
-        	var x = 10;
-			x = x +10;
-			document.write(x);
-        */
-
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;복합 연산자&lt;/title&gt;
+    &lt;script&gt;
         var x = 10;
-        x += 10;
+        var y = 20;
+
+        //x = x + 10;
+        //x += 10;
+        
+        //y = y - 10;
+        //y -= 10
+
+        //x = x * 10;
+        //x *= 10;
+
+        //y = y / 10;
+        //y /= 10;
+
+        //x = x % 10;
+        //x %= 10;
+
         document.write(x);
-        &lt;/script&gt;
-    &lt;/head&gt;
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
-</body>
-</html>
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>대입 연산자를 이용한 테이블 만들기 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <table border="1">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;table&lt;/title&gt;
+    &lt;script&gt;
+        var table = "&lt;table border='1'&gt;";
+        table += "&lt;tr&gt;";
+        table += "&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;";
+        table += "&lt;/tr&gt;";
+        table += "&lt;/table&gt;";
+
+        document.write(table);
+        console.log(table);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt; --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->

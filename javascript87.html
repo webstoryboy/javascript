@@ -6,13 +6,109 @@
 </p>
 
 <h3>이벤트</h3>
+<p>자바스크립트에는 다음과 같은 이벤트가 있습니다.</p>
+<ul>
+    <li>애니메이션 이벤트</li>
+    <li>클립보드 이벤트</li>
+    <li>드래그 이벤트</li>
+    <li>포커스 이벤트</li>
+    <li>URL 이벤트</li>
+    <li>인풋 이벤트</li>
+    <li>키보드 이벤트</li>
+    <li>마우스 이벤트</li>
+    <li>페이지 전환 이벤트</li>
+    <li>PopState 이벤트</li>
+    <li>Progress 이벤트</li>
+    <li>storage 이벤트</li>
+    <li>터치 이벤트</li>
+    <li>트랜지션 이벤트</li>
+    <li>UI 이벤트</li>
+    <li>휠 이벤트</li>
+</ul>
+
+<h4 class="pt50">이벤트에서 쓰는 용어</h4>
+<ul>
+    <li>이벤트 리스너 : 이벤트 속성에 연결된 함수를 나타냅니다.</li>
+    <li>디폴트 이벤트 : 요소가 가지고 있는 기본적인 이벤트를 나타냅니다.</li>
+    <li>이벤트 모델 : 이벤트를 연결하는 방법을 나타냅니다. </li>
+</ul>
 
 
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript74.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>클릭 이벤트 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <button id="btn1">버튼1</button>
+            <button id="btn2">버튼2</button>
+            <button id="btn3">버튼3</button>
+            <button id="btn4" onclick="btn4()">버튼4</button>
+            <button id="btn5">버튼5</button>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;이벤트&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;button id="btn1"&gt;버튼1&lt;/button&gt;
+    &lt;button id="btn2"&gt;버튼2&lt;/button&gt;
+    &lt;button id="btn3"&gt;버튼3&lt;/button&gt;
+    &lt;button id="btn4" onclick="btn4()"&gt;버튼4&lt;/button&gt;
+    &lt;button id="btn5"&gt;버튼5&lt;/button&gt;
+    
+    &lt;script&gt;
+        var btn1 = document.getElementById("btn1");
+
+        //btn1
+        function click(){
+            document.write("1버튼을 클릭하였습니다.");
+        }
+        btn1.onclick = click; 
+
+        //btn2
+        var btn2 = document.getElementById("btn2");
+
+        btn2.onclick = function(){
+            document.write("2버튼을 클릭하였습니다.");
+        }
+
+        //btn3
+        document.getElementById("btn3").onclick = function(){
+            document.write("3버튼을 클릭하였습니다.");
+        }
+
+        //btn4
+        function btn4(){
+            document.write("4버튼을 클릭하였습니다.");
+        }
+        
+        //btn5 이벤트 리스너
+        var btn5 = document.getElementById("btn5");
+        btn5.addEventListener("click", function(){
+            document.write("5버튼을 클릭하였습니다.");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
-
-
-<h5>이벤트 속성</h5>
+<h5 class="pt50">이벤트 속성</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>

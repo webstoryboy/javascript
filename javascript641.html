@@ -1,0 +1,113 @@
+
+
+<h2>콜백 함수</h2>
+<p>함수를 변수에 저장하고 변수를 함수의 인수로 사용하여 매개변수에 전달하는 함수입니다.</p>
+
+<hr>
+
+<h3>콜백 함수</h3>
+<p>콜백 함수는 매개변수로 전달하는 함수입니다.</p>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript59.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>화살표 함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.<br>
+			함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;콜백 함수&lt;/title&gt;
+    &lt;script&gt;
+        function callback(num){
+            for(var i=1; i<=10; i++){
+                num(i);
+            }
+        }
+        var func7 = function(i){
+            document.write("함수가 실행되었습니다.<br>");
+        }
+        
+        callback(func7);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript60.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콜백함수를 이용한 오름차순 내림차순 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            내림차순 : 200,100,90,70,50,30,10,0<br>
+			오름차순 : 0,10,30,50,70,90,100,200
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;콜백 함수&lt;/title&gt;
+    &lt;script&gt;
+        var num = [0,50,100,70,90,30,10,200];
+        
+        function func81(x,y){
+            return y-x;
+        }
+        function func82(x,y){
+            return x-y;
+        }
+        
+        document.write("내림차순 : " + num.sort(func81),"&lt;br&gt;");
+        document.write("오름차순 : " + num.sort(func82),"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+

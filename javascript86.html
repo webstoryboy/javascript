@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
-
 <h2>문서 객체</h2>
-<p class="line">문서 객체 모델(Document Object Model)은 자바스크립트를 통해 브라우저에서 동작하는 형태를 접근하는 방식이며, 문서와 관력된 객체입니다.</p>
+<p>문서 객체 모델(Document Object Model)은 자바스크립트를 통해 브라우저에서 동작하는 형태를 접근하는 방식이며, 문서와 관력된 객체입니다.</p>
+
+<hr>
 
 <h3>문서 객체</h3>
 
@@ -28,53 +21,226 @@
         </thead>
         <tbody>
             <tr>
-                <td>createElement(tagName)</td>
+                <td>createElement()</td>
                 <td>요소 노드를 생성합니다.</td>
             </tr>
             <tr>
-                <td>createTextNode(text)</td>
+                <td>createTextNode()</td>
                 <td>텍스트 노드를 생성합니다.</td>
             </tr>
             <tr>
-                <td>appendChild(node)</td>
-                <td>객체에 노드를 연결합니다.</td>
+                <td>appendChild()</td>
+                <td>객체에 노드를 추가합니다.</td>
             </tr>
             <tr>
-                <td>setAttribute(name, value)</td>
-                <td>객체의 속성을 지정합니다.</td>
+                <td>setAttribute()</td>
+                <td>객체의 속성을 설정합니다.</td>
             </tr>
             <tr>
-                <td>getAttribute(name)</td>
+                <td>getAttribute()</td>
                 <td>객체의 속성을 가져옵니다.</td>
             </tr>
             <tr>
-                <td>getElementById(id)</td>
-                <td>태그의 id속성이 id와 일치하는 문서 객체를 가져옵니다.</td>
+                <td>getElementById()</td>
+                <td>ID 속성을 가져옵니다.</td>
             </tr>
             <tr>
-                <td>getElementsByName(name)</td>
-                <td>태그의 name 속성이 name과 일치하는 문서 객체를 배열로 가져옵니다.</td>
+                <td>getElementsByName()</td>
+                <td>객체의 속성 이름을 가져옵니다.</td>
             </tr>
             <tr>
-                <td>getElementsByTagName(tagName)</td>
-                <td>tagName과 일치하는 문서 객체를 배열로 가져옵니다.</td>
+                <td>getElementsByTagName()</td>
+                <td>태그를 선택합니다.</td>
             </tr>
             <tr>
-                <td>removeChild(child)</td>
-                <td>문서 객체의 자식 노드를 제거합니다.</td>
+                <td>removeChild()</td>
+                <td>객체의 자식 노드를 제거합니다.</td>
             </tr>
             <tr>
-                <td>doucment.querySelector(선택자)</td>
+                <td>querySelector()</td>
                 <td>선택자로 가장 처음 선택되는 문서 객체를 가져옵니다.</td>
             </tr>
             <tr>
-                <td>document.querySelectorAll(선택자)</td>
+                <td>querySelectorAll()</td>
                 <td>선택자로 선택되는 문서 객체를 배열로 가져옵니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
+<h5>자바스크립트와 제이쿼리의 비교</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 20%">
+            <col style="width: 40%">
+            <col style="width: 40%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>선택</th>
+                <th>자바스크립트</th>
+                <th>제이쿼리</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>이름</td>
+                <td>document.getElementsByName()</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td>document.getElementsById("아이디")</td>
+                <td>$("#아이디")</td>
+            </tr>
+            <tr>
+                <td>태그</td>
+                <td>document.getElementsByTagName("태그")</td>
+                <td>$("태그")</td>
+            </tr>
+            <tr>
+                <td>자식 선택자</td>
+                <td>childNodes</td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
 
-</body>
-</html>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>getElementById를 이용한 ID선택하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>getElementById</h3>
+        <div id="list1">
+            <ul>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+                <li>.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+                <li>.nextUntil() 메서드는 지정한 선택 요소의 모든 요소를 선택합니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <button href="#c" id="off11">리셋</button>
+        <button href="#c" id="btn11">클릭하면 글씨색이 변경됩니다.</button>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Javascript<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">window.onload = function(){
+    document.getElementById("off1").onclick = function(){
+        document.getElementById("list").style.color="#000"
+    }
+    document.getElementById("btn1").onclick = function(){
+        document.getElementById("list").style.color="#c7254e"
+    } 
+}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jQuery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$(document).ready(function(){
+    $("#off1").on("click", function(){
+        $("#list").css("color","#000");
+    });
+    $("#btn1").on("click", function(){
+        $("#list").css("color","#c7254e");
+    });
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;getElementById&lt;/h3&gt;
+    &lt;div id="list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.nextUntil() 메서드는 지정한 선택 요소의 모든 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice"&gt;
+        &lt;button href="#c" id="off1"&gt;리셋&lt;/button&gt;
+        &lt;button href="#c" id="btn1"&gt;클릭하면 글씨색이 변경됩니다.&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;        
+        window.onload = function(){
+            document.getElementById("off1").onclick = function(){
+                document.getElementById("list").style.color="#000"
+            }
+            document.getElementById("btn1").onclick = function(){
+                document.getElementById("list").style.color="#c7254e"
+            } 
+        }
+    &lt;/script&gt;
+    
+    &lt;!-- jQuery로 작성한다면~ --&gt;
+&lt;!--
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function(){
+            $("#off1").on("click", function(){
+                $("#list").css("color","#000");
+            });
+            $("#btn1").on("click", function(){
+                $("#list").css("color","#c7254e");
+            });
+        });
+    &lt;/script&gt;
+--&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $("#off11").on("click", function(){
+        $("#list1").css("color","#000");
+    });
+    $("#btn11").on("click", function(){
+        $("#list1").css("color","#c7254e");
+    });
+</script>
+
+<!-- //Sample1 -->
+
+
+
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>

@@ -1,52 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>if문</h2>
-<p class="line">if문 단독으로 사용하는 형태입니다.</p>
+<p>if문 단독으로 사용하는 형태입니다.</p>
+
+<hr>
 
 <h3>if문</h3>
+<p>자바스크립트에서 가장 많이 사용하는 if문입니다. if문은 조건식을 사용할 때 많이 씁니다.</p>
 <p class="blue">
-if (조건) {<br>
+if (조건식) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//실행코드<br>
 }
 </p>
 
-<h5>Sample : if문 <a href="https://webstoryboy.github.io/javascript/sample05_1.html" class="view" target="_blank">View</a></h5>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>if문을 이용한 다양한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100<br>
+            100<br>
+            당신은 전화를 많이쓰네요~<br>
+            당신이 입력한 숫자는 짝수입니다.<br>
+            100<br>
+            66님 방갑습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 100;
-        	
-        	if(x % 2 == 0) {
-	        	document.write("짝수");
-        	}
-        	
-        	
-        	var value = window.prompt("숫자를 입력해주세요.");
-			value = parseInt(value);
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        var x = 100;    //변수 x에 숫자를 100을 저장
 
-			if (value % 2 == 0){
-				alert("짝수입니다.");
-			}
-        	
-        &lt;/script&gt;
-    &lt;/head&gt;
+        if(x &gt; 200){ //변수 x가 200보다 크면 실행(true)
+            document.write(x);
+        }
+
+        if(x &lt; 200){ //변수 x가 200보다 작으면 실행(true)
+            document.write(x,"&lt;br&gt;");
+        }
+
+        if(true){   
+            document.write(x,"&lt;br&gt;");
+        }
+
+        if(false){  
+            document.write(x,"&lt;br&gt;");
+        }
+
+        //통화량 구분하기
+        var min = prompt("당신의 하루 통화량은 몇 분인가요?", "0");
+        if(min &gt; 60){
+            document.write("당신은 전화를 많이쓰네요~&lt;br&gt;");
+        }
+
+        //짝수 구분하기
+        var num = prompt("숫자를 입력해 주세요!!&lt;br&gt;", "0");
+
+        if(num % 2 == 0){
+            document.write("당신이 입력한 숫자는 짝수입니다.&lt;br&gt;");
+        }
+
+        //조건식에 논리형 데이터가 아닌 다른 형이 오는 경우
+        //0, null, ""(빈문자), undefined --&gt; true
+        var y = 100;
+
+        if(y){
+            document.write(y,"&lt;br&gt;");
+        }
+
+        var useName = prompt("당신의 이름은 무엇입니다.","");
+        if(useName){
+            document.write(useName + "님 방갑습니다.");
+        }
+        //document.write(useName + "님 방갑습니다.");
+        
+        //if(useName) document.write(useName + "님 방갑습니다.");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

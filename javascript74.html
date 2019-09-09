@@ -1,77 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+
     
 
 <h2>객체</h2>
-<p class="line">객체는 데이터와 연산 작업을 담고 있는 기본적인 기능입니다.</p>
+<p>자바스크립트는 객체 기반 언어입니다. 객체는 데이터와 연산 작업을 담고 있는 기본적인 기능이라고 생각하면 됩니다. 객체는 기능 또는 속성을 가지고 있으며, 우리 주변의 모든 사물들을 객체라고 표현 할 수 있습니다.</p>
+
+<hr>
 
 <h3>객체</h3>
-<p>객체(object)란 여러분이 현실 세계에서 인지하는 물체에 대한 모델을 만들기 위해 변수와 함수를 그룹화한 것을 말합니다.</p>
+<p>객체(object)란 데이터와 연산 작업을 담고 있는 기본적인 기능이며, 메서드(Method)와 속성(Attribute)으로 이루어져 있습니다.</p>
+<p class="blue">
+객체.메서드(); 객체가 할 수 있는 동작 값<br>
+객체.속성; 객체의 기본 데이터 값
+</p>
 
 
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript66.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>객체를 생성하는 방법 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100 200<br>
 
-<h5>Sample : 객체를 생성하는 방법</h5>
+            100 200<br>
+
+            100 200<br>
+
+            100 200<br>
+
+            100 200<br>
+
+            100 200<br>
+
+            100 200<br>
+
+            100 200 자바스크립트<br><br>
+
+            100<br>
+            200<br>
+            자바스크립트<br>
+            자바스크립트가 실행되었습니다.<br>
+            자바스크립트가 실행되었습니다.<br><br>
+
+            100<br>
+            200<br>
+            자바스크립트<br>
+            제이쿼리<br>
+            20000
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;객체를 생성하는 방법&lt;/title&gt;
     &lt;script&gt;
-        //객체를 생성한 후 속성(변수)과 메서드(함수)를 추가하는 방법
-        //축약형 표기법
-        var hotel = {};
+        //배열 선언
+        var arr1 = new Array();
+        arr1[0] = 100; 
+        arr1[1] = 200;
         
-        hotel.name = "Park";
-        hotel.rooos = 40;
-        hotel.booked = 25;
-        hotel.check = function(){
-            return this.rooms - this.booked;
+        document.write(arr1[0],"&lt;br&gt;");
+        document.write(arr1[1],"&lt;br&gt;&lt;br&gt;");
+        
+        //배열을 선언과 동시에 데이터를 넣는 방법입니다.
+        var arr2 = new Array(100,200);
+        
+        document.write(arr2[0],"&lt;br&gt;");
+        document.write(arr2[1],"&lt;br&gt;&lt;br&gt;");
+        
+        //배열을 선언하지 않고 바로 데이터를 넣는 방법입니다.
+        var arr3 = [100,200];
+        document.write(arr2[0],"&lt;br&gt;");
+        document.write(arr2[1],"&lt;br&gt;&lt;br&gt;");
+        
+        
+        //객체 선언
+        var obj1 = new Object();
+        obj1[0] = 100; 
+        obj1[1] = 200;
+        
+        document.write(obj1[0],"&lt;br&gt;");
+        document.write(obj1[1],"&lt;br&gt;&lt;br&gt;");
+        
+        //객체 선언
+        var obj2 = new Object();
+        obj2.a = 100; 
+        obj2.b = 200;
+        
+        document.write(obj2.a,"&lt;br&gt;");
+        document.write(obj2.b,"&lt;br&gt;&lt;br&gt;");
+        
+        //객체 선언하고 데이터를 넣는 방법입니다.
+        var obj3 = {};
+        obj3.a = 100; 
+        obj3.b = 200;
+        
+        document.write(obj3.a,"&lt;br&gt;");
+        document.write(obj3.b,"&lt;br&gt;&lt;br&gt;");
+        
+        //객체 선언과 동시에 데이터를 넣는 방법입니다.
+        var obj4 = {'a':100, 'b':200};
+        
+        document.write(obj4.a,"&lt;br&gt;");
+        document.write(obj4.b,"&lt;br&gt;&lt;br&gt;");
+        
+        //객체와 배열
+        var obj5 = new Object();
+        obj5.a = ['100', '200']; 
+        obj5.b = "자바스크립트";
+        
+        document.write(obj5.a[0],"&lt;br&gt;");
+        document.write(obj5.a[1],"&lt;br&gt;");
+        document.write(obj5.b,"&lt;br&gt;&lt;br&gt;");
+        
+        //객체와 배열 속성과 메서드를 사전에 정의하여 객체 생성하기
+        var obj6 = {
+            a : ['100', '200'],
+            b : "자바스크립트",
+            c : function(){
+                document.write("자바스크립트가 실행되었습니다.&lt;br&gt;");
+            },
+            d : function(){
+                document.write(this.b + "가 실행되었습니다.&lt;br&gt;&lt;br&gt;");
+            }
         }
+        document.write(obj6.a[0],"&lt;br&gt;");
+        document.write(obj6.a[1],"&lt;br&gt;");
+        document.write(obj6.b,"&lt;br&gt;");
+        obj6.c();
+        obj6.d();
         
         
         //객체 생성자 표기법
-        var hotel2 = new Object{};
-        
-        hotel2.name = "Park";
-        hotel2.rooos = 40;
-        hotel2.booked = 25;
-        hotel2.check = function(){
-            return this.rooms - this.booked;
-        }
-        
-        //속성과 메서드를 사전에 정의하여 객체 생성하기
-        //축약형 표기법
-        var hotel3 = {
-            name: "web",
-            rooms: 40,
-            booked: 25,
-            check: function(){
-                return this.rooms - this.booked;
-            }
-            
-        }
-        
-        //객체 생성자 표기법
-        //함수를 이용하면 여러개의 객체를 생성할 수 있습니다. 이때는 객체의
-        //이름 대신 this 키워드를 사용합니다.
-        
-        function Hotel(name, rooms, booked){
-            this.name = name;
-            this.rooms = rooms;
-            this.booked = booked;
-            this.check = function(){
-                return this.rooms - this.booked;
+        //함수를 이용하면 여러개의 객체를 생성, 객체의 이름 대신 this 키워드를 사용.
+        function obj7(a, b){
+            this.a = a;
+            this.b = b;
+            this.c = function(){
+                return a * b;
             }
         }
-        var quayHotel = new Hotel('quay',40,25);
-        var parkHotel = new Hotel('park',40,25);
+        var result1 = new obj7(100,200);
+        var result2 = new obj7("자바스크립트","제이쿼리");
 
-        
+        document.write(result1.a,"&lt;br&gt;");
+        document.write(result1.b,"&lt;br&gt;");
+        document.write(result2.a,"&lt;br&gt;");
+        document.write(result2.b,"&lt;br&gt;");
+        document.write(result1.c(),"&lt;br&gt;");
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -79,50 +163,9 @@
 &lt;/body&gt;
 &lt;/html&gt; 
 </code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
-<h5>Sample : 데이터 저장</h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;데이터 저장하기&lt;/title&gt;
-    &lt;script&gt;
-    //변수 : 하나의 데이터를 저장하는 저장소
-    var hotel = "Park";
-    document.write(hotel,"&lt;br&gt;");
-    
-    //배열 : 여러개의 데이터를 저장하는 저장소
-    var hotel1 = ["web","S","Y","Nan"];
-    document.write(hotel1[0],"&lt;br&gt;");
-    
-    //객체 : 속성과 메서드를 저장하는 저장소
-    var hotel2 = {
-        name: "java",
-        rooom: 40
-    };
-    document.write(hotel2.name,"&lt;br&gt;");
-        
-    //여러개의 객체 : 여러개의 객채를 저장하는 저장소
-    function Hotel6(name, rooms){
-        this.name = name;
-        this.rooms = rooms;
-    }
-    var hou1 = new Hotel6('Css',40);
-    var hou2 = new Hotel6('Cass',120);
-    
-    document.write(hou1.name,"&lt;br&gt;");
-    document.write(hou2.name,"&lt;br&gt;");
-    document.write(hou1.rooms,"&lt;br&gt;");
-    document.write(hou2.rooms,"&lt;br&gt;");
-        
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
 
-</body>
-</html>

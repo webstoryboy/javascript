@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
 
 <h2>숫자 객체</h2>
-<p class="line">숫자 객체(Number Object)는 숫자와 관련된 객체입니다. 자바스크립트를 이용하여 숫자를 표시하거나, 표현 가능한 수의 속성과 표기법에 대한 메서드를 제공합니다. </p>
+<p>숫자 객체(Number Object)는 숫자와 관련된 객체입니다. 자바스크립트를 이용하여 숫자를 표시하거나, 표현 가능한 수의 속성과 표기법에 대한 메서드를 제공합니다. </p>
+
+<hr>
 
 <h3>숫자 객체 생성</h3>
 <p class="blue">
-    var 참조 변수 = new Number(값)
+    var 변수 = new Number;
 </p>
 
-<h5>숫자 객체 메서드 및 속성</h5>
+
+
+<h5>숫자 객체 속성</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -30,40 +26,32 @@
         </thead>
         <tbody>
             <tr>
-                <td>hasOwnProperty</td>
-                <td>객체에 지정된 이름을 가진 속성이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>MAX_SAFE_INTEGER</td>
+                <td>표현할 수 있는 안전한 최대 정수값을 나타냅니다.</td>
             </tr>
             <tr>
-                <td>isPrototypeOf</td>
-                <td>다른 객체의 prototype 계층 구조에 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>MAX_VALUE</td>
+                <td>표현할 수 있는 가장 큰 수를 나타냅니다.</td>
             </tr>
             <tr>
-                <td>propertyIsEnumerable</td>
-                <td>지정된 속성이 객체의 일부인지 그리고 열거할 수 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>MIN_SAFE_INTEGER</td>
+                <td>표현할 수 있는 안전한 최소 정수값을 나타냅니다.</td>
             </tr>
             <tr>
-                <td>toExponential(n)</td>
-                <td>지수 표시로 나타낸 숫자를 포함하는 문자열을 리턴합니다.</td>
+                <td>MIN_VALUE</td>
+                <td>표현할 수 있는 가장 작은 수를 나타냅니다.</td>
             </tr>
             <tr>
-                <td>toFixed(n)</td>
-                <td>숫자를 고정 소수점 표시로 나타내는 문자열을 리턴합니다.</td>
+                <td>NEGATIVE_INFINITY</td>
+                <td>음의 무한대 수를 나타냅니다.</td>
             </tr>
             <tr>
-                <td>toLocaleString</td>
-                <td>현재 위치를 기반으로 문자열로 변환된 객체를 리턴합니다.</td>
+                <td>NaN</td>
+                <td>숫자가 아닌 경우를 나타냅니다.</td>
             </tr>
             <tr>
-                <td>toPrecision(n)</td>
-                <td>지수 표시나 고정 소수점 표시로 나타낸 숫자를 포함하고 지정된 자릿수를 포함하는 문자열을 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>toString()</td>
-                <td>객체를 나타내는 문자열을 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>valueOf</td>
-                <td>지정한 객체의 기본값을 리턴합니다.</td>
+                <td>POSITIVE_INFINITY</td>
+                <td>양의 무한대 수를 나타냅니다.</td>
             </tr>
         </tbody>
     </table>
@@ -71,5 +59,136 @@
 
 
 
-</body>
-</html>
+<h5>숫자 객체 메서드</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>isFinite()</td>
+                <td>주어진 값이 유한수인지 판별합니다.</td>
+            </tr>
+            <tr>
+                <td>isInteger()</td>
+                <td>주어진 값이 정수인지 판별합니다.</td>
+            </tr>
+            <tr>
+                <td>isNaN()</td>
+                <td>주어진 값이 NaN인지 판별합니다.</td>
+            </tr>
+            <tr>
+                <td>isSafeInteger()</td>
+                <td>주어진 값이 안전한 정수 값인지 판별합니다.</td>
+            </tr>
+            <tr>
+                <td>parseFloat()</td>
+                <td>주어진 값을 실수로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>toExponential()</td>
+                <td>주어진 값을 지수 표기법으로 표기해 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>toFixed()</td>
+                <td>주어진 값을 고정 소수점 표기법으로 표기해 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>toPrecision()</td>
+                <td>주어진 값에 지정된 자릿수를 포함하는 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>toString()</td>
+                <td>주어진 값을 문자열로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>valueOf()</td>
+                <td>주어진 값에 저장된 값을 반환합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>Date 객체를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            가장 큰 수[Number.MAX_VALU] : 1.7976931348623157e+308<br>
+            가장 작은 수[Number.MIN_VALUE] : 5e-324<br>
+            안전한 최대 정수값[Number.MAX_SAFE_INTEGER] : 9007199254740991<br>
+            안전한 최소 정수값[Number.MIN_SAFE_INTEGER] : -9007199254740991<br>
+            음의 무한대 수[Number.NEGATIVE_INFINITY] : -Infinity<br>
+            양의 무한대 수[Number.POSITIVE_INFINITY] : Infinity<br>
+            숫자가 아닌 경우[Number.NaN] : NaN<br><br>
+
+            변수 : 1.23456<br>
+            지수표기법[toExponential()] : 1.2e+0<br>
+            반올림[toFixed()] : 1.2<br>
+            지정한 자릿수까지 반환[toPrecision()] : 1.235<br>
+            반올림[toPrecision()] : 1.2<br>
+            문자형 데이터 변경[toString()] : 1.23456<br>
+            저장된 값을 반환[valueOf()] : 1.23456<br>
+            정수로 반환[parseInt()] : 1<br>
+            실수로 반환[parseFloat()] : 1.23456
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        var num1 = 1.23456;
+        
+        document.write("가장 큰 수[Number.MAX_VALU] : " + Number.MAX_VALUE,"&lt;br&gt;");
+        document.write("가장 작은 수[Number.MIN_VALUE] : " + Number.MIN_VALUE,"&lt;br&gt;");
+        document.write("안전한 최대 정수값[Number.MAX_SAFE_INTEGER] : " + Number.MAX_SAFE_INTEGER,"&lt;br&gt;");
+        document.write("안전한 최소 정수값[Number.MIN_SAFE_INTEGER] : " + Number.MIN_SAFE_INTEGER,"&lt;br&gt;");
+        document.write("음의 무한대 수[Number.NEGATIVE_INFINITY] : " + Number.NEGATIVE_INFINITY,"&lt;br&gt;");
+        document.write("양의 무한대 수[Number.POSITIVE_INFINITY] : " + Number.POSITIVE_INFINITY,"&lt;br&gt;");
+        document.write("숫자가 아닌 경우[Number.NaN] : " + Number.NaN,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("변수 : 1.23456","&lt;br&gt;");
+        document.write("지수표기법[toExponential()] : " + num1.toExponential(1),"&lt;br&gt;");
+        document.write("반올림[toFixed()] : " + num1.toFixed(1),"&lt;br&gt;");
+        document.write("지정한 자릿수까지 반환[toPrecision()] : " + num1.toPrecision(4),"&lt;br&gt;");
+        document.write("반올림[toPrecision()] : " + num1.toPrecision(2),"&lt;br&gt;");
+        document.write("문자형 데이터 변경[toString()] : " + num1.toString(),"&lt;br&gt;");
+        document.write("저장된 값을 반환[valueOf()] : " + num1.valueOf(),"&lt;br&gt;");
+        document.write("정수로 반환[parseInt()] : " + parseInt(num1),"&lt;br&gt;");
+        document.write("실수로 반환[parseFloat()] : " + parseFloat(num1),"&lt;br&gt;&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>MDN JavaScript <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>

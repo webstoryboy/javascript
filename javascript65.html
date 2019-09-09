@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
     
 
 <h2>while문</h2>
 <p class="line">반복되는 부분을 실행할 때 사용하는 제어문입니다.</p>
 
 <h3>while문</h3>
+<p>while문은 조건식에 만족할 때까지 반복적으로 실행하는 반복문입니다. 조건식을 검사하고 만족하면 실행문을 실행하고 증감식을 실행합니다.</p>
 <p class="blue">
-var 변수 = 초기값<br>
+var 변수 = 초깃값;<br>
 while (조건식){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;증감식;<br>
@@ -20,61 +14,90 @@ while (조건식){<br>
 </p>
 
 
-<h5>Sample : while문 <a href="https://webstoryboy.github.io/javascript/sample06_1.html" class="view" target="_blank">View</a></h5>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>while문을 이용한 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
+        &lt;meta charset="utf-8"&gt;
         &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
         &lt;script type="text/javascript"&gt;
             //10보다 작은 수 출력하기
-			var count = 0;	
-			while(true){
-				count++;	
-				document.write("" + count + "번째 실행");
-				document.write("&lt;br /&gt;");
-				
-				if(count &gt; 9){	// 조건
-					break;
-				}
-			}
-            
-            //100보다 작은 숫자에서 4의 배수와 6의 배수를 출력하세요~
-            var num = 1;
-            while(num &lt;= 100){
-
-                if( num % 4 == 0 && num % 6 == 0 ){
-                    document.write(num,"&lt;br&gt;");
+            var num = 0; //초기값 설정
+            while (true) {
+                if (num >= 9) { //실행문 설정
+                    break;
                 }
+                num++; //증감값 설정
 
-                num++;
+                document.write(num, ",");
             }
-            
-            //10보다 작은 숫자에서 짝수는 파란색, 홀수는 빨간색으로 출력하세요~
-            var num2 = 1;
-            while(num2 &lt;= 10){
 
-                if( num2 % 2 == 0 ){
-                    //짝수
-                    document.write("&lt;span style='color:blue'&gt;"+num2+"&lt;/span&gt;");
-                } else {
-                    //홀수
-                    document.write("&lt;span style='color:red'&gt;"+num2+"&lt;/span&gt;");
+            document.write("&lt;br&gt;");
+
+            //1 ~ 100까지 출력하기
+            var num2 = 0;
+            while (true) {
+                if (num2 >= 100) {
+                    break;
                 }
-
                 num2++;
+
+                document.write(num2, ",");
+            }
+
+            document.write("&lt;br&gt;");
+
+            //1 ~ 100까지 짝수만 출력하기
+            var num3 = 1;
+            while (num3 <= 100) {
+
+                if (num3 % 2 == 0) {
+                    document.write(num3, ",");
+                }
+                num3++;
+            }
+
+            document.write("&lt;br&gt;");
+
+            //1 ~ 100까지 4의 배수와 6의 배수 출력하기
+            var num4 = 1;
+            while (num4 <= 100) {
+
+                if (num4 % 4 == 0 || num4 % 6 == 0) {
+                    document.write(num4, ",");
+                }
+                num4++;
+            }
+
+            //1 ~ 100까지 짝수는 파란색 홀수는 빨간색으로 출력하기
+            var num5 = 1;
+            while (num5 <= 100) {
+                if (num5 % 2 === 0) {
+                    document.write("&lt;span style='color:blue'&gt;" + num5 + "&lt;/span&gt;");
+                } else {
+                    document.write("&lt;span style='color:red'&gt;" + num5 + "&lt;/span&gt;");
+                }
+                num5++;
             }
         &lt;/script&gt;
     &lt;/head&gt;
     
     &lt;body&gt;
-	...
+    ...
     &lt;/body&gt;
-&lt;/html&gt;      
+&lt;/html&gt;    
 </code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
 
-</body>
-</html>

@@ -1,20 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>break문</h2>
-<p class="line">break문과 continue문은 반복문을 제어하는 명령어입니다.</p>
+<p>break문과 continue문은 반복문을 제어하는 명령어입니다.</p>
+
+<hr>
 
 <h3>break문</h3>
 <p>break문 : 코드 실행문을 빠져나갈 때 사용하며, 일반적으로 반복문을 종료할 때 사용합니다.</p>
 
+<p class="blue">
+for(초깃값; 조건식; 증감식){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 실행문<br>
+}
+</p>
+<p class="blue">
+var 변수 = 초깃값;<br>
+while(조건식){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 실행문;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 증감식;<br>
+}
+</p>
 
-<h5>Sample : break문 <a href="https://webstoryboy.github.io/javascript/sample06_9.html" class="view" target="_blank">View</a></h5>
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>break문을 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+        	1번째 실행<br>
+			2번째 실행<br>
+			4번째 실행<br>
+			5번째 실행<br>
+			6번째 실행<br>
+			7번째 실행<br>
+			8번째 실행<br>
+			9번째 실행<br>
+			10번째 실행
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
     &lt;head&gt;
@@ -25,10 +57,10 @@
 			while(true){
 				count++;	
 				
-				if(count == 3){	/
+				if(count == 3){
 					continue;
 				}
-				document.write("" + count + "번째 실행");
+				document.write(count + "번째 실행");
 				document.write("&lt;br /&gt;");
 				
 				if(count > 9){	
@@ -43,9 +75,6 @@
     &lt;/body&gt;
 &lt;/html&gt; 
 </code></pre>
-
-
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

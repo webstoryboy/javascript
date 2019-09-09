@@ -1,81 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
 
 <h2>if ~ else문</h2>
-<p class="line">두개의 값을 비교하여 코드를 별개로 실행합니다.</p>
+<p>두개의 값을 비교하여 코드를 별개로 실행합니다.</p>
+
+<hr>
 
 <h3>if ~ else문</h3>
+<p>if ~ else문은 두개의 조건이 있을 때 사용하는 조건문입니다.</p>
 <p class="blue">
-if (조건) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;//참일 때 실행 코드<br>
+if (조건식) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//참(true)일 때 실행 코드<br>
 } else {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;//거짓일 때 실행 코드<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//거짓(false)일 때 실행 코드<br>
 }
 </p>
 
-<h5>Sample : if ~ else문 <a href="https://webstoryboy.github.io/javascript/sample05_2.html" class="view" target="_blank">View</a></h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 100;
-        	
-        	if(x % 2 == 0) {
-	        	document.write("짝수");
-        	} else {
-	        	document.write("홀수");
-        	}
-        	
-        	//
-        	var value = window.prompt("숫자를 입력해주세요.");
-			value = parseInt(value);
 
-			if (value % 2 == 0){
-				alert("짝수입니다.");
-			} else {
-				alert("홀수입니다.");
-			};
-        &lt;/script&gt;
-    &lt;/head&gt;
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>if문을 이용한 다양한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100<br>
+            100<br>
+            당신은 전화를 많이쓰네요~<br>
+            당신이 입력한 숫자는 짝수입니다.<br>
+            100<br>
+            66님 방갑습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //홀수 짝수 구분하기
+        var num = prompt("당신이 좋아하는 숫자는?");
+
+        if(num % 2 == 0){
+            document.write("당신이 좋아하는 숫자는 짝수입니다.&lt;br&gt;");
+        } else {
+            document.write("당신이 좋아하는 숫자는 홀수입니다.&lt;br&gt;");
+        }
+
+        //아이디 비밀번호 구분하기
+        var userID = prompt("아이디를 입력해주세요~");
+        var userPW = prompt("비밀번호를 입력해주세요~");
+
+        if(userID == "webstoryboy" && userPW == "1234"){
+            document.write("환영합니다.&lt;br&gt;");
+        } else {
+            document.write("아이디 또는 비밀번호가 틀렸습니다.&lt;br&gt;");
+        }
+
+        //확인하기
+        var result = confirm("정말로 회원을 탈퇴하시겠습니까?");
+
+        if(result){
+            document.write("탈퇴 처리되었습니다.");
+        } else {
+            document.write("탈퇴 취소되었습니다.");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-
-<h5>Sample : if ~ else문 <a href="https://webstoryboy.github.io/javascript/sample05_3.html" class="view" target="_blank">View</a></h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var userID = window.prompt("아이디를 입력하세요");
-			var userPW = window.prompt("패스워드를 입력하세요");
-
-	        if (userID == "webstoryboy" && userPW == "1234"){
-		        alert("환영합니다.");
-	        } else {
-		        alert("틀렸습니다.");
-	        };
-		&lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
-</code></pre>
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

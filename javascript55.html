@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+
     
 
 <h2>비교 연산자</h2>
-<p class="line">두개의 값을 비교하여 결과를 참 또는 거짓으로 나타냅니다.</p>
+<p class="line">비교 연산자는 비교 할 때 사용하며, 결과 값은 true(참) 또는 false(거짓)로 반환합니다.</p>
 
 <h3>비교 연산자</h3>
 <div class="table-responsive">
@@ -29,81 +23,112 @@
             <tr>
                 <td>==</td>
                 <td>x == y</td>
-                <td>좌변과 우변이 값이 같을 경우 true</td>
+                <td>좌변과 우변이 같다</td>
             </tr>
             <tr>
                 <td>===</td>
                 <td>x === y</td>
-                <td>좌변과 우변이 값이 같거나 데이터형도 같을 경우 true</td>
+                <td>좌변과 우변이 같다. 데이형도 같다.</td>
             </tr>
             <tr>
                 <td>!=</td>
                 <td>x != y</td>
-                <td>좌변과 우변의 값이 같지 않을 경우 true</td>
+                <td>좌변과 우변이 다르다.</td>
             </tr>
             <tr>
                 <td>!==</td>
                 <td>x !== y</td>
-                <td>좌변과 우변의 값이 같지 않을 경우, 또는 데이터형이 다른 경우 true</td>
+                <td>좌변과 우변이 다르다. 데이형도 다르다.</td>
             </tr>
             <tr>
                 <td>&gt;</td>
                 <td>x &gt; y</td>
-                <td>좌변이 우변보다 클 경우 ture</td>
+                <td>좌변이 우변보다 크다.</td>
             </tr>
             <tr>
                 <td>&lt;</td>
                 <td>x &lt; y</td>
-                <td>좌변이 우변보다 작을 경우 true</td>
+                <td>좌변이 우변보다 작다.</td>
             </tr>
             <tr>
                 <td>&gt;=</td>
                 <td>x &gt;= y</td>
-                <td>좌변이 우변보다 크거나 같을 경우 ture</td>
+                <td>좌변이 우변보다 크거나 같다.</td>
             </tr>
             <tr>
                 <td>&lt;=</td>
                 <td>x &lt;= y</td>
-                <td>좌변이 우변보다 작거나 같을 경우 true</td>
+                <td>좌변이 우변보다 작거나 같다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h5>Sample : 비교 연산자</h5>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>비교 연산자를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            false<br>
+            true<br>
+            true<br>
+            false<br>
+            false<br>
+            false<br>
+            false<br>
+            true<br>
+            false<br>
+            true
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 10;
-			var y = 20;
-			
-			document.write(x == y);
-			document.write("&lt;br/&gt;");
-			document.write(x != y);
-			document.write("&lt;br/&gt;");
-			document.write(x > y);
-			document.write("&lt;br/&gt;");
-			document.write(x &lt; y);
-			document.write("&lt;br/&gt;");
-			document.write(x &gt;= y);
-			document.write("&lt;br/&gt;");
-			document.write(x &lt;= y);
-			document.write("&lt;br/&gt;");
-			
-			document.write(x &gt; y) &lt; (200 % 3 + 50);
-			
-        &lt;/script&gt;
-    &lt;/head&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;비교 연산자&lt;/title&gt;
+    &lt;script&gt;
+        var x = 10;
+        var y = 20;     //숫자
+        var a = 10;
+        var b = "20";   //문자열
+
+        document.write(x == y);    
+        document.write("&lt;br&gt;");
+        document.write(x == a);    
+        document.write("&lt;br&gt;");
+        document.write(y == b);     
+        document.write("&lt;br&gt;");
+        document.write(y === b);    
+        document.write("&lt;br&gt;");
+        document.write(x != a);     
+        document.write("&lt;br&gt;");
+        document.write(x !== a);    
+        document.write("&lt;br&gt;");
+        document.write(x &gt; y);       
+        document.write("&lt;br&gt;");
+        document.write(x &lt; y);       
+        document.write("&lt;br&gt;");
+        document.write(x &gt;= y);     
+        document.write("&lt;br&gt;");
+        document.write(x &lt;= y);     
+        document.write("&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

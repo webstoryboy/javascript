@@ -1,0 +1,109 @@
+
+
+<h2>리턴값이 있는 함수</h2>
+<p>결과 값이 있는 함수입니다.</p>
+
+<hr>
+
+<h3>리턴값이 있는 함수</h3>
+<p>결과 값이 있는 함수입니다. ruture이라는 키워드를 이용하여 함수의 결과값을 출력하는 방법입니다. 리턴값은 실행문을 강제로 종료하는 역할도 합니다.</p>
+<p class="blue">
+function 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+&nbsp;&nbsp;&nbsp;&nbsp; return 리턴값;<br>
+}<br>
+var 변수 = 함수명(); //함수호출
+</p>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript53.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //리턴문
+        function func4(){
+            var str = "1. 함수가 실행되었습니다.<br>";
+            return str;
+        }
+        var value = func4();
+        document.write(value);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<h4 class="pt50">종료역할 하는 리턴 값</h4>
+<p class="blue">
+function 함수이름(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+&nbsp;&nbsp;&nbsp;&nbsp; return 리턴값;<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; //실행내용<br>
+}<br>
+var 변수 = 함수명(); //함수호출
+</p>
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript53.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            2. 함수가 실행되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //종료 역할하는 리턴문
+        function func41(){
+            document.write("2. 함수가 실행되었습니다.");
+            return;
+            
+            document.write("3. 함수가 실행되었습니다."); //실행안됨
+        }
+        func41();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+

@@ -1,15 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
-
-<h2>반복문</h2>
-<p>반복되는 부분을 실행할 때 사용하는 제어문입니다.</p>
 
 
-</body>
-</html>
+<h2>for in 반복문</h2>
+<p>for in 반복문은 for문 쉽게 사용하는 방법을 제공합니다.</p>
+
+<hr>
+
+<h3>for문</h3>
+<p class="blue">
+for(변수 in 객체){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//실행 코드 <br>
+}
+</p>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>for in 반복문 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100200300400500<br>
+			100200300400500
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
+        //배열과 반복문
+        var arr1 = new Array(100,200,300,400,500); 
+
+        for(var i=0; i&lt;arr1.length; i++) {
+            document.write(arr1[i]);
+            
+        }   
+        document.write("&lt;br&gt;");
+        
+        //for in 반복문
+        var arr2 = new Array(100,200,300,400,500); 
+
+        for(var i in arr2){
+            document.write(arr2[i]);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;   
+&lt;/html&gt;      
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+

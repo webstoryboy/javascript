@@ -1,70 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
+
 
 <h2>변수의 유형</h2>
-<p class="line">변수는 식별자로만 구분하기 때문에 어떠한 값인지 구분해야 하며, 숫자, 문자열, 불린, 함수, 객체, undefined으로 나눌 수 있습니다.</p>
+<p>변수에는 여러가지 유형이 들어 갈 수 있습니다. 프로그램 언어에 있어 가장 기본적인 요소이며 데이터 타입이라고 합니다. 데이터 타입에는 숫자, 문자열, 논리값, 특수값, 심벌, 객체, 함수 등을 표현할 수 있습니다.</p>
 
-<h3>변수의 유형</h3>
+<hr>
+
+<h3>변수의 유형(데이터 타입)</h3>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
-        <colgroup>
-            <col style="width: 30%">
-            <col style="width: 70%">
-        </colgroup>
         <thead>
             <tr>
-                <th>자료형</th>
+                <th>데이터 타입</th>
                 <th>설명</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th>숫자(Number)</th>
-                <td>정수와 실수가 있지만, 자바스크립트에서는 정수와 실수를 구분하지 않고 사용할 수 있습니다.</td>
+                <td>숫자를 사용할 수 있습니다.</td>
             </tr>
             <tr>
                 <th>문자열(String)</th>
-                <td>"문자", "string" 처럼 따옴표를 사용한 문자의 집합을 문자열이라고 합니다.</td>
+                <td>문자을 사용할 수 있습니다.</td>
             </tr>
             <tr>
-                <th>논리(Boolean)</th>
-                <td>참과 거짓을 나타내는 자료형이며, 오직 <code>true</code>, <code>false</code>로만 표현을 합니다.</td>
+                <th>논리값(Boolean)</th>
+                <td>참과 거짓을 사용할 수 있습니다.</td>
             </tr>
             <tr>
                 <th>특수값(null)</th>
-                <td>null은 아무런 값이 없는 경우를 의미하며, 주로 변수를 초기화할 때 사용합니다.</td>
+                <td>아무런 값이 없을 경우 표현합니다.</td>
             </tr>
             <tr>
                 <th>특수값(undefined)</th>
-                <td>변수 선언 시 자료형의 지정이 이루어지지 않거나, 어떤 자료형인지 알 수가 없을 경우에 undefined라고 표시가 됩니다.</td>
+                <td>정의되지 않은 상태를 표현합니다.</td>
             </tr>
             <tr>
-                <th>배열(array)</th>
-                <td>배열 형태의 자료형도 자바스크립트에서 사용할 수 있습니다.</td>
+                <th>심벌(symbol)</th>
+                <td>자기 자신을 제외한 유일한 값일 때 표현합니다.</td>
             </tr>
             <tr>
-                <th>객체(Object)</th>
-                <td>객체 형태의 자료형도 자바스크립트에서 사용할 수 있습니다.</td>
+                <th>객체(object)</th>
+                <td>객체 형태도 사용 가능합니다.</td>
             </tr>
             <tr>
-                <th>함수(Function)</th>
-                <td>function은 자바스크립트를 구성하는 기본 단위이며, 자료형으로 변수에 넣을 수 있습니다.</td>
+                <th>함수(function)</th>
+                <td>함수 형태도 사용 가능합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
 
+<h4 class="pt50">숫자(Number)</h4>
+<p>자바스크립트에서는 숫자를 사용할 수 있습니다. 숫자는 정수와 실수를 구분 없이 사용할 수 있습니다.</p>
+<p class="blue">
+    var num1 = 50;<br />
+    var num2 = 1.3456;
+</p>
 
 
+<h4 class="pt50">문자열(String)</h4>
+<p>자바스크립트에의 문자를 사용할 수 있습니다. 이를 문자열이라고 합니다. 문자열은 큰 따옴표("") 또는 작은 따옴표('')를 사용하여 표현 할 수 있습니다.</p>
+<p class="blue">
+    var str1 = "javascript String" <br />
+    var str2 = '자바스크립트 문자열'
+</p>
 
 
+<h4 class="pt50">논리값(Boolean)</h4>
+<p>자바스크립트에서는 참과 거짓을 표현 할 수 있습니다. 이것을 논리값이라고 표현합니다.</p>
+<p class="blue">
+    var x = a > b <br />
+    var y = a || b
+</p>
 
-</body>
-</html>
+<h4 class="pt50">특수값(null)</h4>
+<p>null은 아무런 값이 없는 경우를 의미합니다.</p>
+
+
+<h4 class="pt50">특수값(undefined가)</h4>
+<p>undefined은 정의되어 있지 않은 값을 의미합니다.</p>
+<p class="blue">
+    var x;
+</p>
+
+<h4 class="pt50">심벌</h4>
+<p>심벌은 자기 자신을 제외한 유일한 값을 의미합니다. 심벌은 ECMAScript 6에서 새로 추가된 값입니다. </p>
+
+

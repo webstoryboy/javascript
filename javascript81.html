@@ -1,12 +1,14 @@
 
 
 <h2>window 객체</h2>
-<p class="line">window 객체는 DOM 구조의 최상위 객체입니다.</p>
+<p>브라우저 객체는 브라우저에 내장된 객체를 말하며, window 객체는 브라우저 객체의 최상위 객체입니다. window 객체에는 document, screen, location, history, navigator 객체를 포함하고 있으며, 이를 브라우저 객체 모델(BOM: Browser Object Model)이라고 합니다.</p>
+
+<hr>
 
 <h3>window 객체</h3>
 
 
-<h5>window 객체 속성</h5>
+<h5>window 객체 속성(Properties)</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -21,108 +23,116 @@
         </thead>
         <tbody>
             <tr>
-                <td>open()</td>
-                <td>새로운 윈도우 창을 생성합니다.</td>
-            </tr>
-            <tr>
                 <td>closed</td>
-                <td>브라우저 창이 열려 있는지 닫혀 있는지에 대한 정보의 값을 반환합니다.</td>
+                <td>브라우저 창이 열려 있는지 닫혀 있는지에 대한 정보의 값을 불린값으로 반환합니다.</td>
             </tr>
             <tr>
-                <td>defaultStatus</td>
-                <td>브라우저 상태 표시줄 글자의 기본 값을 표현합니다.</td>
+                <td>console</td>
+                <td>디버깅을 목적으로 브라우저에서 객체의 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>document</td>
-                <td>하위 document 객체</td>
+                <td>브라우저에 대한 문서 정보를 표현합니다.</td>
+            </tr>
+            <tr>
+                <td>event</td>
+                <td>브라우저에 이벤트 정보를 표현합니다.</td>
             </tr>
             <tr>
                 <td>frames</td>
-                <td>브라우저에서 사용된 모든 프레임을 배열 형태로 제공합니다.</td>
+                <td>브라우저에 구조를 프레임을 형태로 표현합니다.</td>
+            </tr>
+            <tr>
+                <td>fullScreen</td>
+                <td>브라우저에 인터페이스를 풀 화면으로 표현합니다.</td>
             </tr>
             <tr>
                 <td>history</td>
-                <td>하위 history 객체</td>
+                <td>브라우저의 방문 페이지에 대한 정보를 설정합니다.</td>
             </tr>
             <tr>
                 <td>innerHeight</td>
-                <td>브라우저의 콘텐츠 영역의 높이</td>
+                <td>브라우저의 콘텐츠 영역의 높이(스크롤 포함)값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>innerWidth</td>
-                <td>브라우저의 콘텐츠 영역의 너비</td>
+                <td>브라우저의 콘텐츠 영역의 너비(스크롤 포함)값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>length</td>
-                <td>브라우저에 사용된 프레임의 개수</td>
+                <td>브라우저에 사용된 프레임의 개수를 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>localStorage</td>
+                <td>브라우저에 세션에 저장된 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>location</td>
-                <td>하위 location 객체</td>
+                <td>브라우저 현재 위치에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>name</td>
-                <td>브라우저 전체의 표시 이름</td>
+                <td>브라우저의 이름에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>navigator</td>
-                <td>하위 navigator 객체</td>
+                <td>브라우저 navigator 객체에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>opener</td>
-                <td>열려 있는 창에 대한 레퍼런스</td>
+                <td>열려 있는 창에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>outerHeight</td>
-                <td>툴바/스크롤바를 포함한 바깥 영역의 높이</td>
+                <td>브라우저의 툴바/스크롤바를 포함한 바깥 영역의 높이를 반환홥니다.</td>
             </tr>
             <tr>
                 <td>outerWidth</td>
-                <td>툴바/스크롤바를 포함한 바깥 영역의 너비</td>
+                <td>브라우저의 툴바/스크롤바를 포함한 바깥 영역의 너비를 반환홥니다.</td>
             </tr>
             <tr>
                 <td>pageXOffset</td>
-                <td>브라우저의 문서 위치(스크롤된 위치)의 x좌표</td>
+                <td>브라우저의 문서 위치(스크롤된 위치)의 x좌표를 반환합니다.</td>
             </tr>
             <tr>
                 <td>pageYOffset</td>
-                <td>브라우저의 문서 위치(스크롤된 위치)의 y좌표</td>
+                <td>브라우저의 문서 위치(스크롤된 위치)의 y좌표를 반환합니다.</td>
             </tr>
             <tr>
                 <td>parent</td>
-                <td>현재 창의 부모창</td>
+                <td>브라우저 현재 창의 부모창에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>screen</td>
-                <td>하위 screen 객체</td>
+                <td>브라우저 screen 객체에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>screenLeft</td>
-                <td>브라우저 화면에서의 x좌표</td>
+                <td>브라우저 화면에서의 x좌표에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>screenTop</td>
-                <td>브라우저 화면에서의 y좌표</td>
+                <td>브라우저 화면에서의 y좌표에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>screenX</td>
-                <td>브라우저 화면에서의 x좌표</td>
+                <td>브라우저 화면에서의 x좌표에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>screenY</td>
-                <td>브라우저 화면에서의 y좌표</td>
+                <td>브라우저 화면에서의 y좌표에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>self</td>
-                <td>현재 사용 중인 창</td>
+                <td>브라우저의 현재 사용 중인 창에 대한 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>status</td>
-                <td>브라우저의 상태 표시줄의 글자</td>
+                <td>브라우저의 상태 표시줄의 글자 정보를 반환합니다.</td>
             </tr>
             <tr>
                 <td>top</td>
-                <td>제일 위에 표시된 브라우저 창</td>
+                <td>브라우저 제일 위에 표시된 브라우저 창에 대한 정보를 반환합니다.</td>
             </tr>
         </tbody>
     </table>
@@ -145,23 +155,35 @@
         <tbody>
             <tr>
                 <td>alert()</td>
-                <td>경고창을 뛰웁니다.</td>
+                <td>확인 버튼을 누를 수 있는 경고 대화 상자를 표시합니다.</td>
+            </tr>
+            <tr>
+                <td>atob()</td>
+                <td>base-64 유형의 문자열을 디코딩합니다.</td>
             </tr>
             <tr>
                 <td>blur()</td>
                 <td>현재 윈도우의 포커스를 없애줍니다.</td>
             </tr>
             <tr>
+                <td>btoa()</td>
+                <td>base-64 유형의 문자열을 인코딩합니다.</td>
+            </tr>
+            <tr>
+                <td>clearInterval()</td>
+                <td>일정 시간마다 함수를 반복(setInterval())하는 것을 중지합니다.</td>
+            </tr>
+            <tr>
+                <td>clearTimeout()</td>
+                <td>일정 시간 후 함수를 한 번 실행(setTimeout())하는 것을 중지합니다.</td>
+            </tr>
+            <tr>
                 <td>close()</td>
                 <td>현재 윈도우를 닫습니다.</td>
             </tr>
             <tr>
-                <td>stop()</td>
-                <td>창이 로그되는 것을 멈춥니다.</td>
-            </tr>
-            <tr>
                 <td>confirm()</td>
-                <td>ok, cancel 형태의 다이얼로그를 뛰어줍니다.</td>
+                <td>확인과 취소 버튼을 누를 수 있는 대화 상자를 표시합니다.</td>
             </tr>
             <tr>
                 <td>createPopup()</td>
@@ -173,14 +195,14 @@
             </tr>
             <tr>
                 <td>moveBy()</td>
-                <td>윈도우 창의 위치를 상대적으로 이동합니다.</td>
+                <td>윈도우 창의 위치를 현재 위치를 기준으로 이동합니다.</td>
             </tr>
             <tr>
                 <td>moveTo()</td>
-                <td>윈도우 창의 위치를 이동시킬 때 사용합니다.</td>
+                <td>윈도우 창의 위치를 특정 위치로 이동시킬 때 사용합니다.</td>
             </tr>
             <tr>
-                <td>open(URL, name, features, replace)</td>
+                <td>open()</td>
                 <td>새창을 열어줍니다.</td>
             </tr>
             <tr>
@@ -193,19 +215,23 @@
             </tr>
             <tr>
                 <td>resizeBy()</td>
-                <td>윈도우 창의 크기를 상대적으로 변경할 때 지정합니다.</td>
+                <td>윈도우 창의 크기를 현재 크기를 기준으로 조절합니다.</td>
             </tr>
             <tr>
                 <td>resizeTo()</td>
-                <td>윈도우 창의 크기를 변경할 때 사용합니다.</td>
+                <td>윈도우 창의 크기를 특정 크기로 조절합니다.</td>
+            </tr>
+            <tr>
+                <td>scroll()</td>
+                <td>scrollTo로 이름이 변경되었습니다.</td>
             </tr>
             <tr>
                 <td>scrollBy()</td>
-                <td>윈도우 스크롤의 위치를 상대적으로 이동합니다.</td>
+                <td>윈도우 스크롤의 위치를 스크롤 위치를 기준으로 이동합니다.</td>
             </tr>
             <tr>
                 <td>scrollTo()</td>
-                <td>윈도우 스크롤의 위치를 절대적으로 이동합니다.</td>
+                <td>윈도우 스크롤의 위치를 특정 위치로 이동합니다.</td>
             </tr>
             <tr>
                 <td>setInterval()</td>
@@ -216,17 +242,175 @@
                 <td>일정 시간 후 함수를 한 번만 실행합니다.</td>
             </tr>
             <tr>
-                <td>clearInterval()</td>
-                <td>일정 시간마다 함수를 반복하는 것을 중지합니다.</td>
-            </tr>
-            <tr>
-                <td>clearTimeout()</td>
-                <td>일정 시간 후 함수를 한 번 실행하는 것을 중지합니다.</td>
+                <td>stop()</td>
+                <td>원도우 창이 로드되는 것을 멈춥니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript67.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>현재 브라우저의 위치를 알아내는 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            현재 브라우저의 x축 좌표 값[screenX] : 0<br>
+            현재 브라우저의 y축 좌표 값[screenY] : 23
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;screenX, screenY&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        var nowScreenx = window.screenX;
+        var nowScreeny = window.screenY;
+        
+        document.write("현재 브라우저의 x축 좌표 값[screenX] : " + nowScreenx, "px&lt;br&gt;");
+        document.write("현재 브라우저의 y축 좌표 값[screenY] : " + nowScreeny, "px&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript68.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>현재 컨텐츠 요소의 크기를 구하는 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            현재 컨텐츠 요소의 가로 값[innerWidth] : 1680px<br>
+            현재 컨텐츠 요소의 세로 값[innerHeight] : 916px
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;screenX, screenY&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        var nowInnerWidth = window.innerWidth;
+        var nowInnerHeight = window.innerHeight;
+        
+        document.write("현재 컨텐츠 요소의 가로 값[innerWidth] : " + nowInnerWidth, "px<br>");
+        document.write("현재 컨텐츠 요소의 세로 값[innerHeight] : " + nowInnerHeight, "px<br>");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">screen</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">innerWidth</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">innerHeight</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 
 <h4 class="pt40">참고(Reference)</h4>

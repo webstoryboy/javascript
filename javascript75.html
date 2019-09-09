@@ -1,11 +1,13 @@
 
 
 <h2>문자 객체</h2>
-<p class="line">문자객체(String Object)는 문자와 관련된 객체입니다. </p>
+<p>문자객체(String Object)는 문자와 관련된 객체입니다. </p>
+
+<hr>
 
 <h3>문자 객체 생성</h3>
 <p class="blue">
-    var 참조 변수 = new String(문자형 데이터)
+    var 변수 = new String(문자형 데이터)
 </p>
 
 
@@ -27,8 +29,6 @@
                 <td>length</td>
                 <td>문자열의 길이를 가져옵니다.</td>
             </tr>
-            
-            
         </tbody>
     </table>
 </div>
@@ -49,88 +49,112 @@
         </thead>
         <tbody>						
             <tr>
-                <td>charAt(index)</td>
-                <td>
-                    문자열에서 인덱스 번호에 해당하는 문자를 반환합니다.<br>
-                    <span class="ex"><i>ex</i>var text = webstoryboy; text.charAt(3); //s를 반환</span>
-                </td>
+                <td>charAt()</td>
+                <td>문자열에서 인덱스 번호에 해당하는 문자를 반환합니다.</td>
             </tr>
             <tr>
-                <td>indexOf("찾는 문자")</td>
-                <td>
-                    앞에서부터 일치하는 문자열의 위치를 반환합니다. 찾는 문자가 없다면 -1을 반환합니다.<br>
-                    <span class="ex"><i>ex</i>var text = web java coding; text.indexOf(java); //4을 반환</span>
-                </td>
+                <td>charCodeAt()</td>
+                <td>문자열에서 인덱스에 대한 유니코드를 나타내는 0부터 65535 사이의 정수를 반환합니다.</td>
             </tr>
             <tr>
-                <td>lastIndexOf(searchString, position)</td>
-                <td>
-                    뒤에서부터 일치하는 문자열의 위치를 반환합니다. 찾는 문자가 없다면 -1을 반환합니다.<br>
-                    <span class="ex"><i>ex</i>var text = web java coding java; text.lastIndexOf(java); //16을 반환</span>
-                </td>
+                <td>codePointAt()</td>
+                <td>문자열에서 인덱스에 대한 유니코드 포인트 값인 아닌 정수를 반환합니다.</td>
             </tr>
             <tr>
-                <td>charCodeAt(position)</td>
-                <td>position에 위취하는 문자의 유니코드 인코딩을 리턴합니다.</td>
+                <td>concat()</td>
+                <td>여러 개의 문자열을 새 문자열로 반환합니다.</td>
             </tr>
             <tr>
-                <td>contcat(args)</td>
-                <td>매개변수로 입력한 문자열을 이어서 리턴합니다.</td>
+                <td>endsWith()</td>
+                <td>문자열에서 특정 문자열로 끝나는지를 확인합니다.</td>
             </tr>
             <tr>
-                <td>march("찾는 문자")</td>
-                <td>
-                    문자열 내에 왼쪽부터 "찾는 문자"를 찾아 찾은 문자를 반환합니다. 찾는 문자가 없다면 null을 반환합니다.<br>
-                    <span class="ex"><i>ex</i>var text = web java coding css; text.march(java); //java를 반환</span>
-                </td>
+                <td>includes()</td>
+                <td>하나의 문자열이 다른 문자열에 포함되어 있는지를 판별합니다.</td>
             </tr>
             <tr>
-                <td>replace("바꿀 문자", "새로운 문자")</td>
-                <td>
-                    문자열에서 왼쪽부터 바꿀 문자를 찾아 새로운 문자로 변환합니다.<br>
-                    <span class="ex"><i>ex</i>var text = web javascript; text.replace("javascript","jquery"); //web jquery 반환</span>
-                </td>
+                <td>includes()</td>
+                <td>하나의 문자열이 다른 문자열에 포함되어 있는지를 판별합니다.</td>
             </tr>
             <tr>
-                <td>search("찾는 문자")</td>
-                <td>
-                    문자열에서 왼쪽부터 찾는 문자를 찾은 후 최초로 일치하는 인덱스를 반환합니다.
-                    <span class="ex"><i>ex</i>var text = web javascript; text.search("javascript"); //4를 반환</span>
-                </td>
+                <td>indexOf()</td>
+                <td>문자열에서 왼쪽부터 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다</td>
             </tr>
             <tr>
-                <td>slice(start, end)</td>
-                <td>특정 위치의 문자열을 추출해 리턴합니다.</td>
+                <td>lastIndexOf()</td>
+                <td>문자열에서 오른쪽부터 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다.</td>
             </tr>
             <tr>
-                <td>split(separator, limit)</td>
-                <td>separator로 문자열을 잘라서 배열을 리턴합니다.</td>
+                <td>localeCompare()</td>
+                <td>기준 문자열과 비교했을 때 비교 대상 문자열의 정렬상태를 알려줍니다.</td>
+            </tr>
+            <tr>
+                <td>match()</td>
+                <td>문자열에서 왼쪽부터 찾은 문자와 일치하는 문자를 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>normalize()</td>
+                <td>문자열에서 유니코드를 따라 정규화된 형태로 반환합니다. </td>
+            </tr>
+            <tr>
+                <td>padEnd()</td>
+                <td>현재 문자열에 다른 문자열을 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>padStart()</td>
+                <td>현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>repeat()</td>
+                <td>문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>replace()</td>
+                <td>문자열에서 왼쪽부터 바꿀 문자를 찾아 새로운 문자로 변환합니다.</td>
+            </tr>
+            <tr>
+                <td>search()</td>
+                <td>문자열에서 왼쪽부터 찾는 문자를 찾은 후 최초로 일치하는 인덱스를 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>slice()</td>
+                <td>문자열에서  특정 위치의 문자열을 추출해 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>split()</td>
+                <td>구분자를 이용하여 여러 개의 문자열로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>startsWith()</td>
+                <td>문자열에서 특정 문자로 시작하는지 확인하여 결과를 true 혹은 false로 반환합니다.</td>
             </tr>
             <tr>
                 <td>substr(start, count)</td>
-                <td>start부터 count만큼 문자열을 잘라서 리턴합니다.</td>
+                <td>start부터 count만큼 문자열을 잘라서 반환합니다.</td>
             </tr>
             <tr>
                 <td>substring(start, end)</td>
-                <td>start부터 end까지 문자열을 잘라서 리턴합니다.</td>
+                <td>start부터 end까지 문자열을 잘라서 반환합니다.</td>
             </tr>
             <tr>
                 <td>toLowerCase()</td>
-                <td>문자열을 소문자로 바꾸어 리턴합니다.</td>
+                <td>문자열을 소문자로 바꾸어 반환합니다.</td>
             </tr>
             <tr>
                 <td>toUpperCase()</td>
-                <td>문자열을 대문자로 바꾸어 리턴합니다.</td>
+                <td>문자열을 대문자로 바꾸어 반환합니다.</td>
             </tr>
-            
-            
+            <tr>
+                <td>trim()</td>
+                <td>문자열 양 끝의 공백을 제거합니다.</td>
+            </tr>
         </tbody>
     </table>
 </div>
 
 
-
-<h5>HTML 관련 String 객체 메서드</h5>
+<h5>HTML 관련 객체 메서드</h5>
+<p>현재는 사용하지 않는 태그이기 때문에 다음의 객체 메서드들도 사용하지 않습니다.</p>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -200,6 +224,220 @@
     </table>
 </div>
 
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>문자열에서 많이 사용하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            Hello I'm a webstoryboy. I'm not a student.<br>
+            인덱스(6)에 저장된 문자[charAt(6)] : I<br>
+            주어진 값과 왼쪽부터 일치하는 인덱스[indexOf(a)] : 10<br>
+            문자열 인덱스 30부터 주어진 값과 왼쪽부터 일치하는 인덱스[indexOf('a',30)] : 33<br>
+            주어진 값과 오른쪽부터 일치하는 인덱스[indexOf(a)] : 33<br>
+            문자열 인덱스 30부터 주어진 값과 오른쪽부터 일치하는 인덱스[indexOf('a',30)] : 10<br>
+            인덱스 11부터 12글자 반환[substr()] : webstoryboy<br>
+            인덱스 11부터 23까지 반환[substring()] : webstoryboy<br>
+            문자열 교체[replace()] : Hello I'm a webs. I'm not a student.<br>
+            문자열 일치 후 문자열 반환[match()] : webstoryboy<br>
+            문자열 일치 후 인덱스 반환[search()] : 12<br>
+            소문자 변경[toLowerCase()] : hello i'm a webstoryboy. i'm not a student.<br>
+            대문자 변경[toUpperCase()] : HELLO I'M A WEBSTORYBOY. I'M NOT A STUDENT.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;string&lt;/title&gt;
+    &lt;script&gt;
+        let text = "Hello I'm a webstoryboy. I'm not a student.";
+        
+        document.write(text,"&lt;br&gt;");
+        document.write("인덱스(6)에 저장된 문자[charAt(6)] : " + text.charAt(6),"&lt;br&gt;");
+        document.write("주어진 값과 왼쪽부터 일치하는 인덱스[indexOf(a)] : " + text.indexOf("a"),"&lt;br&gt;");
+        document.write("문자열 인덱스 30부터 주어진 값과 왼쪽부터 일치하는 인덱스[indexOf('a',30)] : " + text.indexOf("a",30),"&lt;br&gt;");
+        document.write("주어진 값과 오른쪽부터 일치하는 인덱스[indexOf(a)] : " + text.lastIndexOf("a"),"&lt;br&gt;");
+        document.write("문자열 인덱스 30부터 주어진 값과 오른쪽부터 일치하는 인덱스[indexOf('a',30)] : " + text.lastIndexOf("a",30),"&lt;br&gt;");
+        document.write("인덱스 11부터 12글자 반환[substr()] : " + text.substr(11,12),"&lt;br&gt;");
+        document.write("인덱스 11부터 23까지 반환[substring()] : " + text.substring(11,23),"&lt;br&gt;");
+        document.write("문자열 교체[replace()] : " + text.replace("webstoryboy","webs"),"&lt;br&gt;");
+        document.write("문자열 일치 후 문자열 반환[match()] : " + text.match("webstoryboy"),"&lt;br&gt;");
+        document.write("문자열 일치 후 인덱스 반환[search()] : " + text.search("webstoryboy"),"&lt;br&gt;");
+        document.write("소문자 변경[toLowerCase()] : " + text.toLowerCase(),"&lt;br&gt;");
+        document.write("대문자 변경[toUpperCase()] : " + text.toUpperCase(),"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<style>
+    .none span {text-decoration: underline;}
+</style>
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>글자를 span 태그로 만들기 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <p id="h2">편안함이 끝나고 궁핍이 시작될 때 인생의 가름침이 시작된다</p>
+            <span>편안함이</span> <span>끝나고</span> <span>궁핍이</span> <span>편안함이</span><span>시작될</span> <span>때</span> <span>인생의</span> <span>가름침이</span> <span>시작된다</span> <br><span>편</span> <span>안</span> <span>함</span> <span>이</span> <span> </span> <span>끝</span> <span>나</span> <span>고</span> <span> </span> <span>궁</span> <span>핍</span> <span>이</span> <span> </span> <span>시</span> <span>작</span> <span>될</span> <span> </span> <span>때</span> <span> </span> <span>인</span> <span>생</span> <span>의</span> <span> </span> <span>가</span> <span>름</span> <span>침</span> <span>이</span> <span> </span> <span>시</span> <span>작</span> <span>된</span> <span>다</span>  
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;글자를 span 태그로 만들기&lt;/title&gt;
+    &lt;style&gt;
+        span {text-decoration: underline;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2 id="h2"&gt;편안함이 끝나고 궁핍이 시작될 때 인생의 가름침이 시작된다&lt;/h2&gt;
+    
+    &lt;script&gt;
+        window.onload = function(){
+            let text = document.getElementById('h2').textContent;
+        
+            let spanText = text.split(" ").join("&lt;/span&gt; &lt;span&gt;")
+                spanText = "&lt;span&gt;" + spanText + "&lt;/span&gt; ";
+        
+            let spanText2 = text.split("").join("&lt;/span&gt; &lt;span&gt;")
+                spanText2 = "&lt;span&gt;" + spanText2 + "&lt;/span&gt; ";
+            
+            document.write(spanText,"&lt;br&gt;");
+            document.write(spanText2);
+        };
+    &lt;/script&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3</h4>
+<p>toUpperCase(), substring() 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+           HWANG SNAG YEON<br>
+           010-2039-****
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;toUpperCase(), substring()&lt;/title&gt;
+    &lt;script&gt;
+        let userName = prompt("영문 이름을 입력하세요!","");
+        let userNumber = prompt("핸드폰 번호를 입력하세요!","");
+        
+        let upper = userName.toUpperCase();
+        let star = userNumber.substring(0, userNumber.length-4)+"****";
+        
+        document.write(upper,"&lt;br&gt;");
+        document.write(star);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4</h4>
+<p>이메일 유효성 검사하기 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+           이메일 형식이 잘못되었습니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;이메일 유효성 검사하기&lt;/title&gt;
+    &lt;script&gt;
+        let useEmail = prompt("당신의 이메일 주소는?","");
+        let arrUrl = [".co.kr",".com",".net",".or.kr",".go.kr"];
+        
+        let check1 = false;
+        let check2 = false;
+        
+        if(useEmail.indexOf("@")&gt;0) check1=true;
+        
+        for(let i=0; i&lt;arrUrl.length; i++){
+            if(useEmail.indexOf(arrUrl[i])&gt;0) check2=true;
+        }
+        
+        if(check1 && check2){
+            document.write(useEmail);
+        } else {
+            document.write("이메일 형식이 잘못되었습니다.");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
 
 
 <h4 class="pt40">참고(Reference)</h4>

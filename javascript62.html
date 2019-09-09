@@ -1,93 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+
     
 
 <h2>다중 if문</h2>
-<p class="line">여러가지 조건에 따라 조건문을 설정합니다.</p>
+<p>여러가지 조건에 따라 조건문을 설정합니다. 조건에 계속 설정할 수 있으며 마지막에는 조건식을 쓰지 않습니다.</p>
+
+<hr>
 
 <h3>다중 if문</h3>
 <p class="blue">
-if (조건) {<br>
+if (조건식1) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//참일 때 실행 코드<br>
-} else if {<br>
+} else if (조건식2) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//앞 조건이 거짓일 때 실행 코드<br>
-} else if {<br>
+} else if (조건식2) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//앞 조건이 거짓일 때 실행 코드<br>
+} else if (조건식3) {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//앞 조건이 거짓일 때 실행 코드<br>
 } else {<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//앞의 모든 조건이 거짓일 때 실행 코드<br>
 }
 </p>
 
-<h5>Sample : 다중 if문 <a href="https://webstoryboy.github.io/javascript/sample05_4.html" class="view" target="_blank">View</a></h5>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>다중 if문을 이용한 심리테스트 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 100;
-        	
-        	if(x == 90){
-	        	document.write("x의 숫자는 90입니다.");
-        	}else if(x == 91){
-	        	document.write("x의 숫자는 91입니다.");
-        	}else if(x == 92){
-	        	document.write("X의 숫자는 92입니다.");
-        	}else if(x == 93){
-	        	document.write("X의 숫자는 93입니다.");
-        	}else if(x == 94){
-	        	document.write("X의 숫자는 94입니다.");
-        	}else if(x == 95){
-	        	document.write("X의 숫자는 95입니다.");
-        	}else if(x == 100){
-	        	document.write("X의 숫자는 100입니다.");
-        	}else{
-	        	document.write("X의 숫자를 모르겠습니다.");
-        	}
-        &lt;/script&gt;
-    &lt;/head&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        var food = prompt("다음 중 가장 먹고 싶은 음식은? 1.카레 2.레몬 3.팝콘 4.커피 5.초코릿");
+        
+        if(food == "카레"){
+            document.write("매콤한 음식을 고른 당신은 사람에게 첫눈에 반하기보다는 서서히 사랑에 빠지는 스타일입니다.");
+        } else if(food == "레몬"){
+            document.write("새콤한 과일을 고른 당신은 쉽게 마음을 열고 또 쉽게 사람을 믿는 스타일입니다.");
+        } else if(food == "팝콘"){
+            document.write("짭짭할고 고소한 팝콘을 고른 당신은 오래 알고 지낸 사람들에게서 보이는 의외에 모습에 약한 스타일입니다.");
+        } else if(food == "커피"){
+            document.write("쌉싸름한 커피를 고른 당신은 사랑에 누구보다 적극적인 스타일입니다.");
+        } else if(food == "초코릿"){
+            document.write("달콤한 초코릿을 선택한 당신은 금방 사랑에 빠지는 스타일입니다.");
+        } else {
+            document.write("해당과일이 없습니다.");
+        } 
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-<h5>Sample : 다중 if문 <a href="https://webstoryboy.github.io/javascript/sample05_5.html" class="view" target="_blank">View</a></h5>
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var userID = window.prompt("아이디를 입력하세요");
-			var userPW = window.prompt("패스워드를 입력하세요");
-
-	        if(userID == "webstoryboy" && userPW == "1234"){
-                alert("환영합니다.");
-            } else if(userID == "webstoryboy"){
-                alert("패스워드가 틀렸습니다.");
-            } else if(userPW == "1234"){
-                alert("아이디가 틀렸습니다.");
-            } else {
-                alert("틀렸습니다.");
-            }
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
-</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
 
 
 
-</body>
-</html>

@@ -1,101 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
 
 
 <h2>배열</h2>
-<p class="line">배열은 여러개의 데이터를 순차적으로 저장하는 저장소입니다.</p>
+<p>배열은 여러개의 데이터를 순차적으로 저장하는 저장소입니다.</p>
+
+<hr>
 
 <h3>배열</h3>
-<p>배열을 선언하는 방법과 선언과 동시에 초기화하는 방법, 배열의 크기구하는 방법등을 알아보겠습니다.</p>
+<p>배열은 여러개의 데이터를 순차적으로 저장하는 저장소이며, 사용하는 방법이 다양합니다.</p>
 
 <h4>문법</h4>
 <p class="blue">
 var 변수명 = [값1, 값2, 값3......]
 </p>
 
-<h5>Sample : 배열 <a href="https://webstoryboy.github.io/javascript/sample04_1.html" class="view" target="_blank">View</a></h5>
+<h4>배열 사용하는 방법1</h4>
+<p>배열을 선언하고 데이터를 순차적으로 선언하는 방법입니다.</p>
+<p class="blue">
+var arr1 = new Array();<br>
+arr1[0] = 100;  <br>
+arr1[1] = 200;
+</p>
+
+<h4>배열 사용하는 방법2</h4>
+<p>배열을 선언과 동시에 데이터를 넣는 방법입니다. </p>
+<p class="blue">
+var arr2 = new Array(100,200);
+</p>
+
+<h4>배열 사용하는 방법3</h4>
+<p>배열을 선언하지 않고 바로 데이터를 넣는 방법입니다.</p>
+<p class="blue">
+var arr3 = [100,200];
+</p>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">배열</h4>
+<p>배열 선언하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100<br>
+            200<br>
+
+            100<br>
+            200<br>
+
+            100<br>
+            200<br>
+
+            100<br>
+            200<br>
+
+            5<br>
+
+            100<br>
+            200<br>
+            300<br>
+            400<br>
+            500<br>
+
+            1500
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;배열&lt;/title&gt;
     &lt;script&gt;
-        //변수 x=100, y=200 출력해주세요!
+        //변수 x = 100; 변수 y = 200 저장한 다음 출력해주세요!!
         var x = 100;
         var y = 200;
+
         document.write(x);
         document.write("&lt;br&gt;");
         document.write(y);
         document.write("&lt;br&gt;&lt;br&gt;");
-        
-        //배열 선언
+
+        //배열을 이용해서 화면에 100과 200을 출력하세요!
         var arr1 = new Array();
-        arr1[0] = 100;
-        arr1[1] = 200;
-        
+        arr1[0] = 100;      //첫번째 배열 저장소에 100을 저장
+        arr1[1] = 200;      //두번째 배열 저장소에 200을 저장
+
         document.write(arr1[0]);
         document.write("&lt;br&gt;");
         document.write(arr1[1]);
         document.write("&lt;br&gt;&lt;br&gt;");
-        
-        //배열 선언과 동시에 초기화하기
-        var arr2 = new Array(100,200,300);
-        
-        document.write(arr2[0],"&lt;br&gt;");
-        document.write(arr2[1],"&lt;br&gt;");
-        document.write(arr2[2],"&lt;br&gt;&lt;br&gt;");
-        
+
+        //배열을 선언과 동시에 초기화하여 100과 200을 출력하세요!!
+        var arr2 = new Array(100,200);
+
+        document.write(arr2[0]);
+        document.write("&lt;br&gt;");
+        document.write(arr2[1]);
+        document.write("&lt;br&gt;&lt;br&gt;");
+
+        //배열을 선언하지 않고 100과 200을 출력하세요!!
+        var arr3 = [100,200];
+
+        document.write(arr3[0]);
+        document.write("&lt;br&gt;");
+        document.write(arr3[1]);
+        document.write("&lt;br&gt;&lt;br&gt;");
+
         //배열의 크기 구하기
-        var arr3 = new Array(100,200,300,400,500);
-        
-        document.write(arr3.length);
-        
-        //for문을 이용한 배열의 합 구하기
-        var arr4 = new Array(100,200,300,400,500,600,700,800,900,1000)
+        var arr4 = [100,200,300,400,500];
+
+        document.write(arr4.length);
+        document.write("&lt;br&gt;&lt;br&gt;");
+
+        //배열 가져오기
+        var arr5 = [100,200,300,400,500];
+
+        for(var i=0; i&lt;arr5.length; i++){
+            document.write(arr5[i], "&lt;br&gt;");
+        }
+
+        //배열의 합 구하기
+        var arr6 = [100,200,300,400,500];
         var sum = 0;
-        
-        //arr4[0] = 100
-        //arr4[i] = 200
-        //arr4[i] = 300
-        //arr4[i] = 400
-        //arr4[i] = 500
-        //arr4[i] = 600
-        //arr4[i] = 700
-        //arr4[i] = 800
-        //arr4[i] = 900
-        //arr4[i] = 1000
-        
-        // 0 = 0 + 100;
-        // 100 = 100 + 200;
-        // 300 = 300 + 300;
-        // 600 = 600 + 400;
-        // 1000 = 1000 + 500;
-        // 1500 = 1500 + 600;
-        // 2100 = 2100 + 700;
-        // 2800 = 2800 + 800;
-        // 3600 = 3600 + 900;
-        // 4500 = 4500 + 1000;
-        // 5500
-        
-        //i=0;  0&lt;10; 1;
-        //i=1;  1&lt;10; 2;
-        //i=2;  2&lt;10; 3;
-        //i=3;  3&lt;10; 4;
-        //i=4;  4&lt;10; 5;
-        //i=5;  5&lt;10; 6;
-        //i=6;  6&lt;10; 7;
-        //i=7;  7&lt;10; 8;
-        //i=8;  8&lt;10; 9;
-        //i=9;  9&lt;10; 10;
-        
-        for(var i=0; i&lt;arr4.length; i++){
-            sum = sum + arr4[i];
+
+        for(var i=0; i&lt;arr6.length; i++){
+            // sum = 100+200+300+400+500;
+            // sum = arr5[0]+arr5[1]+arr5[2]+arr5[3]+arr5[4]
+            // sum = arr5[i]+arr5[i]+arr5[i]+arr5[i]+arr5[i]
+            sum = sum + arr6[i];
+            // 0    =  0  + 100;
+            // 100 = 100 + 200;
+            // 300 = 300 + 300;
+            // 600 = 600 + 400;
+            // 1000= 1000+ 500;
+            // 1500
         }
         document.write("&lt;br&gt;");
         document.write(sum);
@@ -104,8 +148,75 @@ var 변수명 = [값1, 값2, 값3......]
 &lt;body&gt;
     
 &lt;/body&gt;
-&lt;/html&gt; 
+&lt;/html&gt;
 </code></pre>
+    </div>
+</div>
+<!-- sample1 -->
 
-</body>
-</html>
+
+
+<h3 class="pt50">배열 객체의 메서드 및 속성</h3>
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>join()</td>
+                <td>배열 객체의 데이터를 문자형 데이터로 출력합니다.</td>
+            </tr>
+            <tr>
+                <td>reverse()</td>
+                <td>배열 객체의 데이터를 반대로 출력합니다.</td>
+            </tr>
+            <tr>
+                <td>sort()</td>
+                <td>배열 객체의 데이터를 오름차순으로 출력합니다.</td>
+            </tr>
+            <tr>
+                <td>slice()</td>
+                <td>배열 객체의 데이터를 인덱스 구간만큼 가져옵니다.</td>
+            </tr>
+            <tr>
+                <td>splice()</td>
+                <td>배열 객체의 지정 데이터를 삭제하고 새 테이터를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>concat()</td>
+                <td>배열 객체의 데이터 중 2개의 배열 객체를 하나로 합칩니다.</td>
+            </tr>
+            <tr>
+                <td>pop()</td>
+                <td>배열 객체의 데이터 중 마지막 데이터를 삭제합니다.</td>
+            </tr>
+            <tr>
+                <td>push()</td>
+                <td>배열 객체의 마지막 인덱스에 새 데이터를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>shift()</td>
+                <td>배열 객체의 데이터 중 첫 번째 데이터를 삭제합니다.</td>
+            </tr>
+            <tr>
+                <td>unshift()</td>
+                <td>배열 객체의 첫 번째 인덱스에 새 데이터를 삽입합니다.</td>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>배열 객체의 데이터 개수를 반환합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+

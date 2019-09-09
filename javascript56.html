@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    
+
 
 <h2>논리 연산자</h2>
-<p class="line">참/거짓으로 나타나는 boolean 값을 조합해서 논리 연산을 수행합니다.</p>
+<p>참/거짓으로 나타나는 boolean 값을 조합해서 논리 연산을 수행합니다.</p>
+
+<hr>
 
 <h3>논리 연산자</h3>
 <div class="table-responsive">
@@ -29,60 +24,99 @@
             <tr>
                 <td>&&</td>
                 <td>X && Y</td>
-                <td>(AND)둘다 true인 경우 true</td>
+                <td>둘다 true인 경우 true를 반환합니다.</td>
             </tr>
             <tr>
                 <td>||</td>
                 <td>X || Y</td>
-                <td>(OR)둘 중의 하나 이상이 true이면 true</td>
+                <td>둘 중의 하나 이상이 true인 경우 true를 반환합니다.</td>
             </tr>
             <tr>
                 <td>!</td>
                 <td>!X</td>
-                <td>(NOT)식이 false인 경우 true</td>
+                <td>반대 값을 반환합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h5>Sample : 논리 연산자</h5>
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>논리 연산자를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            false<br>
+            true<br>
+            true<br>
+
+            false<br>
+            false<br>
+            true<br>
+
+            false<br>
+            true<br>
+
+            false<br>
+            false<br>
+            false<br>
+            true
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var x = 10;
-        	var y = 20;
-        	var z = 100;
-			
-			document.write(true && true);
-			document.write("&lt;br/&gt;");
-			document.write(true && false);
-			document.write("&lt;br/&gt;");
-			document.write(true || true);
-			document.write("&lt;br/&gt;");
-			document.write(true || false);
-			document.write("&lt;br/&gt;");
-			document.write(!true);
-			document.write("&lt;br/&gt;");
-			
-			//논리 연산자의 활용
-			document.write(x &lt; y && y &lt; 120);
-			document.write("&lt;br/>");
-			document.write(70 &lt;= z && z &lt; 120);
-			document.write("&lt;br/&gt;");
-			document.write(80 &lt;= z && z &lt;= 100);
-			
-        &lt;/script&gt;
-    &lt;/head&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;논리 연산자&lt;/title&gt;
+    &lt;script&gt;
+        var a = 10;
+        var b = 20;
+
+        document.write( false || false);    
+        document.write("&lt;br&gt;");
+        document.write( false || true);   
+        document.write("&lt;br&gt;");
+        document.write( true || true);     
+        document.write("&lt;br&gt;");
+
+        document.write( false && false);   
+        document.write("&lt;br&gt;");
+        document.write( false && true);    
+        document.write("&lt;br&gt;");
+        document.write( true && true);   
+        document.write("&lt;br&gt;");
+
+        document.write( !true );                  
+        document.write("&lt;br&gt;");
+        document.write( !false );                
+        document.write("&lt;br&gt;");
+
+        document.write( a &gt; b && a &lt; b);        
+        document.write("&lt;br&gt;");
+        document.write( a &gt; b && a &lt; b && a &gt;= b); 
+        document.write("&lt;br&gt;");
+        document.write( a &gt; 200 || 50 &lt; b);     
+        document.write("&lt;br&gt;");
+        document.write( !(a &gt; 200));         
+        document.write("&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
     
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;     
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-
-
-</body>
-</html>
+    </div>
+</div>
+<!-- sample1 -->

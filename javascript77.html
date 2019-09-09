@@ -1,11 +1,24 @@
 
 
 <h2>날짜 객체</h2>
-<p class="line">날짜 객체(Data Object)는 날짜와 관련된 객체입니다. </p>
+<p>날짜 객체(Data Object)는 날짜와 관련된 객체입니다. </p>
+
+<hr>
 
 <h3>날짜 객체 생성</h3>
 <p class="blue">
     var 참조 변수 = new Data();
+</p>
+
+<h4>UTC(협정 세계표준시)와 GMT(그리니치 표준시)</h4>
+<p>UTC(협정 세계표준시)는 1972년 1월 1일부터 시행된 국제 표준시이며, GMT(그리니치 표준시)는 런던을 기점으로 하고, 웰링턴에 종점으로 설정되는 협정 세계시의 기준시간대입니다. UTC와 GMT는 초의 소숫점 단위에서만 차이가 나기 때문에 일상에서는 혼용되어 사용되며, 기술적인 표기에서는 UTC가 사용됩니다.</p>
+
+<h4>초 계산</h4>
+<p class="blue">
+    1분 = 1000(msc)<br>
+    1분(60초) = 1000 * 60                 //60,000(msc)<br>
+    1시간(60분) = 1000 * 60 * 60           //3,600,000(msc)<br>
+    1일(60분*24) = 1000 * 60 * 60 * 24    //86,400,00(msc)
 </p>
 
 <h5>Date 함수</h5>
@@ -24,15 +37,15 @@
         <tbody>
             <tr>
                 <td>Date.now</td>
-                <td>현재 날짜 및 시간의 값을 리턴합니다.</td>
+                <td>현재 날짜 및 시간의 값을 가져옵니다.</td>
             </tr>
             <tr>
                 <td>Date.parse</td>
-                <td>날자를 포함한 문자열 구문을 분석하여 해당 날짜 사이의 시간을 밀리세컨드로 리턴합니다.</td>
+                <td>날자를 포함한 문자열 구문을 분석하여 해당 날짜 사이의 시간을 밀리세컨드로 가져옵니다.</td>
             </tr>
             <tr>
                 <td>Date.UTC</td>
-                <td>UTC(지역표준시) 또는 GMT(그리니치 표준시)의 날짜 사이의 시간을 밀리세컨트로 리턴합니다.</td>
+                <td>UTC(지역표준시) 또는 GMT(그리니치 표준시)의 날짜 사이의 시간을 밀리세컨트로 가져옵니다.</td>
             </tr>
         </tbody>
     </table>
@@ -54,171 +67,155 @@
         <tbody>
             <tr>
                 <td>getDate()</td>
-                <td>로컬 시간을 사용하여 일(월 기준) 값을 리텁합니다.</td>
+                <td>현재 일 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getDay()</td>
-                <td>로컬 시간을 사용하여 일(주 기준)값을 리턴합니다.</td>
+                <td>현재 월 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getFullYear()</td>
-                <td>로컬 시간을 사용하여 연도 값을 리턴합니다.</td>
+                <td>현재 년도 정보를 가져옵니다.</td>
             </tr>
             <tr>
-                <td>getHours()></td>
-                <td>로컬 시간을 사용하여 시간 값을 리턴합니다.</td>
+                <td>getHours()</td>
+                <td>현재 시 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getMilliseconds()</td>
-                <td>로컬 시간을 사용하여 밀리세컨드 값을 리턴합니다.</td>
+                <td>현재 초(1/1000 단위) 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getMinutes()</td>
-                <td>로컬 시간을 사용하여 분 값을 리턴합니다.</td>
+                <td>현재 분 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getMonth()</td>
-                <td>로컬 시간을 사용하여 월 값을 리턴합니다.</td>
+                <td>현재 월 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getSeconds()</td>
-                <td>로컬 시간을 사용하여 초 값을 리턴합니다.</td>
+                <td>현재 초 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getTime()</td>
-                <td>1970년 1월 1일 자정 이후로 밀리세컨드 단위로 리턴합니다.</td>
+                <td>1970년 1월 1일 자정 이후의 초 정보를 밀리세컨드 단위로 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getTimezoneOffset()</td>
-                <td>호스트 컴퓨터와 UTC(지역 표준시) 사이의 시간차를 분으로 리턴합니다.</td>
+                <td>호스트 컴퓨터와 UTC 사이의 시간차를 분으로 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCDate()</td>
-                <td>UTC를 사용하여 일(월 기준)값을 리턴합니다.</td>
+                <td>UTC를 사용하여 일 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCDay()</td>
-                <td>UTC를 사용하여 일(일 기준)값을 리턴합니다.</td>
+                <td>UTC를 사용하여 월 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCFullYear()</td>
-                <td>UTC를 사용하여 연도 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 년도 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCHours()</td>
-                <td>UTC를 사용하여 시간 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 시간 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCMilliseconds()</td>
-                <td>UTC를 사용하여 밀리세컨드 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 초(1/1000 단위) 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCMinutes()</td>
-                <td>UTC를 사용하여 분 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 분 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCMonth()</td>
-                <td>UTC를 사용하여 월 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 월 정보를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>getUTCSeconds()</td>
-                <td>UTC를 사용하여 초 값을 리턴합니다.</td>
+                <td>UTC를 사용하여 초 정보를 가져옵니다.</td>
             </tr>
             <tr>
-                <td>getVarData()</td>
-                <td>Data 객체의 VT_DATE 값을 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>getYear()></td>
+                <td>getYear()</td>
                 <td>연도 값을 리턴합니다.</td>
             </tr>
             <tr>
-                <td>hasOwnProperty()</td>
-                <td>객체에 지정된 이름을 가진 속성이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>isPrototypeOf()</td>
-                <td>다른 객체의 prototype 체인이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>propertyIsEnumerable()</td>
-                <td>지정된 속성이 객체의 일부인지와 열거할 수 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
-            </tr>
-            <tr>
                 <td>setData()</td>
-                <td>로컬 시간을 사용하여 숫자로 된 날짜(월 기준)을 설정합니다.</td>
+                <td>현재 일 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setFullYear()</td>
-                <td>로컬 시간을 사용하여 연도 값을 설정합니다.</td>
+                <td>현재 년도 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setHours()</td>
-                <td>로컬 시간을 사용하여 시간 값을 설정합니다.</td>
+                <td>현재 시간 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setMilliseconds()</td>
-                <td>로컬 시간을 사용하여 밀리세컨드 값을 설정합니다.</td>
+                <td>현재 초(1/1000단위) 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setMinutes()</td>
-                <td>로컬 시간을 사용하여 분 값을 설정합니다.</td>
+                <td>현재 분 정보를 수정합니다.</td>
             </tr>
             <tr>
-                <td>setMonth()></td>
-                <td>로컬 시간을 사용하여 월 값을 설정합니다.</td>
+                <td>setMonth()</td>
+                <td>현재 월 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setSeconds()</td>
-                <td>로컬 시간을 사용하여 초 값을 설정합니다.</td>
+                <td>현재 초 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setTime()</td>
-                <td>Date 객체의 날짜와 시간 값을 설정합니다.</td>
+                <td>1970년 1월 1일 자정 이후의 초 정보를 밀리세컨드 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCDate()</td>
-                <td>UTC를 사용하여 숫자로 된 날짜(월 기준)을 설정합니다.</td>
+                <td>UTC를 사용하여 일 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCFullYear()</td>
-                <td>UTC를 사용하여 연도 값을 설정합니다.</td>
+                <td>UTC를 사용하여 년도 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCHours()</td>
-                <td>UTC를 사용하여 시간 값을 설정합니다.</td>
+                <td>UTC를 사용하여 시간 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCMilliseconds()</td>
-                <td>UTC를 사용하여 밀리세컨드 값을 설정합니다.</td>
+                <td>UTC를 사용하여 초(1/1000단위) 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCMinutes()</td>
-                <td>UTC를 사용하여 분 값을 설정합니다.</td>
+                <td>UTC를 사용하여 분 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCMonth()</td>
-                <td>UTC를 사용하여 월 값을 설정합니다.</td>
+                <td>UTC를 사용하여 월 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setUTCSeconds()</td>
-                <td>UTC를 사용하여 초 값을 설정합니다.</td>
+                <td>UTC를 사용하여 초 정보를 수정합니다.</td>
             </tr>
             <tr>
                 <td>setYear()</td>
-                <td>로컬 시간을 사용하여 연도 값을 설정합니다.</td>
+                <td>로컬 시간을 사용하여 연도 값을 가져옵니다.</td>
             </tr>
             <tr>
                 <td>toDateString()</td>
-                <td>날짜를 문자열 값으로 리턴합니다.</td>
+                <td>날짜를 문자열 값으로 가져옵니다.</td>
             </tr>
             <tr>
                 <td>toGMTString()</td>
-                <td>GMT를 사용하여 문자열로 변환된 날짜를 리턴합니다.</td>
+                <td>GMT를 사용하여 문자열로 변환된 날짜를 가져옵니다.</td>
             </tr>
             <tr>
                 <td>toISOString()</td>
-                <td>날짜를 ISO 형식의 문자열 값으로 리턴합니다.</td>
+                <td>날짜를 ISO 형식의 문자열 값으로 가져옵니다.</td>
             </tr>
             <tr>
                 <td>toJSON()</td>
@@ -229,7 +226,360 @@
 </div>
 
 
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>Date 객체를 이용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            Fri Aug 23 2019 10:39:11 GMT+0900 (한국 표준시)<br>
+            현재 월[getMonth()] : 7<br>
+            현재 일[getDate()] : 23<br>
+            현재 일[getDay()] : 5<br>
+            현재 년도[getFullYear()] : 2019<br>
+            현재 시간[getHours()] : 10<br>
+            현재 초[getMilliseconds()] : 27<br>
+            현재 초[getSeconds()] : 11<br>
+            현재 분[getMinutes()] : 39<br>
+            현재 초[getTime()] : 1566524351027<br><br>
+
+            날짜 문자열[toDateString()] : Fri Aug 23 2019<br>
+            날짜 문자열[toGMTString()] : Fri, 23 Aug 2019 01:39:11 GMT<br>
+            날짜 문자열[toLocaleDateString()] : 2019. 8. 23.<br>
+            날짜 문자열[toLocaleString()] : 2019. 8. 23. 오전 10:39:11<br>
+            날짜 문자열[toLocaleTimeString()] : 오전 10:39:11<br>
+            날짜 문자열[toString()] : Fri Aug 23 2019 10:39:11 GMT+0900 (한국 표준시)<br>
+            날짜 문자열[toTimeString()] : 10:39:11 GMT+0900 (한국 표준시)<br>
+            날짜 문자열[toUTCString()] : Fri, 23 Aug 2019 01:39:11 GMT
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Date()&lt;/title&gt;
+    &lt;script&gt;
+        var today = new Date();                         //날짜 객체를 생성하고 변수에 저장
+        var nowMonth = today.getMonth();                //현재 월을 변수에 저장
+        var nowDate = today.getDate();                  //현재 일을 변수에 저장
+        var nowDay = today.getDay();                    //현재 요일을 변수에 저장
+        var nowFullYear = today.getFullYear();          //현재 년도를 변수에 저장
+        var nowHours = today.getHours();                //현재 시간을 변수에 저장
+        var nowMilliseconds = today.getMilliseconds();  //현재 초(1/1000초 단위)를 변수에 저장
+        var nowSeconds = today.getSeconds();            //현재 초를 변수에 저장
+        var nowMinutes = today.getMinutes();            //현재 분을 변수에 저장
+        var nowTime = today.getTime();                  //1970년 1월 1일 자정 이후의 초 정보를 저장
+        
+        var nowDateString = today.toDateString();               //날짜를 문자열로 변수에 저장
+        var nowGMTString = today.toGMTString();                 //날짜를 문자열로 변수에 저장
+        var nowLocaleDateString = today.toLocaleDateString();   //날짜를 문자열로 변수에 저장
+        var nowLocaleString = today.toLocaleString();           //날짜를 문자열로 변수에 저장
+        var nowLocaleTimeString = today.toLocaleTimeString();   //날짜를 문자열로 변수에 저장
+        var nowString = today.toString();                       //날짜를 문자열로 변수에 저장
+        var nowTimeString = today.toTimeString();               //날짜를 문자열로 변수에 저장
+        var nowUTCString = today.toUTCString();                 //날짜를 문자열로 변수에 저장
+        
+        document.write(today,"&lt;br&gt;");
+        document.write("현재 월[getMonth()] : " + nowMonth,"&lt;br&gt;");
+        document.write("현재 일[getDate()] : " + nowDate,"&lt;br&gt;");
+        document.write("현재 일[getDay()] : " + nowDay,"&lt;br&gt;");
+        document.write("현재 년도[getFullYear()] : " + nowFullYear,"&lt;br&gt;");
+        document.write("현재 시간[getHours()] : " + nowHours,"&lt;br&gt;");
+        document.write("현재 초[getMilliseconds()] : " + nowMilliseconds,"&lt;br&gt;");
+        document.write("현재 초[getSeconds()] : " + nowSeconds,"&lt;br&gt;");
+        document.write("현재 분[getMinutes()] : " + nowMinutes,"&lt;br&gt;");
+        document.write("현재 초[getTime()] : " + nowTime,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("날짜 문자열[toDateString()] : " + nowDateString,"&lt;br&gt;");
+        document.write("날짜 문자열[toGMTString()] : " + nowGMTString,"&lt;br&gt;");
+        document.write("날짜 문자열[toLocaleDateString()] : " + nowLocaleDateString,"&lt;br&gt;");
+        document.write("날짜 문자열[toLocaleString()] : " + nowLocaleString,"&lt;br&gt;");
+        document.write("날짜 문자열[toLocaleTimeString()] : " + nowLocaleTimeString,"&lt;br&gt;");
+        document.write("날짜 문자열[toString()] : " + nowString,"&lt;br&gt;");
+        document.write("날짜 문자열[toTimeString()] : " + nowTimeString,"&lt;br&gt;");
+        document.write("날짜 문자열[toUTCString()] : " + nowUTCString,"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>현재 시간을 표현하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            현재 시간은 : <div id="clock"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        #clock {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 5vw; white-space: nowrap;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="clock"&gt;&lt;/div&gt;
+    
+    &lt;script&gt;
+        window.onload = function(){
+            var clock = document.getElementById("clock");
+
+            setInterval(function(){
+                clock.innerHTML = new Date().toLocaleString();
+            },1000);
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3</h4>
+<p>D-Day를 출력하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            2019년도 <span id="cl"></span>일 밖에 남지 않았군요!
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;D-Day 구하기&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;script&gt;
+        window.onload = function(){
+            var today = new Date();
+            var dDay = new Date("December 31, 2019");
+
+            var interval = today.getTime() - dDay.getTime();
+            interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+
+            document.write("2019년도" + interval + "일 밖에 남지 않았군요!");
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4</h4>
+<p>D-Day를 출력하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <p>도쿄 올림픽까지</p>
+            <p>남은 시간은 
+                <span id="day"></span>일
+                <span id="hour"></span>시간
+                <span id="min"></span>분
+                <span id="sec"></span>초 입니다.
+            </p>  
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;D-Day&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h2&gt;도쿄 올림픽까지&lt;/h2&gt;
+    &lt;p&gt;남은 시간은 
+        &lt;span id="day"&gt;&lt;/span&gt;일
+        &lt;span id="hour"&gt;&lt;/span&gt;시간
+        &lt;span id="min"&gt;&lt;/span&gt;분
+        &lt;span id="sec"&gt;&lt;/span&gt;초 입니다.
+    &lt;/p&gt;    
+    
+    &lt;script type="text/javascript"&gt;   
+        setInterval(function(){
+            var today = new Date();
+            var goal = new Date(2020, 7, 24);
+
+            var interval = goal.getTime() - today.getTime();
+            var days = Math.floor(interval / 1000 / 60 / 60 / 24);
+            var hour = Math.floor(interval / 1000 / 60 / 60) % 24;
+            var min = Math.floor(interval / 1000 / 60) % 60;
+            var sec = Math.floor(interval / 1000 % 60);
+            
+            document.getElementById('day').innerHTML = days;
+            document.getElementById('hour').innerHTML = hour;
+            document.getElementById('min').innerHTML = min;
+            document.getElementById('sec').innerHTML = sec;
+        }, 1000); 
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
+
+
+
+
+<!-- Sample5 -->
+<h4 class="pt50">Sample5</h4>
+<p>마지막 접속 시간을 출력하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <div>당신의 마지막 접속 시간은 : <span id="last"></span></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;마지막 접속 시간&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;당신의 마지막 접속 시간은 : &lt;span id="last"&gt;&lt;/span&gt;&lt;/div&gt;
+    
+    &lt;script&gt;
+        window.onload = function(){
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth();
+            var date = today.getDate();
+            var hour = today.getHours();
+            var min = today.getMinutes();
+            var ampm = '';
+            if(hour &lt; 12) {
+                ampm = ' 오전';
+            } else {
+                ampm = ' 오후';
+            }
+            var last = year + '.' + (month + 1) + '.' + date + ' ' + (hour % 12) + ':' + min + ampm;
+            
+            document.getElementById('last').innerHTML = last;
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample5 -->
+
+
+
+
 <h4 class="pt40">참고(Reference)</h4>
 <ul>
     <li>MDN JavaScript <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
 </ul>
+
+
+<script type="text/javascript"> 
+    var clock = document.getElementById("clock");
+
+    setInterval(function(){
+        clock.innerHTML = new Date().toLocaleString();
+    },1000);
+
+
+    var today2 = new Date();
+    var dDay2 = new Date("December 31, 2019");
+
+    var interval2 = today2.getTime() - dDay2.getTime();
+    interval2 = Math.floor(interval2 / (1000 * 60 * 60 * 24));
+
+    document.getElementById('cl').innerHTML = interval2;
+
+    setInterval(function(){
+        var today = new Date();
+        var goal = new Date(2020, 7, 24);
+
+        var interval = goal.getTime() - today.getTime();
+        var days = Math.floor(interval / 1000 / 60 / 60 / 24);
+        var hour = Math.floor(interval / 1000 / 60 / 60) % 24;
+        var min = Math.floor(interval / 1000 / 60) % 60;
+        var sec = Math.floor(interval / 1000 % 60);
+        
+        document.getElementById('day').innerHTML = days;
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = min;
+        document.getElementById('sec').innerHTML = sec;
+    }, 1000); 
+
+
+    var today3 = new Date();
+    var year3 = today3.getFullYear();
+    var month3 = today3.getMonth();
+    var date3 = today3.getDate();
+    var hour3 = today3.getHours();
+    var min3 = today3.getMinutes();
+    var ampm3 = '';
+    if(hour3 < 12) {
+        ampm3 = ' 오전';
+    } else {
+        ampm3 = ' 오후';
+    }
+    var last3 = year3 + '.' + (month3 + 1) + '.' + date3 + ' ' + (hour3 % 12) + ':' + min3 + ampm3;
+    
+    document.getElementById('last').innerHTML = last3;
+</script>

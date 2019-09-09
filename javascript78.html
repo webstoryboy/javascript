@@ -1,14 +1,17 @@
 
 
 <h2>Array 객체</h2>
-<p class="line">배열 객체(Array Object)는 여러 개의 데이터를 저장하기 위한 객체입니다. </p>
+<p>배열 객체(Array Object)는 여러 개의 데이터를 저장하기 위한 객체입니다. </p>
+
+<hr>
 
 <h3>Array 객체 생성</h3>
 <p class="blue">
-    var 참조 변수 = new Array();
+    var 변수 = new Array();
 </p>
 
-<h5>Array 객체 속성</h5>
+
+<h5 class="pt50">Array 객체 속성</h5>
 <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <colgroup>
@@ -30,27 +33,6 @@
     </table>
 </div>
 
-<h5>Array 함수</h5>
-<div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-        <colgroup>
-            <col style="width: 30%">
-            <col style="width: 70%">
-        </colgroup>
-        <thead>
-            <tr>
-                <th>함수</th>
-                <th>설명</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Array.isArray</td>
-                <td>객체가 배열인지 여부를 나타내는 불린 값을 리턴합니다.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 <h5>Array 객체 메서드</h5>
 <div class="table-responsive">
@@ -68,107 +50,336 @@
         <tbody>
             <tr>
                 <td>concat()</td>
-                <td>두 배열의 조합으로 구성된 새 배열을 리턴한다.</td>
+                <td>여러 개의 배열을 새 배열로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>copyWithin()</td>
+                <td>두 배열의 조합으로 구성된 새 배열을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>entries()</td>
+                <td>배열의 각 인덱스에 대한 키와 값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>every()</td>
-                <td>배열의 모든 요소에 대해 선언된 콜백 함수가 true를 리턴하는지 여부를 확인합니다.</td>
+                <td>배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 테스트합니다.</td>
+            </tr>
+            <tr>
+                <td>fill()</td>
+                <td>배열의 시작 인덱스부터 끝 인덱스까지 하나의 값으로 채웁니다.</td>
             </tr>
             <tr>
                 <td>filter()</td>
-                <td>배열의 각 요소에 대해 선언된 콜백함수를 호출하고 콜백 함수가 true를 리턴하는 값의 배열을 리턴합니다.</td>
+                <td>주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>find()</td>
+                <td>주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>findIndex()</td>
+                <td>주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. </td>
+            </tr>
+            <tr>
+                <td>flat()</td>
+                <td>모든 하위 배열까지 하나의 배열로 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>flatMap()</td>
+                <td>각 엘리먼트에 대해 map 수행 후, 결과를 새로운 배열로 반환합니다.</td>
             </tr>
             <tr>
                 <td>forEach()</td>
-                <td>배열의 각 요소에 대해 선언된 콜백 함수를 호출합니다.</td>
+                <td>배열 요소 각각에 대해 실행합니다.</td>
             </tr>
             <tr>
-                <td>hasOwnProperty()</td>
-                <td>객체에 지정된 이름을 가진 속성이 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>includes()</td>
+                <td>배열에 특정 요소를 포함하고 있는지 판별합니다.</td>
+            </tr>
+            <tr>
+                <td>includes()</td>
+                <td>배열에 특정 요소를 포함하고 있는지 판별합니다.</td>
             </tr>
             <tr>
                 <td>indexOf()</td>
-                <td>배열에서 맨 처음 나오는 값의 인덱스를 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>isPrototypeOf()</td>
-                <td>객체가 다른 객체의 prototype 체인에 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>배열에서 지정된 요소를 찾을 수있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.</td>
             </tr>
             <tr>
                 <td>join()</td>
-                <td>배열 하나에 함께 연결된 모든 요소들로 구성된 String 객체를 리턴합니다.</td>
+                <td>배열의 모든 요소를 연결해 하나의 문자열로 만듭니다.</td>
+            </tr>
+            <tr>
+                <td>keys()</td>
+                <td>배열의 각 인덱스를 키 값으로 가지는 새로운 배열을 반환합니다.</td>
             </tr>
             <tr>
                 <td>lastIndexOf()</td>
-                <td>배열에서 마지막으로 나오는 지정된 값의 인덱스를 리턴합니다.</td>
+                <td>지정된 요소가 배열에서 발견 될 수있는 마지막 인덱스를 반환하고, 존재하지 않으면 -1을 반환합니다.</td>
             </tr>
             <tr>
                 <td>map()</td>
-                <td>배열의 각 요소에 대해 선언된 콜백 함수를 호출하고 결과가 포함되어 있는 배열을 리턴합니다.</td>
+                <td>배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.</td>
             </tr>
             <tr>
                 <td>pop()</td>
-                <td>배열의 마지막 요소를 제거하여 리턴합니다.</td>
-            </tr>
-            <tr>
-                <td>propertyIsEnumerable()</td>
-                <td>지정된 속성이 객체의 일부인지와 열거할 수 있는지 여부를 나타내는 불린 값을 리턴합니다.</td>
+                <td>배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.</td>
             </tr>
             <tr>
                 <td>push()</td>
-                <td>배열에 새 요소를 추가하고 배열의 새 길이를 리턴합니다.</td>
+                <td>배열 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.</td>
             </tr>
             <tr>
                 <td>reduce()</td>
-                <td>배열의 모든 요소에 대해 선언된 콜백함수를 호출하여 단일 결과를 누적합니다.</td>
+                <td>배열의 각 요소에 대해 주어진 함수를 실행하고, 하나의 결과값을 반환합니다.</td>
             </tr>
             <tr>
                 <td>reduceRight()</td>
-                <td>배열의 모든 요소에 대해 선언된 콜백 함수를 호출하여 단일 결과를 내림차순으로 누적합니다.</td>
+                <td>누적기에 대해 함수를 적용하고 배열의 각 값은 값을 단일 값으로 줄입니다.</td>
             </tr>
             <tr>
                 <td>reverse()</td>
-                <td>요소들이 역으로 나열된 Array 객체를 리턴합니다.</td>
+                <td>배열의 순서를 반전합니다.</td>
             </tr>
             <tr>
                 <td>shift()</td>
-                <td>배열에서 첫 번째 요소를 제거하여 리턴합니다.</td>
+                <td>배열에서 첫 번째 요소를 제거하고, 제거된 요소를 반환합니다.</td>
             </tr>
             <tr>
-                <td>slice()></td>
-                <td>배열의 일정 부분을 리턴합니다.</td>
+                <td>slice()</td>
+                <td>배열의 일부분을 선택하여 새로운 배열 객체로 반환합니다.</td>
             </tr>
             <tr>
                 <td>some()</td>
-                <td>배열의 모든 요소에 대해 선언된 콜백 함수가 true를 리턴하는지 여부를 확인합니다.</td>
+                <td>배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.</td>
             </tr>
             <tr>
-                <td>sort()></td>
-                <td>요소가 정렬된 Array 객체를 리턴합니다.</td>
+                <td>sort()</td>
+                <td>배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환합니다.</td>
             </tr>
             <tr>
                 <td>splice()</td>
-                <td>배열에서 첫 번째 요소를 제거하고, 필요하면 그 자리에 새 요소를 삽입한 다음 삭제된 요소를 리턴합니다.</td>
+                <td>배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</td>
             </tr>
             <tr>
                 <td>toLocaleString()</td>
-                <td>현재 로케일을 사용하는 문자열을 리턴합니다.</td>
+                <td>배열의 요소를 나타내는 문자열을 반환합니다.</td>
             </tr>
             <tr>
                 <td>toString()</td>
-                <td>배열을 나타내는 문자열을 리턴합니다.</td>
+                <td>지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.</td>
             </tr>
             <tr>
                 <td>unshift()</td>
-                <td>배열 시작에 새요소를 삽입합니다.</td>
+                <td>새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.</td>
             </tr>
             <tr>
-                <td>valueOf()</td>
-                <td>배열에 대한 참조를 가져옵니다.</td>
+                <td>values()</td>
+                <td>배열의 각 인덱스에 대한 값을 가지는 새로운 객체를 반환합니다.</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>concat()를 이용하여 여러 개의 배열을 새 배열로 반환하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1,2,3,4,5,6,7,8,9,10<br>
+            1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;concat()&lt;/title&gt;
+    &lt;script&gt;
+        var array1 = [1,2,3,4,5];
+        var array2 = [6,7,8,9,10];
+        var array3 = [11,12,13,14,15];
+        
+        document.write(array1.concat(array2));
+        document.write(array1.concat(array2, array3),"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+      
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>join()를 이용하여 여러 개의 데이터를 문자형 데이터로 반환하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1,2,3,4,5<br>
+            12345<br>
+            1 2 3 4 5<br>
+            1,2,3,4,5<br>
+            1+2+3+4+5
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;join()&lt;/title&gt;
+    &lt;script&gt;
+        var array1 = [1,2,3,4,5];
+        
+        document.write(array1.join(),"&lt;br&gt;");
+        document.write(array1.join(''),"&lt;br&gt;");
+        document.write(array1.join(' '),"&lt;br&gt;");
+        document.write(array1.join(','),"&lt;br&gt;");
+        document.write(array1.join('+'),"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3</h4>
+<p>배열에서 많이 사용하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            반대로 출력[reverse()] : 9,8,7,6,5,4,3,2,1<br>
+            현재 배열 :9,8,7,6,5,4,3,2,1<br><br>
+
+            현재 배열 :9,8,7,6,5,4,3,2,1<br>
+            오름차순 출력[sort()] : 1,2,3,4,5,6,7,8,9<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            마지막 요소를 제거하고 그 요소를 반환[pop()] : 9<br>
+            현재 배열 :1,2,3,4,5,6,7,8<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8<br>
+            배열 끝에 하나 이상의 요소를 추가[push(9)] : 9<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            첫 번째 요소를 제거하고, 제거된 요소를 반환[shift()] : 1<br>
+            현재 배열 :2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :2,3,4,5,6,7,8,9<br>
+            새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환[unshift(1)] : 9<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            지정된 요소를 찾아서 인덱스를 반환[indexOf(5)] : 4<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            특정 항목을 제거[splice(2,1)] : 3<br>
+            현재 배열 :1,2,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,4,5,6,7,8,9<br>
+            특정 항목을 제거[splice(2,1,3,4)] : 4<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9<br><br>
+
+            현재 배열 :1,2,3,4,5,6,7,8,9<br>
+            일부분을 선택하여 반환[slice(1,3)] : 2,3<br>
+            현재 배열 :1,2,3,4,5,6,7,8,9
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;reverse(), sort()&lt;/title&gt;
+    &lt;script&gt;
+        var array1 = [1,2,3,4,5,6,7,8,9];
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("반대로 출력[reverse()] : " + array1.reverse(),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("오름차순 출력[sort()] : " + array1.sort(),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("마지막 요소를 제거하고 그 요소를 반환[pop()] : " + array1.pop(),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("배열 끝에 하나 이상의 요소를 추가[push(9)] : " + array1.push(9),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("첫 번째 요소를 제거하고, 제거된 요소를 반환[shift()] : " + array1.shift(),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환[unshift(1)] : " + array1.unshift(1),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("지정된 요소를 찾아서 인덱스를 반환[indexOf(5)] : " + array1.indexOf(5),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("특정 항목을 제거[splice(2,1)] : " + array1.splice(2,1),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("특정 항목을 제거[splice(2,1,3,4)] : " + array1.splice(2,1,3,4),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+        
+        document.write("현재 배열 :" + array1,"&lt;br&gt;");
+        document.write("일부분을 선택하여 반환[slice(1,3)] : " + array1.slice(1,3),"&lt;br&gt;");
+        document.write("현재 배열 :" + array1,"&lt;br&gt;&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
 
 
 <h4 class="pt40">참고(Reference)</h4>
