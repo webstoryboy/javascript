@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(Javasript)</title>
+</head>
+<body>
+    
+    <script>
+        var x1 = 100;      //숫자(number)
+
+        document.write(x1, "<br>");
+        document.write(typeof(x1), "<br>");
+
+        x1 = "" + x1;       //숫자를 문자열로 형 변환
+        document.write(typeof(x1), "<br>");
+
+        var str = Number(x1);       //내장 객체를 이용한 형 변화
+        document.write(typeof(str), "<br>");
+
+        var num = String(str);      //내장 객체를 이용한 형 변화
+        document.write(typeof(num), "<br>");
+    </script>
+</body>
+</html>

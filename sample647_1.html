@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(Javasript)</title>
+</head>
+<body>
+    
+    <script>
+        var book = {HTML: "1단계", CSS: "2단계", JavaScript: "3단계"}
+
+        for(var i in book){
+            if( !book.hasOwnProperty(i) ) continue;
+            document.write(i + "은 " + book[i]+ " 입니다.","<br>");
+        }
+    </script>
+</body>
+</html>

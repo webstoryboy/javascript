@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(Javasript)</title>
+</head>
+<body>
+    
+    <script>
+        var book = [
+            {name: 'HTML', level: '1단계'},
+            {name: 'CSS', level: '2단계'},
+            {name: '3단계', level: '3단계'}
+        ];
+        var list = 
+            `<p>${book[0].name}은 ${book[0].level} 입니다.</p>
+             <p>${book[1].name}은 ${book[1].level} 입니다.</p>
+             <p>${book[2].name}은 ${book[2].level} 입니다.</p>`;
+      
+        document.write(list);
+        document.write("<br>");
+        document.write(`공부하는 단계는 총${book.length}단계 입니다.`);
+    </script>
+</body>
+</html>

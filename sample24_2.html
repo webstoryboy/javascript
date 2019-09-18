@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(Javasript)</title>
+</head>
+<body>
+    
+    <script>
+        //객체와 반복문
+        var book = {HTML: "1단계", CSS: "2단계", JavaScript: "3단계"}
+
+        document.write(book.HTML,"<br>");
+        document.write(book.CSS,"<br>");
+        document.write(book.JavaScript,"<br><br>");
+
+        //사용 불가
+        for(var i=0; i<book.length; i++) {
+            document.write(i,"<br>");
+            document.write(book[i],"<br>");
+        }   
+
+        //for in 반복문
+        for(var i in book){
+            document.write(i);
+            document.write(book[i]);
+        }
+        document.write("<br><br>");
+
+        //for in 반복문 출력
+        document.write("코딩 공부 순서는 다음과 같습니다.<br>");
+        for(var i in book){
+            document.write(i + "은 " + book[i]+ " 입니다.","<br>");
+        }
+    </script>
+</body>
+</html>

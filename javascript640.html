@@ -13,6 +13,15 @@
 };
 </p>
 
+<h4>화살표 함수 규칙</h4>
+<ul>
+    <li>매개변수가 하나인 경우 괄호를 생략할 수 있습니다.</li>
+    <li>매개변수가 두개 이상인 경우 괄호를 생략할 수 없습니다.</li>
+    <li>코드블록을 지정하지 않고 한 문장으로 작성시 return 문은 생략할 수 있습니다.</li>
+    <li>코드블록을 지정했을 경우 return 문은 생략할 수 없습니다.</li>
+</ul>
+
+
 
 <!-- Sample1 -->
 <h4 class="pt50">Sample1 <span><a href="http://webstoryboy.dothome.co.kr/Wscript/javascript54.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
@@ -22,12 +31,18 @@
     <div class="ex">
         <!-- ex -->
         <div class="none">
-            1. function가 실행되었습니다.<br>
-            2. function가 실행되었습니다.<br>
-            3. function가 실행되었습니다.<br>
-            4. function가 실행되었습니다.<br>
-            5. function가 실행되었습니다.<br>
-            6. function가 실행되었습니다.
+            1. 기본함수: function가 실행되었습니다.<br>
+            2. 익명 함수: function가 실행되었습니다.<br>
+            3. 리턴문 함수: function가 실행되었습니다.<br>
+            4. 화살표 함수(기본): function가 실행되었습니다.<br>
+            5. 화살표 함수(익명): function가 실행되었습니다.<br>
+            6. 화살표 함수(리턴문): function가 실행되었습니다.<br>
+            7. 화살표 함수(괄호): function가 실행되었습니다.<br>
+            8. 화살표 함수(괄호 생략): function가 실행되었습니다.<br>
+            9. 화살표 함수 간략화(return 생략): function가 실행되었습니다.<br>
+            10. 화살표 함수 간략화(return, 괄호 생략): function가 실행되었습니다.<br>
+            11. 화살표 함수(괄호 생략X): function가 실행되었습니다.<br>
+            12. 템플릿 리터럴: function가 실행되었습니다.
         </div>
         <!-- ex -->
     </div>
@@ -36,56 +51,95 @@
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;템플릿 리터럴(Template Literal)&lt;/title&gt;
-    &lt;script&gt;
-        //기본함수
-        function func7(){
-            document.write("1. function가 실행되었습니다.<br>");
-        }
-        func7();
-        
-        //익명 함수
-        const func71 = function(){
-            document.write("2. function가 실행되었습니다.<br>");
-        }
-        func71(); 
-                
-        //리턴문 함수
-        const func72 = function(){
-            var str = "3. function가 실행되었습니다.<br>";
-            return str;
-        }
-        var value = func72();
-        document.write(value); 
-        
-        //화살표 함수
-        const func73 = (str) => {
-            return str;
-        }
-        const value1 = func73("4. function가 실행되었습니다.<br>");
-        document.write(value1); 
-        
-        //화살표 함수 간략화
-        const func74 = (str) => str;
-        
-        const value2 = func74("5. function가 실행되었습니다.<br>");
-        document.write(value2); 
-        
-        //템플릿 리터럴와 화살표 함수
-        const func75 = (str2) => {
-            document.write(`${str2}`);
-        }
-        func75("6. function가 실행되었습니다.");
-    &lt;/script&gt;
+    &lt;title&gt;자바스크립트(Javasript)&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
     
+    &lt;script&gt;
+        //기본함수
+        function func1(){
+            document.write("1. 기본함수: function가 실행되었습니다.&lt;br&gt;");
+        }
+        func1();
+        
+        //익명 함수
+        const func2 = function(){
+            document.write("2. 익명 함수: function가 실행되었습니다.&lt;br&gt;");
+        }
+        func2(); 
+                
+        //리턴문 함수
+        const func3 = function(){
+            var str = "3. 리턴문 함수: function가 실행되었습니다.&lt;br&gt;";
+            return str;
+        }
+        var value = func3();
+        document.write(value); 
+
+        //화살표 함수(기본)
+        func4 = () =&gt; {
+            document.write("4. 화살표 함수(기본): function가 실행되었습니다.&lt;br&gt;");
+        }
+        func4();
+
+        //화살표 함수(익명)
+        const func5 = () =&gt; {
+            document.write("5. 화살표 함수(익명): function가 실행되었습니다.&lt;br&gt;");
+        }
+        func5();
+
+        //화살표 함수(리턴문)
+        const func6 = () =&gt; {
+            var str = "6. 화살표 함수(리턴문): function가 실행되었습니다.&lt;br&gt;";
+            return str;
+        }
+        var value1 = func6();
+        document.write(value1); 
+        
+        //화살표 함수(괄호)
+        const func7 = (str) =&gt; {
+            return str;
+        }
+        const value2 = func7("7. 화살표 함수(괄호): function가 실행되었습니다.&lt;br&gt;");
+        document.write(value2); 
+
+        //화살표 함수(괄호 생략)
+        const func8 = str =&gt; {
+            return str;
+        }
+        const value3 = func8("8. 화살표 함수(괄호 생략): function가 실행되었습니다.&lt;br&gt;");
+        document.write(value3); 
+        
+        //화살표 함수 간략화(return 생략)
+        const func9 = (str) =&gt; str;
+        
+        const value4 = func9("9. 화살표 함수 간략화(return 생략): function가 실행되었습니다.&lt;br&gt;");
+        document.write(value4); 
+
+        //화살표 함수 간략화(return, 괄호 생략)
+        const func10 = str =&gt; str;
+        
+        const value5 = func10("10. 화살표 함수 간략화(return, 괄호 생략): function가 실행되었습니다.&lt;br&gt;");
+        document.write(value5); 
+
+        //화살표 함수(괄호 생략X)
+        const func11 = (x, y) =&gt; {
+            return x + y;
+        }
+        const value6 = func11("11. 화살표 함수(괄호 생략X): ","function가 실행되었습니다.&lt;br&gt;");
+        document.write(value6); 
+
+        //템플릿 리터럴와 화살표 함수
+        const func12 = (str) =&gt; {
+            document.write(`${str}`);
+        }
+        func12("12. 템플릿 리터럴: function가 실행되었습니다.");
+    &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
     </div>
 </div>
 <!-- sample1 -->

@@ -5,18 +5,19 @@
 
 <hr>
 
-<h3>for문</h3>
-<p class="blue">
-for(변수 in 객체){<br>
+<h3>for in 반복문</h3>
+<p>for in 반복문은 for문과 비슷하게 for 키워드를 사용합니다. 반복과 내부 요소에 접근하는 방식에 차이가 있으며 in 키워드를 기준으로 변수와 반복할 대상을 설정합니다.</p>
+<div class="blue">
+for(변수 in 반복할 대상){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;//실행 코드 <br>
 }
-</p>
+</div>
 
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>for in 반복문 이용한 예제입니다.</p>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample24_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>for in 반복문 이용한 배열 예제입니다.</p>
 <div class="sample">
     <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="ex">
@@ -36,13 +37,15 @@ for(변수 in 객체){<br>
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
     &lt;script type="text/javascript"&gt;
         //배열과 반복문
         var arr1 = new Array(100,200,300,400,500); 
 
         for(var i=0; i&lt;arr1.length; i++) {
             document.write(arr1[i]);
-            
         }   
         document.write("&lt;br&gt;");
         
@@ -53,9 +56,6 @@ for(변수 in 객체){<br>
             document.write(arr2[i]);
         }
     &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
 &lt;/body&gt;   
 &lt;/html&gt;      
 </code></pre>
@@ -63,3 +63,72 @@ for(변수 in 객체){<br>
 </div>
 <!-- sample1 -->
 
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/javascript/sample24_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>for in 반복문 이용한 객체 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            1단계<br>
+            2단계<br>
+            3단계<br><br>
+            
+            HTML1단계CSS2단계JavaScript3단계<br><br>
+            
+            코딩 공부 순서는 다음과 같습니다.<br>
+            HTML은 1단계 입니다.<br>
+            CSS은 2단계 입니다.<br>
+            JavaScript은 3단계 입니다.<br>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;자바스크립트(Javasript)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        //객체와 반복문
+        var book = {HTML: "1단계", CSS: "2단계", JavaScript: "3단계"}
+
+        document.write(book.HTML,"&lt;br&gt;");
+        document.write(book.CSS,"&lt;br&gt;");
+        document.write(book.JavaScript,"&lt;br&gt;&lt;br&gt;");
+
+        //사용 불가
+        for(var i=0; i&lt;book.length; i++) {
+            document.write(i,"&lt;br&gt;");
+            document.write(book[i],"&lt;br&gt;");
+        }   
+
+        //for in 반복문
+        for(var i in book){
+            document.write(i);
+            document.write(book[i]);
+        }
+        document.write("&lt;br&gt;&lt;br&gt;");
+
+        //for in 반복문 출력
+        document.write("코딩 공부 순서는 다음과 같습니다.&lt;br&gt;");
+        for(var i in book){
+            document.write(i + "은 " + book[i]+ " 입니다.","&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;     
+</code></pre>
+    </div>
+</div>
+<!-- sample2-->

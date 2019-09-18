@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트(Javasript)</title>
+</head>
+<body>
+    
+    <script>
+        //기본함수
+        function func1(){
+            document.write("1. 기본함수: function가 실행되었습니다.<br>");
+        }
+        func1();
+        
+        //익명 함수
+        const func2 = function(){
+            document.write("2. 익명 함수: function가 실행되었습니다.<br>");
+        }
+        func2(); 
+                
+        //리턴문 함수
+        const func3 = function(){
+            var str = "3. 리턴문 함수: function가 실행되었습니다.<br>";
+            return str;
+        }
+        var value = func3();
+        document.write(value); 
+
+        //화살표 함수(기본)
+        func4 = () => {
+            document.write("4. 화살표 함수(기본): function가 실행되었습니다.<br>");
+        }
+        func4();
+
+        //화살표 함수(익명)
+        const func5 = () => {
+            document.write("5. 화살표 함수(익명): function가 실행되었습니다.<br>");
+        }
+        func5();
+
+        //화살표 함수(리턴문)
+        const func6 = () => {
+            var str = "6. 화살표 함수(리턴문): function가 실행되었습니다.<br>";
+            return str;
+        }
+        var value1 = func6();
+        document.write(value1); 
+        
+        //화살표 함수(괄호)
+        const func7 = (str) => {
+            return str;
+        }
+        const value2 = func7("7. 화살표 함수(괄호): function가 실행되었습니다.<br>");
+        document.write(value2); 
+
+        //화살표 함수(괄호 생략)
+        const func8 = str => {
+            return str;
+        }
+        const value3 = func8("8. 화살표 함수(괄호 생략): function가 실행되었습니다.<br>");
+        document.write(value3); 
+        
+        //화살표 함수 간략화(return 생략)
+        const func9 = (str) => str;
+        
+        const value4 = func9("9. 화살표 함수 간략화(return 생략): function가 실행되었습니다.<br>");
+        document.write(value4); 
+
+        //화살표 함수 간략화(return, 괄호 생략)
+        const func10 = str => str;
+        
+        const value5 = func10("10. 화살표 함수 간략화(return, 괄호 생략): function가 실행되었습니다.<br>");
+        document.write(value5); 
+
+        //화살표 함수(괄호 생략X)
+        const func11 = (x, y) => {
+            return x + y;
+        }
+        const value6 = func11("11. 화살표 함수(괄호 생략X): ","function가 실행되었습니다.<br>");
+        document.write(value6); 
+
+        //템플릿 리터럴와 화살표 함수
+        const func12 = (str) => {
+            document.write(`${str}`);
+        }
+        func12("12. 템플릿 리터럴: function가 실행되었습니다.");
+    </script>
+</body>
+</html>

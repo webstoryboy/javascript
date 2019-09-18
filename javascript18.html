@@ -19,17 +19,131 @@ var 변수명;<br>
 var 변수명 = 값;<br>
 </p>
 
-<p>ECMAScript 6에서부터 let 변수가 새로 추가 되었습니다. let 변수는 재선언이 되지 않습니다.</p>
+<p>ECMAScript 6에서부터 let 변수가 새로 추가 되었습니다. let 변수는 변수 선언시 변수의 유효 범위와 블록 범위를 지정할 수 있습니다.</p>
 <p class="blue">
 let 변수명;<br>
 let 변수명 = 값;
 </p>
 
+
+<!-- Sample1 -->
+<h4 class="pt50">var과 let <span><a href="https://webstoryboy.github.io/javascript/sample18_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>변수 var과 let의 차이점을 보여주는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            100<br>
+            200<br><br>
+            
+            300<br><br>
+            
+            500<br>
+            600<br><br>
+            
+            700
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;자바스크립트(Javasript)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        var x1 = 100;  
+        let x2 = 200;
+
+        document.write(x1,"&lt;br&gt;");
+        document.write(x2,"&lt;br&gt;&lt;br&gt;");
+
+        if(true){
+            var x3 = 300;  
+            let x4 = 400;
+        }
+        document.write(x3,"&lt;br&gt;&lt;br&gt;");
+        //document.write(x4,"&lt;br&gt;&lt;br&gt;");
+
+        var x5 = 500;
+        if(true){
+            document.write(x5,"&lt;br&gt;");
+            var x5 = 600;
+            document.write(x5,"&lt;br&gt;&lt;br&gt;");
+        }
+
+        let x6 = 700;
+        if(true){
+            //document.write(x6,"&lt;br&gt;");
+            let x6 = 700;
+            document.write(x6,"&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
 <h3 class="pt50">상수</h3>
-<p>상수는 변하지 않는 수를 의미합니다.  ECMAScript 6에서부터 const 변수가 새로 추가 되었습니다.</p>
+<p>상수는 변하지 않는 수를 의미합니다. 상수는 값을 할당한 후에 재할당을 할 수 없습니다.  ECMAScript 6에서부터 const 변수가 새로 추가 되었습니다.</p>
 <p class="blue">
 const 변수명 = 값;
 </p>
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">var과 const <span><a href="https://webstoryboy.github.io/javascript/sample18_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>변수 var과 const의 차이점을 보여주는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            200
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;자바스크립트(Javasript)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        var x1 = 100;  
+        x1 = 200;
+
+        document.write(x1,"&lt;br&gt;");
+
+        const x2 = 100;  
+        x2 = 200;
+
+        document.write(x2,"&lt;br&gt;");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
 
 <h3 class="pt50">변수명</h3>  
 <p>자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수 없는 단어들이 있습니다.</p> 

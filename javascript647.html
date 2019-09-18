@@ -59,6 +59,48 @@
 </div>
 
 
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample647_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>객체에 속성이 있으면 출력되는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            HTML은 1단계 입니다.<br>
+            CSS은 2단계 입니다.<br>
+            JavaScript은 3단계 입니다.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;자바스크립트(Javasript)&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;script&gt;
+        var book = {HTML: "1단계", CSS: "2단계", JavaScript: "3단계"}
+
+        for(var i in book){
+            if( !book.hasOwnProperty(i) ) continue;
+            document.write(i + "은 " + book[i]+ " 입니다.","&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
 <h4 class="pt40">참고(Reference)</h4>
 <ul>
     <li>MDN JavaScript <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
