@@ -35,7 +35,7 @@
     <div class="ex">
         <!-- ex -->
         <div class="none">
-            hello
+            Javasript1
         </div>
         <!-- ex -->
     </div>
@@ -44,7 +44,7 @@
     <h5>Script<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Javasript&lt;/title&gt;
@@ -53,12 +53,12 @@
 
     &lt;!-- script 태그 사이에 기술하는 방법 --&gt;
     &lt;script&gt;
-        document.write("hello");
+        document.write("Javasript1");
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;!-- 태그에 직접 기술하는 방법 --&gt;
-    &lt;input type="button" onclick="alert('hello')"&gt;
+    &lt;a href="#" onclick="alert('Javasript2')"&gt;&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
@@ -81,7 +81,7 @@
     <div class="ex">
         <!-- ex -->
         <div class="none">
-            webstoryboy
+            Javasript 출력
         </div>
         <!-- ex -->
     </div>
@@ -94,25 +94,21 @@
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Javasript&lt;/title&gt;
+    &lt;script&gt;
+        //콘솔 로그를 이용한 방법
+        console.log("javascript 출력1");
+
+        //웹 문서에 출력하는 방법
+        document.write("javascript 출력2");
+
+        //경고창을 이용하는 방법
+        alert("javascript 출력3");
+    &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
     
-    &lt;script&gt;
-        var x = 123;
-        var y = "webstoryboy";
-
-        //콘솔 로그를 이용한 방법
-        console.log(x);
-
-        //웹 문서에 출력하는 방법
-        document.write(y);
-
-        //경고창을 이용하는 방법
-        alert(x);
-    &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
     </div>
 </div>
 <!-- sample2 -->
@@ -144,9 +140,6 @@
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Javasript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    
     &lt;script&gt;
         "use strict";
 
@@ -155,6 +148,9 @@
 
         document.write(x, y);
     &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
