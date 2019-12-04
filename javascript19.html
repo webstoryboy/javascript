@@ -15,66 +15,47 @@
 
 
 <!-- Sample1 -->
-<h4 class="pt50">지역변수/전역변수</h4>
+<h4 class="pt50">지역변수/전역변수 <span><a href="https://webstoryboy.github.io/javascript/sample19_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>지역변수와 전역변수에 대한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            함수 안<br>
-            300<br>
-            400<br>
-            500<br><br>
 
-            함수 밖<br>
-            100<br>
-            200<br>
-            500<br>
-        </div>
-        <!-- ex -->
-    </div>
-</div>
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
     &lt;script&gt;
-        var x1 = 1000;      //(전역)변수 x1에 숫자를 1000을 저장
-        var x2 = 2000;      //(전역)변수 x2에 숫자를 2000을 저장
-        var x3;             //(전역)변수 x3를 선언
+        //변수 선언 
+        let x = 1000;       //전역변수 
+        let y = 2000;       //전역변수
+        let z = 700;        //전역변수
 
-        x1 = 100;           //(전역)변수 x1에 숫자를 1000에서 100으로 변경
-        x2 = 200;           //(전역)변수 x2에 숫자를 2000에서 200으로 변경
+        //함수 선언
+        function fun1(){
+            let x = 1000;       //지역변수
+            let y = 2000;       //지역변수
+            y = 3000;           //지역 변수 2000에서 3000으로 변경
+            z = 800;             //전역 변수 700에서 800으로 변경
 
-        function func(){
-            var x1 = 3000;  //(지역)변수 x1에 숫자를 3000을 저장
-            var x2 = 4000;  //(지역)변수 x2에 숫자를 4000을 저장
-
-            x1 = 300;       //(지역)변수 x1에 숫자를 3000에서 300으로 변경
-            x2 = 400;       //(지역)변수 x2에 숫자를 4000에서 400으로 변경
-            x3 = 500;       //(전역)변수 x3에 숫자를 500을 저장
-
-            document.write("함수 안&lt;br&gt;");
-            document.write(x1);
+            document.write("함수 선언&lt;br&gt;");
+            document.write(x);
             document.write("&lt;br&gt;");
-            document.write(x2);
+            document.write(y);
             document.write("&lt;br&gt;");
-            document.write(x3);
+            document.write(z);
             document.write("&lt;br&gt;&lt;br&gt;");
         }
-        func();
 
-        document.write("함수 밖&lt;br&gt;");
-        document.write(x1);
+        fun1();
+        document.write("변수 선언&lt;br&gt;");
+        document.write(x);
         document.write("&lt;br&gt;");
-        document.write(x2);
+        document.write(y);
         document.write("&lt;br&gt;");
-        document.write(x3);
+        document.write(z);
+        document.write("&lt;br&gt;&lt;br&gt;");
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -88,74 +69,50 @@
 
 
 <!-- Sample2 -->
-<h4 class="pt50">매개변수</h4>
+<h4 class="pt50">매개변수 <a href="https://webstoryboy.github.io/javascript/sample19_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>매개변수에 대한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            1000<br><br>
-
-            javascript<br><br>
-
-            html<br><br>
-
-            CSS<br><br>
-
-            jQuery<br><br>
-
-            javascript + jquery
-        </div>
-        <!-- ex -->
-    </div>
-</div>
 <div class="sample">
     <h5>script<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;매개변수&lt;/title&gt;
+    &lt;title&gt;javascript&lt;/title&gt;
     &lt;script&gt;
-        //화면에 숫자 1000을 출력하세요!!
-        document.write(1000);
+        //웹 문서에 "javascript1" 문자열을 출력하시오.
+        document.write("javascript1");
         document.write("&lt;br&gt;&lt;br&gt;");
 
-        //화면에 문자 javascript를 출력하세요!!
-        document.write("javascript");
-        document.write("&lt;br&gt;&lt;br&gt;");
-
-        //변수(x1)에 문자열 "html"을 저장하고 출력하세요!!
-        var x1 = "html";
+        //변수를 이용해서 웹 문서에 "javascript2" 문자열을 출력하시오.
+        let x1 = "javascript2";
         document.write(x1);
         document.write("&lt;br&gt;&lt;br&gt;");
 
-        //함수(func1)를 이용해서 화면에 "CSS"를 출력하세요!!
-        function func1(){
-            document.write("CSS");
+        //함수를 이용해서 웹 문서에 "javascript3" 문자열을 출력하시오.
+        function fun1(){
+            let x1 = "javascript3";
+            document.write(x1); 
             document.write("&lt;br&gt;&lt;br&gt;");
         }
-        func1();
+        fun1();
 
-        //매개변수를 이용해서 화면에 "jQuery"를 출력하세요!!
-        function func2(str){
-            document.write(str);
+        //함수와 매개변수를 이용해서 웹 문서에 "javascript4" 문자열을 출력하시오.
+        function fun2(x2){
+            document.write(x2);
             document.write("&lt;br&gt;&lt;br&gt;");
         }
-        func2("jQuery");
+        fun2("javascript4");
 
-        //매개변수를 이용해서 화면에 "javascript + jquery"를 출력하세요!!
-        function func3(str1, str2){
-            document.write(str1, " + " + str2);
-            document.write("&lt;br&gt;&lt;br&gt;");
+        //함수와 매개변수를 이용해서 웹 문서에 "javascript5" 문자열을 출력하시오.
+        function fun3(str1, str2){
+            document.write(str1,str2);
         }
-        func3("javascript","jquery");
+        fun3("javascript","5");
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-
+    
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>

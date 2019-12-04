@@ -2,20 +2,44 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>자바스크립트(Javasript)</title>
+    <title>변수 var과 let의 차이점</title>
+    <script>
+        //변수 선언
+        var x1 = 100;  
+        let x2 = 200;
+
+        document.write(x1);
+        document.write("<br>");
+        document.write(x2);
+        document.write("<br>");
+
+        //if문에서 변수 선언
+        if(true){
+            var x3 = 300;  
+            let x4 = 400;
+        }
+        document.write(x3);
+        document.write("<br>");
+        //document.write(x4,"<br><br>"); //에러 발생
+
+        //변수 선언
+        var x5 = 500;
+        if(true){
+            document.write(x5,"<br>");
+            var x5 = 600;
+            document.write(x5,"<br><br>");
+        }
+
+        //if문에서 변수 선언
+        let x6 = 700;
+        if(true){
+            //document.write(x6,"<br>"); //에러 발생
+            let x6 = 700;
+            document.write(x6,"<br>");
+        }
+    </script>
 </head>
 <body>
     
-    <script>
-        var x1 = 100;  
-        x1 = 200;
-
-        document.write(x1,"<br>");
-
-        const x2 = 100;  
-        x2 = 200;
-
-        document.write(x2,"<br>");
-    </script>
 </body>
 </html>

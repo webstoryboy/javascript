@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <script>
+        //변수 선언 
+        let x = 1000;       //전역변수 
+        let y = 2000;       //전역변수
+        let z = 700;        //전역변수
+
+        //함수 선언
+        function fun1(){
+            let x = 1000;       //지역변수
+            let y = 2000;       //지역변수
+            y = 3000;           //지역 변수 2000에서 3000으로 변경
+            z = 800;             //전역 변수 700에서 800으로 변경
+
+            document.write("함수 선언<br>");
+            document.write(x);
+            document.write("<br>");
+            document.write(y);
+            document.write("<br>");
+            document.write(z);
+            document.write("<br><br>");
+        }
+
+        fun1();
+        document.write("변수 선언<br>");
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+        document.write(z);
+        document.write("<br><br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

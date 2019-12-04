@@ -36,38 +36,9 @@ var arr3 = [100,200];
 
 
 <!-- Sample1 -->
-<h4 class="pt50">배열</h4>
+<h4 class="pt50">배열 <span><a href="https://webstoryboy.github.io/javascript/sample21_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>배열 선언하는 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            100<br>
-            200<br>
 
-            100<br>
-            200<br>
-
-            100<br>
-            200<br>
-
-            100<br>
-            200<br>
-
-            5<br>
-
-            100<br>
-            200<br>
-            300<br>
-            400<br>
-            500<br>
-
-            1500
-        </div>
-        <!-- ex -->
-    </div>
-</div>
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
@@ -78,8 +49,8 @@ var arr3 = [100,200];
     &lt;title&gt;배열&lt;/title&gt;
     &lt;script&gt;
         //변수 x = 100; 변수 y = 200 저장한 다음 출력해주세요!!
-        var x = 100;
-        var y = 200;
+        const x = 100;
+        const y = 200;
 
         document.write(x);
         document.write("&lt;br&gt;");
@@ -87,7 +58,7 @@ var arr3 = [100,200];
         document.write("&lt;br&gt;&lt;br&gt;");
 
         //배열을 이용해서 화면에 100과 200을 출력하세요!
-        var arr1 = new Array();
+        const arr1 = new Array();
         arr1[0] = 100;      //첫번째 배열 저장소에 100을 저장
         arr1[1] = 200;      //두번째 배열 저장소에 200을 저장
 
@@ -97,7 +68,7 @@ var arr3 = [100,200];
         document.write("&lt;br&gt;&lt;br&gt;");
 
         //배열을 선언과 동시에 초기화하여 100과 200을 출력하세요!!
-        var arr2 = new Array(100,200);
+        const arr2 = new Array(100,200);
 
         document.write(arr2[0]);
         document.write("&lt;br&gt;");
@@ -105,7 +76,7 @@ var arr3 = [100,200];
         document.write("&lt;br&gt;&lt;br&gt;");
 
         //배열을 선언하지 않고 100과 200을 출력하세요!!
-        var arr3 = [100,200];
+        const arr3 = [100,200];
 
         document.write(arr3[0]);
         document.write("&lt;br&gt;");
@@ -113,21 +84,21 @@ var arr3 = [100,200];
         document.write("&lt;br&gt;&lt;br&gt;");
 
         //배열의 크기 구하기
-        var arr4 = [100,200,300,400,500];
+        const arr4 = [100,200,300,400,500];
 
         document.write(arr4.length);
         document.write("&lt;br&gt;&lt;br&gt;");
 
         //배열 가져오기
-        var arr5 = [100,200,300,400,500];
+        const arr5 = [100,200,300,400,500];
 
         for(var i=0; i&lt;arr5.length; i++){
             document.write(arr5[i], "&lt;br&gt;");
         }
 
         //배열의 합 구하기
-        var arr6 = [100,200,300,400,500];
-        var sum = 0;
+        const arr6 = [100,200,300,400,500];
+        let sum = 0;
 
         for(var i=0; i&lt;arr6.length; i++){
             // sum = 100+200+300+400+500;
@@ -148,8 +119,7 @@ var arr3 = [100,200];
 &lt;body&gt;
     
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
     </div>
 </div>
 <!-- sample1 -->

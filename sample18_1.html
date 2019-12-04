@@ -2,37 +2,46 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>자바스크립트(Javasript)</title>
+    <title>Javascript</title>
+    <script>
+        //변수 선언
+        var x = 100;             //변수 x에 100 숫자를 저장함
+        var y = 200;             //변수 y에 200 숫자를 저장함
+        var z = "javascript";    //변수 z에 javascript 문자를 저장함
+
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+        document.write(z);
+        document.write("<br><br>");
+
+        //변수 선언
+        let a = 100;             //변수 a에 100 숫자를 저장함
+        let b = 200;             //변수 b에 200 숫자를 저장함
+        let c = "javascript";    //변수 c에 javascript 문자를 저장함
+
+        document.write(a);
+        document.write("<br>");
+        document.write(b);
+        document.write("<br>");
+        document.write(c);
+        document.write("<br><br>");
+
+        //변수의 변경
+        x = 300;            //변수 x값이 100에서 300으로 변경
+        y = 400;            //변수 y값이 300에서 400으로 변경
+        z = "ES6";          //변수 z값이 javascript에서 ES6으로 변경
+
+        document.write(x);
+        document.write("<br>");
+        document.write(y);
+        document.write("<br>");
+        document.write(z);
+        document.write("<br><br>");
+    </script>
 </head>
 <body>
     
-    <script>
-        var x1 = 100;  
-        let x2 = 200;
-
-        document.write(x1,"<br>");
-        document.write(x2,"<br><br>");
-
-        if(true){
-            var x3 = 300;  
-            let x4 = 400;
-        }
-        document.write(x3,"<br><br>");
-        //document.write(x4,"<br><br>");
-
-        var x5 = 500;
-        if(true){
-            document.write(x5,"<br>");
-            var x5 = 600;
-            document.write(x5,"<br><br>");
-        }
-
-        let x6 = 700;
-        if(true){
-            //document.write(x6,"<br>");
-            let x6 = 700;
-            document.write(x6,"<br>");
-        }
-    </script>
 </body>
 </html>
