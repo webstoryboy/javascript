@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이메일 유효성 검사하기</title>
+    <script>
+        let useEmail = prompt("당신의 이메일 주소는?","");
+        let arrUrl = [".co.kr",".com",".net",".or.kr",".go.kr"];
+        
+        let check1 = false;
+        let check2 = false;
+        
+        if(useEmail.indexOf("@")>0) check1=true;
+        
+        for(let i=0; i<arrUrl.length; i++){
+            if(useEmail.indexOf(arrUrl[i])>0) check2=true;
+        }
+        
+        if(check1 && check2){
+            document.write(useEmail);
+        } else {
+            document.write("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

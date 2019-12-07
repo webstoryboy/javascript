@@ -14,41 +14,39 @@
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>switch문을 이용한 예제입니다.</p>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample64_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>if문을 삼항 연산자로 변경하는 예제입니다.</p>
 
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-        	// if ~ else
-        	var value = window.prompt("숫자를 입력해주세요.");
-			value = parseInt(value);
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
+	&lt;script type="text/javascript"&gt;
+		// if~else문
+		let value = window.prompt("숫자를 입력해주세요.");
+		value = parseInt(value);
 
-			if (value % 2 == 0){
-				alert("짝수입니다.");
-			} else {
-				alert("홀수입니다.");
-			};
-			
-			//조건 연산자
-			var value = window.prompt("숫자를 입력해주세요. ");
-	        value = parseInt(value);
+		if (value % 2 == 0){
+			document.write("짝수입니다.");
+		} else {
+			document.write("홀수입니다.");
+		};
+		
+		//조건 연산자
+		let value = window.prompt("숫자를 입력해주세요.","");
+		value = parseInt(value);
 
-	        (value % 2 == 0) ? alert("짝수입니다.") : alert("홀수입니다.");
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;  
-</code></pre>
+		(value % 2 == 0) ? document.write("짝수입니다.") : document.write("홀수입니다.");;
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     </div>
 </div>
 <!-- sample1 -->

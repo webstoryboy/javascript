@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    
+</head>
+<body>
+    <button type="button" onclick="myFunction()">+</button>
+    <span id="count">0</span>
+    
+    <script>
+        // var counter = 0;
+        // function add(){
+        //     return counter += 1;
+        // }
+        // function myFunction(){
+        //     document.getElementById("count").innerHTML = add();
+        // }
+
+        //변수가 지역변수로 인식하여 한번밖에 작동되지 않는다.
+        // function add(){
+        //     var counter = 0;
+        //     return counter += 1;
+        // }
+        // function myFunction(){
+        //     document.getElementById("count").innerHTML = add();
+        // }
+
+        var add = (function(){
+            var counter = 0;
+            return function(){return counter += 1;}
+        })();
+        function myFunction(){
+            document.getElementById("count").innerHTML = add();
+        }
+    </script>
+</body>
+</html>

@@ -24,56 +24,106 @@ switch (조건을 체크할 변수) {<br>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample63_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>switch문을 이용한 예제입니다.</p>
 
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var color = prompt("빨강, 파랑, 노랑, 검정, 흰색 중 가장 느낌이 오는 색을 적어주세요^^.", "");	
-			switch (color){
-				case "빨강" :
-					document.write("당신은 빨강처럼 열정적인 사람입니다.");
-					break;				
-				case "파랑" :
-					document.write("당신은 파랑처럼 열정적인 사람입니다.");
-					break;					
-				case "노랑" :
-					document.write("당신은 노랑처럼 열정적인 사람입니다.");
-					break;				
-				case "검정" :
-					document.write("당신은 검정처럼 열정적인 사람입니다.");
-					break;
-				case "흰색" :
-					document.write("당신은 흰색처럼 열정적인 사람입니다.");
-					break;
-				default :
-					document.write("당신은 색을 볼 줄 모르는군요~ 실망입니다.");
-					break;
-			}
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
-</code></pre>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;javascript&lt;/title&gt;
+	&lt;script&gt;
+		let first = prompt("제일 먼저 잡고 싶은 물건은 무엇인가요? 1.과일 2.떡 3.수정구슬 4.현찰 5.반지");
+		switch (first){
+			case "과일" :
+				document.write("생각이 많고 진지해 보이는 연상 타입니다.");
+			break;
+			case "떡" :
+				document.write("무드에 약해 화술과 매너가 좋은 타입니다.");
+			break;
+			case "수정구슬" :
+				document.write("정열적이고 열중하는 타입입니다.");
+			break;
+			case "현찰" :
+				document.write("부드럽고 따듯한 타입입니다.");
+			break;
+			case "반지" :
+				document.write("자기를 보호해 줄 수 있는 이성 타입입니다.");
+			break;
+			default :
+				document.write("잘못 선택했습니다.");
+			break;
+		}
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     </div>
 </div>
 <!-- sample1 -->
 
 
 
-
 <!-- Sample2 -->
-<h4 class="pt50">Sample2</h4>
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/javascript/sample63_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>switch문과 if문을 이용한 학점 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;javascript&lt;/title&gt;
+	&lt;script&gt;
+		let score = 85;
+		let grade;
+
+		if( score &gt;= 90 ){
+			grade = "A";
+		} else if ( score &gt;= 80 && score &lt; 90 ){
+			grade = "B";
+		} else if ( score &gt;= 70 && score &lt; 80 ){
+			grade = "C";
+		} else if ( score &gt;= 60 && score &lt; 70 ){
+			grade = "D";
+		} else if ( score &lt; 60 ){
+			grade = "F";
+		}
+
+		switch(grade) {
+			case "A" : document.write("당신의 학점은 A입니다.");
+			break;
+			case "B" : document.write("당신의 학점은 B입니다.");
+			break;
+			case "C" : document.write("당신의 학점은 C입니다.");
+			break;
+			case "D" : document.write("당신의 학점은 D입니다.");
+			break;
+			case "F" : document.write("당신의 학점은 F입니다.");
+			break;
+		}
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/javascript/sample63_3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>switch문을 이용한 사이트 이동 예제입니다.</p>
 
 <div class="sample">
@@ -81,43 +131,84 @@ switch (조건을 체크할 변수) {<br>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var site = prompt("네이버, 다음, 구글, 네이트 중 자주가는 사이트는?","");
-			var url;
-			
-			switch(site){
-				case "네이버":url="https://www.naver.com";
-				break;
-				
-				case "다음":url="https://www.daum.net";
-				break;
-				
-				case "구글":url="https://www.google.com";
-				break;
-				
-				case "네이트":url="https://www.nate.com";
-				break;
-				
-				default : document.write("그런 사이트는 없습니다.");
-				break;
-			}
-			
-			location.href=url;
-			//if(url) location.href=url
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt;   
-</code></pre>
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;javascript&lt;/title&gt;
+	&lt;script&gt;
+		let site = prompt("네이버, 다음, 구글, 네이트 중 자주가는 사이트는?","");
+		let url;
+
+		switch(site){
+			case "네이버" :
+				url = "https://www.naver.com/"
+			break;
+			case "다음" :
+				url = "https://www.daum.net/"
+			break;
+			case "구글" :
+				url = "https://www.google.co.kr/"
+			break;
+			case "네이트" :
+				url = "https://www.nate.com/"
+			break;
+			default :
+				document.write("그런 사이트는 없습니다.")
+			break;
+		}
+		console.log(url);
+
+		// if(url){
+		//     location.href = url;
+		// }
+		if(url) location.href = url;
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     </div>
 </div>
-<!-- sample2 -->
+<!-- sample3 -->
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="https://webstoryboy.github.io/javascript/sample63_4.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>switch문을 if문으로 변경한 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;javascript&lt;/title&gt;
+	&lt;script&gt;
+		let site = prompt("Design, Coding, Tutor, CSS 중 자주가는 사이트는?");
+		let url;
+
+		if(site == "Design"){
+			url = "https://wiss.tistory.com/"
+		} else if ( site == "Coding"){
+			url = "https://webzz.tistory.com/"
+		} else if ( site == "Tutor"){
+			url = "https://wtss.tistory.com/"
+		} else if ( site == "CSS"){
+			url = "https://wsss.tistory.com/"
+		} else {
+			document.write("그런 사이트는 없습니다.")
+		}
+		if(url) location.href = url;
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
 
 
 

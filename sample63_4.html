@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script>
+        let site = prompt("Design, Coding, Tutor, CSS 중 자주가는 사이트는?");
+        let url;
+
+        if(site == "Design"){
+            url = "https://wiss.tistory.com/"
+        } else if ( site == "Coding"){
+            url = "https://webzz.tistory.com/"
+        } else if ( site == "Tutor"){
+            url = "https://wtss.tistory.com/"
+        } else if ( site == "CSS"){
+            url = "https://wsss.tistory.com/"
+        } else {
+            document.write("그런 사이트는 없습니다.")
+        }
+        if(url) location.href = url;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

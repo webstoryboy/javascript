@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글자를 span 태그로 만들기</title>
+    <style>
+        span {text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h2 id="h2">편안함이 끝나고 궁핍이 시작될 때 인생의 가름침이 시작된다</h2>
+    
+    <script>
+        window.onload = function(){
+            let text = document.getElementById('h2').textContent;
+        
+            let spanText = text.split(" ").join("</span> <span>")
+                spanText = "<span>" + spanText + "</span> ";
+        
+            let spanText2 = text.split("").join("</span> <span>")
+                spanText2 = "<span>" + spanText2 + "</span> ";
+            
+            document.write(spanText,"<br>");
+            document.write(spanText2);
+        };
+    </script> 
+</body>
+</html>

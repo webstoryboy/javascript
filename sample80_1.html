@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+    <script>
+        let text = "Hello I'm a webstoryboy. I'm not a student.";
+        let rge = /webstoryboy/;
+
+        document.write(text,"<br><br>");
+        document.write("정규식을 검색하고 위치를 반환[search()] : " + text.search(/webstoryboy/),"<br>");
+        document.write("문자열을 검색하고 위치를 반환[search()] : " + text.search("webstoryboy"),"<br>");
+        document.write("정규식을 검색하고 위치를 반환[replace()] : " + text.replace(/webstoryboy/,"webs"),"<br>");
+        document.write("문자열을 검색하고 위치를 반환[replace()] : " + text.replace("webstoryboy","webs"),"<br>");
+        document.write("정규식을 검색하고 true 반환[test()] : " + rge.test(text),"<br>");
+        document.write("정규식을 검색하고 문자열 반환[exec()] : " + rge.exec(text),"<br>");
+        document.write("정규식을 검색하고 문자열 반환[match()] : " + text.match(/webstoryboy/),"<br>");
+        document.write("대소문자를 구분하지 않고 반환[i] : " + text.match(/webstoryboy/i),"<br>");
+        document.write("전체 문자열을 정규식과 비교하여 반환[g] : " + text.match(/webstoryboy/g),"<br>");
+        document.write("여러 줄의 문자열을 정규식과 비교하여 반환[m] : " + text.match(/webstoryboy/m),"<br>");
+
+        document.write("문자열을 검색하고 반환[]: " + text.match(/[web]/ig),"<br>");
+        document.write("영어 소문자를 검색하고 반환[a-z]: " + text.match(/[a-z]/ig),"<br>");
+        document.write("영어 대문자를 검색하고 반환[A-Z]: " + text.match(/[A-Z]/g),"<br>");
+        document.write("숫자를 검색하고 반환[0-9]: " + text.match(/[0-9]/g),"<br>");
+        document.write("'|'로 분리된 문자 중에서 반환[a|b|c]: " + text.match(/[a|b|c]/g),"<br>");
+
+        document.write("'^문자'로 시작하는 문자를 반환[/^문자/]: " + text.match(/^a/ig),"<br>");
+        document.write("'문자$'로 끝나는 문자를 반환[/문자$/]: " + text.match(/a c  $/ig),"<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
