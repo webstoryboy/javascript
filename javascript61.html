@@ -17,58 +17,53 @@ if (조건식) {<br>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample61_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>if문을 이용한 다양한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            100<br>
-            100<br>
-            당신은 전화를 많이쓰네요~<br>
-            당신이 입력한 숫자는 짝수입니다.<br>
-            100<br>
-            66님 방갑습니다.
-        </div>
-        <!-- ex -->
-    </div>
-</div>
+
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
     &lt;script&gt;
-        //홀수 짝수 구분하기
-        var num = prompt("당신이 좋아하는 숫자는?");
+        //숫자 크기
+        let num = 200; 
 
-        if(num % 2 == 0){
-            document.write("당신이 좋아하는 숫자는 짝수입니다.&lt;br&gt;");
+        if( num &gt; 100 ){
+            document.write("숫자는 100보다 큽니다.&lt;br&gt;&lt;br&gt;");
         } else {
-            document.write("당신이 좋아하는 숫자는 홀수입니다.&lt;br&gt;");
+            document.write("숫자는 100보다 작습니다.&lt;br&gt;&lt;br&gt;");
+        }
+
+        //짝수 홀수 구하기
+        let num2 = prompt("당신이 좋아하는 숫자는?","");
+
+        if( num2 % 2 == 0 ){
+            document.write("당신이 좋아하는 숫자는 짝수입니다.&lt;br&gt;&lt;br&gt;");
+        } else {
+            document.write("당신이 좋아하는 숫자는 홀수입니다.&lt;br&gt;&lt;br&gt;");
         }
 
         //아이디 비밀번호 구분하기
-        var userID = prompt("아이디를 입력해주세요~");
-        var userPW = prompt("비밀번호를 입력해주세요~");
+        let userID = prompt("아이디를 입력하세요~","");
+        let userPW = prompt("비밀번호를 입력하세요~","");
 
-        if(userID == "webstoryboy" && userPW == "1234"){
-            document.write("환영합니다.&lt;br&gt;");
+        if (userID == "webstoryboy" && userPW == "1234" ){
+            document.write("환영합니다. &lt;br&gt;&lt;br&gt;");
         } else {
-            document.write("아이디 또는 비밀번호가 틀렸습니다.&lt;br&gt;");
+            document.write("아이디 또는 비밀번호를 확인해주세요~ &lt;br&gt;&lt;br&gt;");
         }
 
         //확인하기
-        var result = confirm("정말로 회원을 탈퇴하시겠습니까?");
+        let conf = confirm("정말로 정말로 회원을 탈퇴할거냐?");
 
-        if(result){
-            document.write("탈퇴 처리되었습니다.");
+        if( conf ){
+            document.write("그래 탈퇴처리 됐다. 잘가라~");
         } else {
-            document.write("탈퇴 취소되었습니다.");
+            document.write("탈퇴처리가 취소되었습니다.");
         }
     &lt;/script&gt;
 &lt;/head&gt;

@@ -16,23 +16,9 @@ if (조건식) {<br>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample60_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>if문을 이용한 다양한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            100<br>
-            100<br>
-            당신은 전화를 많이쓰네요~<br>
-            당신이 입력한 숫자는 짝수입니다.<br>
-            100<br>
-            66님 방갑습니다.
-        </div>
-        <!-- ex -->
-    </div>
-</div>
+
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
@@ -40,54 +26,26 @@ if (조건식) {<br>
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
+    &lt;title&gt;javascript&lt;/title&gt;
     &lt;script&gt;
-        var x = 100;    //변수 x에 숫자를 100을 저장
+        let num = 300;    //변수에 숫자 100을 저장
 
-        if(x &gt; 200){ //변수 x가 200보다 크면 실행(true)
-            document.write(x);
+        // 변수 num 값이 200보다 크면 실행(true)
+        if( num &gt; 200 ){
+            document.write(num);
+            document.write("&lt;br&gt;&lt;br&gt;");
+        }
+        if( true ){
+            document.write(num);
+            document.write("&lt;br&gt;&lt;br&gt;");
         }
 
-        if(x &lt; 200){ //변수 x가 200보다 작으면 실행(true)
-            document.write(x,"&lt;br&gt;");
+        //짝수
+        let num2 = prompt("숫자를 입력해주세요!","");
+
+        if( num2 % 2 == 0){
+            document.write("당신이 입력한 숫자는 짝수입니다.");
         }
-
-        if(true){   
-            document.write(x,"&lt;br&gt;");
-        }
-
-        if(false){  
-            document.write(x,"&lt;br&gt;");
-        }
-
-        //통화량 구분하기
-        var min = prompt("당신의 하루 통화량은 몇 분인가요?", "0");
-        if(min &gt; 60){
-            document.write("당신은 전화를 많이쓰네요~&lt;br&gt;");
-        }
-
-        //짝수 구분하기
-        var num = prompt("숫자를 입력해 주세요!!&lt;br&gt;", "0");
-
-        if(num % 2 == 0){
-            document.write("당신이 입력한 숫자는 짝수입니다.&lt;br&gt;");
-        }
-
-        //조건식에 논리형 데이터가 아닌 다른 형이 오는 경우
-        //0, null, ""(빈문자), undefined --&gt; true
-        var y = 100;
-
-        if(y){
-            document.write(y,"&lt;br&gt;");
-        }
-
-        var useName = prompt("당신의 이름은 무엇입니다.","");
-        if(useName){
-            document.write(useName + "님 방갑습니다.");
-        }
-        //document.write(useName + "님 방갑습니다.");
-        
-        //if(useName) document.write(useName + "님 방갑습니다.");
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>중첩 if문</title>
+    <script>
+        var useID = "webstoryboy";
+        var usePW = "1234";
+        
+        var id = prompt("아이디가 무엇입니까?","");
+        var pw = prompt("비밀번호가 무엇입니까?","");
+        
+        if( useID == id){
+            if( usePW == pw){
+                document.write( id + "님 반갑습니다.");
+            } else {
+                document.write("비밀번호가 틀립니다.");
+            }
+        } else {
+            document.write("아이디가 일치하지 않습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

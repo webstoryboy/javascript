@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // const price1 = 3000;
+        // const price2 = 4000;
+        // const price3 = 2000;
+
+        // let total = price1 + price2 + price3;
+        // let result = total > 10000 ? "돈을 너무 많이 사용했습니다." : "돈을 잘 관리 했네요!"
+
+        // document.write(result);
+
+        //document.write("당신이 오늘 사용한 지출은 " + total + "원 입니다.");
+
+        let userPrice1 = prompt("오늘 당신의 교통비는?","");
+        let userPrice2 = prompt("오늘 당신의 식비는?","");
+        let userPrice3 = prompt("오늘 당신의 음료비는?","");
+
+        userPrice1 = Number(userPrice1);
+        userPrice2 = Number(userPrice2);
+        userPrice3 = Number(userPrice3);
+
+        let total = userPrice1 + userPrice2 + userPrice3;
+        let result = total > 10000 ? "돈을 너무 많이 사용했습니다." : "돈을 잘 관리 했네요!";
+
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

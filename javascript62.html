@@ -24,7 +24,7 @@ if (조건식1) {<br>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample62_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>다중 if문을 이용한 심리테스트 예제입니다.</p>
 
 <div class="sample">
@@ -61,6 +61,67 @@ if (조건식1) {<br>
     </div>
 </div>
 <!-- sample1 -->
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/javascript/sample62_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>다중 if문을 예제입니다.</p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;javascript&lt;/title&gt;
+    &lt;script&gt;
+        //숫자 크기
+        let num = 300; 
+
+        if( num &gt; 0 && num &lt; 101 ){
+            document.write("숫자는 0보다 크거나 101보다 작습니다.&lt;br&gt;&lt;br&gt;");
+        } else if( num &gt; 101 && num &lt; 201 ){
+            document.write("숫자는 101보다 크거나 201보다 작습니다.&lt;br&gt;&lt;br&gt;");
+        } else {
+            document.write("숫자는 201보다 큽니다.&lt;br&gt;&lt;br&gt;");
+        }
+
+        //짝수 홀수 구하기
+        let num2 = prompt("숫자를 적어주세요!!","");
+
+        if ( num2 % 2 == 0 ){
+            document.write("짝수입니다. &lt;br&gt;&lt;br&gt;");
+        } else if ( num2 % 2 == 1 ) {
+            document.write("홀수입니다. &lt;br&gt;&lt;br&gt;");
+        } else {
+            document.write("숫자를 쓰세요~ &lt;br&gt;&lt;br&gt;")
+        }
+
+        //아이디 비밀번호
+        let userID = prompt("아이디를 입력하세요","");
+        let userPW = prompt("비밀번호를 입력하세요~","");
+
+        if( userID == "webstoryboy" && userPW == "1234"){
+            document.write("환영합니다.&lt;br&gt;&lt;br&gt;");
+        } else if( userID == "webstoryboy" ) {
+            document.write("비밀번호가 틀렸습니다.&lt;br&gt;&lt;br&gt;");
+        } else if( userPW == "1234" ) {
+            document.write("아이디가 틀렸습니다.&lt;br&gt;&lt;br&gt;");
+        } else {
+            document.write("아이디 또는 비밀번호가 틀렸습니다.");
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
 
 
 
