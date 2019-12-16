@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <script>
+        let num = 1;
+        let table = "<table border='1'>";
+
+            for(var i=1; i<=10; i++){
+                table += "<tr>";
+                
+                for(var j=1; j<=10; j++){
+                    table += "<td>"+ num +"</td>";
+                    num++;
+                }
+
+                table += "</tr>";
+            }
+            table += "</table>";
+
+        document.write(table);
+        console.log(table);
+    </script>
+</head>
+<body>
+    <!-- <table border='1'>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table> -->
+</body>
+</html>

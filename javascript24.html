@@ -16,7 +16,7 @@ for(변수 in 반복할 대상){<br>
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample24_2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample24_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>for in 반복문 이용한 배열 예제입니다.</p>
 <div class="sample">
     <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
@@ -35,28 +35,27 @@ for(변수 in 반복할 대상){<br>
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;script type="text/javascript"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
+    &lt;script&gt;
         //배열과 반복문
-        var arr1 = new Array(100,200,300,400,500); 
+        let arr1 = new Array(100,200,300,400,500);
 
-        for(var i=0; i&lt;arr1.length; i++) {
+        //for문
+        for(var i=0; i&lt;arr1.length; i++){
             document.write(arr1[i]);
-        }   
-        document.write("&lt;br&gt;");
-        
-        //for in 반복문
-        var arr2 = new Array(100,200,300,400,500); 
+        }
+        document.write("&lt;br&gt;&lt;br&gt;");
 
-        for(var i in arr2){
-            document.write(arr2[i]);
+        //for in문
+        for(var i in arr1){
+            document.write(arr1[i]);
         }
     &lt;/script&gt;
-&lt;/body&gt;   
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
 &lt;/html&gt;      
 </code></pre>
     </div>

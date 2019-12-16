@@ -19,72 +19,52 @@
 
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample71_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
 <p>함수를 사용하는 이유에 관한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-            1.black입니다.<br>
-			2.black입니다.<br>
-			3.black입니다.<br>
-			4.black입니다.<br>
-			5.black입니다.<br>
-			1.red입니다.<br>
-			2.red입니다.<br>
-			3.red입니다.<br>
-			4.red입니다.<br>
-			5.red입니다.<br>
-			1.white입니다.<br>
-			2.white입니다.<br>
-			3.white입니다.<br>
-			4.white입니다.<br>
-			5.white입니다.
-        </div>
-        <!-- ex -->
-    </div>
-</div>
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
 <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			/*for(var i=1;i&lt;=5;i++){
-				document.write(i+". black");
-				document.write("&lt;br&gt;");
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;javascript&lt;/title&gt;
+	&lt;script&gt;
+		//이것은 빨간색1 입니다.
+		//이것은 빨간색2 입니다.
+		//이것은 빨간색3 입니다.
+		//이것은 빨간색4 입니다.
+		//이것은 빨간색5 입니다.
+		//이것은 빨간색6 입니다.
+		//이것은 빨간색7 입니다.
+		//이것은 빨간색8 입니다.
+		//이것은 빨간색9 입니다.
+		//이것은 빨간색10 입니다.
+
+		for(var i=1; i&lt;=10; i++){
+			document.write("이것은 빨간색"+i+"입니다.&lt;br&gt;");
+		}
+		for(var i=1; i&lt;=10; i++){
+			document.write("이것은 검은색"+i+"입니다.&lt;br&gt;");
+		}
+		for(var i=1; i&lt;=10; i++){
+			document.write("이것은 파란색"+i+"입니다.&lt;br&gt;");
+		}
+
+		function colorName(color){
+			for(var i=1; i&lt;=10; i++){
+				document.write("이것은"+ color, i+"입니다.&lt;br&gt;");
 			}
-            	
-	        for(var i=1;i&lt;=5;i++){
-				document.write(i+". red");
-				document.write("&lt;br&gt;");
-			}
-			
-			for(var i=1;i&lt;=5;i++){
-				document.write(i+". white");
-				document.write("&lt;br&gt;");
-			}*/
-			
-			function showName(name){
-	            for(var i=1; i&lt;=5; i++){
-		            document.write(i+"."+name+"입니다.&lt;br&gt;");
-	            }  
-	        }
-	        
-	        showName("black");
-	        showName("red");
-	        showName("white");
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
+		}
+		colorName("빨간색");
+		colorName("파란색");
+		colorName("검은색");       
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
     </div>
 </div>

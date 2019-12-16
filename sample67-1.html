@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script>
+        //화면에 1~10까지 출력해주세요!~
+        document.write(1);
+        document.write(2);
+        document.write(3);
+        document.write(4);
+        document.write(5);
+        document.write(6);
+        document.write(7);
+        document.write(8);
+        document.write(9);
+        document.write(10);
+        document.write("<br><br>");
+
+        //for문을 이용해서 0부터 100까지 출력하세요~
+        for( var i=0; i<=100; i++){
+            document.write(i);
+        }
+        document.write("<br><br>");
+
+        //for문을 이용해서 1부터 100까지 출력하세요~
+        for( var i=1; i<=100; i++ ){
+            document.write(i);
+        }
+        document.write("<br><br>");
+
+        //for문을 이용해서 1~100 숫자 중에서 짝수만 출력하세요~
+        for( var i=2; i<=100; i+=2){
+            document.write(i);
+        }
+        document.write("<br><br>");
+
+        //for문을 이용해서 1~100 숫자 중에서 5의 배수는 파란색으로 7의 배수는 빨간색으로 출력하세요~
+        for( var i=1; i<=100; i++){
+            if( i % 5 == 0){
+                document.write("<span style='color:blue'>"+ i +"</span>")
+            } 
+            if( i % 7 == 0){
+                document.write("<span style='color:red'>"+ i +"</span>")
+            } 
+        }
+        document.write("<br><br>");
+
+        //for문을 이용해서 1~100 숫자 중에서
+        //5의 배수는 파란색 7의 배수는 빨간색 공통 배수는 검은색
+
+        //배열과 반복문
+        let arr1 = new Array(100,200,300,400,500);
+
+        //배열의 갯수 구하기
+        document.write(arr1.length,"<br>");
+
+        //배열의 데이터 구하기
+        for(var i=0; i<arr1.length; i++){
+            document.write(arr1[i],"<br>");
+        }
+
+        //배열 데이터의 합 구하기
+        let sum = 0;
+        for(var i=0; i<arr1.length; i++){
+            // i = 0, 1, 2, 3, 4
+            // arr1[0], arr1[1], arr1[2], arr1[3], arr1[4]
+            // 100, 200, 300, 400, 500
+            // sum = sum + arr1[i]
+            //   0   =   0  + 100
+            // 100  = 100 + 200
+            // 300  = 300 + 300
+            // 600  = 600 + 400
+            // 1000 = 1000 + 500
+            // 1500
+            sum = sum + arr1[i];
+        }
+        document.write(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

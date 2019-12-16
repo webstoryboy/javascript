@@ -22,57 +22,57 @@ while(조건식){<br>
 </p>
 
 <!-- Sample1 -->
-<h4 class="pt50">Sample1</h4>
-<p>break문을 이용한 예제입니다.</p>
-<div class="sample">
-    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
-    <div class="ex">
-        <!-- ex -->
-        <div class="none">
-        	1번째 실행<br>
-			2번째 실행<br>
-			4번째 실행<br>
-			5번째 실행<br>
-			6번째 실행<br>
-			7번째 실행<br>
-			8번째 실행<br>
-			9번째 실행<br>
-			10번째 실행
-        </div>
-        <!-- ex -->
-    </div>
-</div>
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/javascript/sample70_1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>break문와 continue문을 이용한 예제입니다.</p>
 <div class="sample">
     <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
     <div class="html">
-<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-    &lt;head&gt;
-    	&lt;meta charset="utf-8"&gt;
-        &lt;title&gt;자바스크립트(JavaScript)&lt;/title&gt;
-        &lt;script type="text/javascript"&gt;
-			var count = 0;	
-			while(true){
-				count++;	
-				
-				if(count == 3){
-					continue;
-				}
-				document.write(count + "번째 실행");
-				document.write("&lt;br /&gt;");
-				
-				if(count > 9){	
-					break;
-				}
+<pre class="line-numbers"><code class="language-markup">&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Javascript&lt;/title&gt;
+	&lt;script&gt;
+		//while문을 이용해서 1~20까지 출력해주세요!
+		// 숫자 1
+		// 숫자 2
+		// ...........
+		// 숫자 20
+		let num = 0;
+		while (num &lt; 20){
+			num++;
+			document.write("숫자 " + num, "&lt;br&gt;");
+		}
+
+		//for문을 이용해서 1~20까지 출력해주세요!
+		// 숫자 1
+		// 숫자 2
+		// ...........
+		// 숫자 20
+		for (var i=1; i&lt;=20; i++){
+			document.write("숫자 " + i, "&lt;br&gt;");
+		}
+
+		//break문과 continue문
+		var count = 0;
+		while(true){
+			count++;
+		if( count == 3){
+			continue;
+		}
+		document.write("카운트" + count, "&lt;br&gt;");
+
+		if ( count &gt; 19 ){
+			break;
 			}
-        &lt;/script&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-	...
-    &lt;/body&gt;
-&lt;/html&gt; 
+		}
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
     </div>
 </div>
 <!-- sample1 -->
+
