@@ -129,3 +129,191 @@
     </table>
 </div>
    
+
+
+
+
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="selector" class="selector"&gt;
+        &lt;div class="box add"&gt;제이쿼리 VS 자바스크립트&lt;/div&gt;
+        &lt;div class="box"&gt;제이쿼리 VS 자바스크립트&lt;/div&gt;
+        &lt;div class="box"&gt;제이쿼리 VS 자바스크립트&lt;/div&gt;
+        &lt;div class="box"&gt;제이쿼리 VS 자바스크립트&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class="button1"&gt;button1&lt;/button&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //아이디 선택자
+        $("#selector").css("color","red");
+        document.getElementById("selector").style.color = "#F00";
+
+        //클래스 선택자
+        $(".selector").css("color","red");
+        document.querySelector(".selector").style.color = "#F00";
+
+        //다중 선택자
+        $(".box").css("color","red");
+        document.querySelector(".box").style.color = "#F00";
+        document.querySelectorAll("box").style.color = "#F00"; (X)
+        document.querySelectorAll(".box").forEach(box =&gt; { box.style.color = "#F00" });
+
+        const box = document.querySelectorAll(".box")
+        for (var i=0; i&lt;=box.length; i++){
+            box[i].style.color = "#F00";
+        } 
+
+        //태그 선택자 
+        $("div").css("color","red");
+        document.getElementsByTagName("div").style.color = "#F00"; (X)
+
+        //선택자
+        const selector = $(".selector");
+        const box = selector.find(".box");
+        box.css("color","red");
+        const selector = document.querySelector(".selector");
+        const box = selector.querySelector(".box");
+        box.style.color = "#F00";
+        const boxAll = selector.querySelectorAll(".box");
+        boxAll.forEach(box =&gt; { box.style.color = "#F00" });
+
+        //형제 선택자
+        $(".box").next().css("color","red");
+        $(".box").prev();
+        $(".box").parent();
+        const box = document.querySelector(".box");
+        box.nextElementSibling.style.color = "#F00";
+        box.previousElementSibling;
+        box.parentElement;
+
+        //속성
+        $(".box").css({
+            "color": "#fff",
+            "background-color": "red"
+        }); 
+
+        const box = document.querySelector(".box");
+        box.style.color = "#fff";
+        box.style.backgroundColor = "red"; 
+        box.style.cssText = "color: #fff; background-color: red"; 
+
+        const boxAll = document.querySelectorAll(".box");
+        boxAll.forEach(box =&gt; { 
+            box.style.color = "#fff";
+            box.style.backgroundColor = "red";
+        });
+
+        //숨기기, 보이기
+        $(".box").hide();
+        document.querySelectorAll(".box").forEach(box =&gt; { box.style.display = "none" });
+        $(".box").show();
+        document.querySelectorAll(".box").forEach(box =&gt; { box.style.display = "block" });
+
+        //클래스 추가하기
+        $(".box").addClass("add");
+        $(".box").removeClass("add");
+        $(".button1").click(function(){
+            $(".box").toggleClass("add");
+        });
+
+        const box = document.querySelector(".box");
+        box.classList.add("add");
+        box.classList.remove("add");
+        document.querySelector(".button1").addEventListener("click", () =&gt; { 
+            box.classList.toggle("add");
+        });
+
+        const boxAll = document.querySelectorAll(".box");
+        boxAll.forEach(box =&gt; { box.classList.add("add") });
+        boxAll.forEach(box =&gt; { box.classList.remove("add") });
+        document.querySelector(".button1").addEventListener("click", () =&gt; { 
+            boxAll.forEach(box =&gt; { box.classList.toggle("add") });
+        }); 
+
+        //
+        var box = document.querySelector(".box");
+        box.classList.add("add", "add2");
+        box.classList.remove("add", "add2");
+
+        
+        document.querySelector(".box").classList.replace("box", "reduce");
+
+
+
+        //이벤트
+        $(".button1").click(function() { 
+            $(".box").css("color","blue");
+        });
+
+        document.querySelector(".button1").addEventListener("click", () =&gt; { 
+            //document.querySelector(".box").style.color = "#F00" 
+            document.querySelectorAll(".box").forEach(box =&gt; { box.style.color = "#F00" });
+        });
+
+        //마우스 오버 이벤트 
+        $(".button1").mouseenter(function() {  
+            $(".box").css("color","blue");
+        });
+
+        document.querySelector(".button1").addEventListener("mouseenter", () =&gt; { 
+            //document.querySelector(".box").style.color = "#F00" 
+            document.querySelectorAll(".box").forEach(box =&gt; { box.style.color = "#F00" });
+        });
+
+
+        //hasClass
+        if ($(".box").hasClass("add")) {
+            $(".add").css("color","blue");
+        }
+
+        if (document.querySelector(".box").classList.contains("add")) {
+            document.querySelector(".add").style.color = "#F00" 
+        } 
+
+
+        //append
+        $(".button1").click(function(){
+            $("#selector").append("&lt;div/&gt;");
+        });
+
+        document.querySelector(".button1").addEventListener("click", () =&gt; { 
+            const element = document.getElementById("selector");
+            const doc = document.createElement("div");
+            element.appendChild(doc);
+        }); 
+
+        //text
+        $(".box").text("box text");
+
+        const text = $(".box").text();
+        alert(text); 
+
+        document.querySelector(".box").textContent = "box text";
+        document.querySelectorAll(".box").forEach(box =&gt; { box.textContent = "box text" });
+
+        const text = document.querySelector(".box").textContent;
+        alert(text);
+
+        $(".box").html("&lt;div&gt;textContent VS innerText&lt;/div&gt;");
+        document.querySelector(".box").innerHTML = "&lt;div&gt;textContent VS innerText&lt;/div&gt;";
+        document.querySelector(".box").innerText = "&lt;div&gt;textContent VS innerText&lt;/div&gt;";
+        document.querySelector(".box").textContent = "&lt;div&gt;textContent VS innerText&lt;/div&gt;";
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
