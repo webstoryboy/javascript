@@ -107,3 +107,91 @@ var 변수 = 함수명(); //함수호출
 </div>
 <!-- sample2 -->
 
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="#" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            300
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        //매개변수 + 리턴문
+        function func5(num1, num2){
+            return num1 + num2;
+        }
+        let result = func5(100, 200);
+        document.write(result);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="#c" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>함수를 사용하는 기본 예제입니다. </p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="galleryZone"&gt;
+        &lt;p&gt;&lt;img id="photo" src="img/pic_1.jpg" alt="이미지1" style="width:500px"&gt;&lt;/p&gt;
+        &lt;div&gt;
+            &lt;button onclick="gallery(0)"&gt;이전&lt;/button&gt;
+            &lt;button onclick="gallery(1)"&gt;다음&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        let num = 1;
+        function gallery(direct){
+            if(direct){
+                if(num == 8) return;
+                num++;
+            } else {
+                if(num == 1) return;
+                num--;
+            }
+            console.log(num);
+            let imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src","img/pic_"+num+".jpg");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
+

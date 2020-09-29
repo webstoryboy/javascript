@@ -1,0 +1,88 @@
+
+
+<h2>프로토타입 함수</h2>
+<p>프로토타입을 사용하여 생성된 객체를 공유할 수 있습니다. </p>
+
+<hr>
+
+<h3>프로토타입 함수</h3>
+<p>프로토타입을 사용하여 생성된 객체를 공유할 수 있습니다.</p>
+<p class="blue">
+function 함수명(매개변수1, 매개변수2,.........){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; this.속성명 = 새 값;<br>
+}<br><br>
+ 
+함수명.prototype.함수명 = function(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 자바스크립트 코드;<br>
+}<br><br>
+ 
+let 참조 변수(인스턴스 네임) = new 함수명();
+</p>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="#" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>객체를 생성하는 예제입니다. </p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            이름: 웹쓰, 키: 174, 몸무게: 90,살좀 빼세요~~.
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Javascript&lt;/title&gt;
+    &lt;script&gt;
+        function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+        CheckWeight.prototype.getInfo = function(){
+            let str = "";
+            str += "이름: " + this.userName + ", ";
+            str += "키: " + this.userHeight + ", ";
+            str += "몸무게: " + this.userWeight + ", ";
+            return str;
+        }
+        CheckWeight.prototype.getResult = function(){
+            this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+            this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+            if( this.userWeight &gt;= this.minWeight && this.userWeight &lt;= this.maxWeight){
+                return "정상 몸무게입니다.";
+            } else if( this.userWeight &lt; this.minWeight) {
+                return "정상 몸무게보다 미달입니다.";
+            } else {
+                return "정상 몸무게보다 초과입니다.";
+            }
+        }
+
+        let hwang = new CheckWeight("웹쓰","180","75");
+        document.write(hwang.getInfo());
+        document.write(hwang.getResult());
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+

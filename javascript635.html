@@ -52,6 +52,46 @@ var 변수이름 = function(){ <br>
 <!-- sample1 -->
 
 
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="#" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>백그라운 색을 변경하는 예제입니다. </p>
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;javascript&lt;/title&gt;
+    &lt;script&gt;
+        let color = ["orange", "yellow", "aqua", "red"];
+
+        let i = 0;
+        function changColor(){
+            i++;
+            if( i &gt;= color.length ){
+                i = 0;
+            }
+
+            let bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor = color[i];
+            console.log("i : " + i);
+            console.log("color[i] : " + color[i]);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body id="theBody"&gt;
+    &lt;button onclick="changColor();"&gt;배경색 바꾸기&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
 
 
 
